@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1, li, a, button {
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #e36039;
+}
+
+.login {
+    padding: 10px 25px;
+    background-color: unset;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease 0s;
+}
+.login:hover {
+    border-style: groove;
+
+}
+
+.register {
+    padding: 15px 25px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease 0s;
+}
+
+.register:hover {
+    background-color: #e36039;
+}
+
+.center {
+    align-content: center;
+    text-align: center;
+   margin: 150px;
+}
+
+.centerB {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.centerB a button {
+    margin-right: 25px;
+    padding: 16px 27px;
+    background-color: #5faa41;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.2s ease 0s;
+}
+
+.centerB a button:hover {
+    background-color: #519438;
+}
