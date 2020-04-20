@@ -7,6 +7,7 @@
 body {
     overflow: auto;
     font-family: 'Libre Baskerville', serif;
+    background-color: #fafaf0;
 }
 
 .background {
@@ -23,14 +24,14 @@ h1, li, a, button {
     text-decoration: none;
 }
 
-header {
+header{
+    height: 100px;
     display: flex;
     justify-content: space-between;
     padding: 30px 10%;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    
 }
 
 
@@ -49,7 +50,7 @@ header {
 }
 
 .nav-links li a {
-    transition: all 0.3s ease 0s;
+    transition: all 0.2s ease 0s;
 }
 
 .nav-links li a:hover {
@@ -117,4 +118,34 @@ header {
 
 .centerB a button:hover {
     background-color: #519438;
+}
+
+.second {
+    height: 15vw;
+    align-content: center;
+    text-align: center;
+    margin: 100px;
+}
+
+.second ul li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.second a button {
+    margin-top: 40px;
+    padding: 5px 15px;
+    background-color: unset;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #519438;
+    font-size: 14px;
+    color: #519438;
+    font-weight: 600;
+    transition: all 0.2s ease 0s;
+}
+
+.second a button:hover {
+    border-color: #e36039;
+    color: #e36039;
 }
