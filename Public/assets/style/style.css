@@ -166,16 +166,17 @@ header{
 .accordion {
     width: 65%;
     margin-left: 17%;
+    margin-bottom: 20px;
     background-color: inherit;
 }
 
 .card-header {
     margin: 15px;
-    background:linear-gradient(90deg, #ffeeeed8 0%,#d4dad6 100% );
+    background:linear-gradient(90deg, #ffeeeeb2 0%,#d4dad6 100% );
 }
 
 .card-header:hover {
-    background:linear-gradient(90deg, #d4dad6 0%, #ffeeeed8 100% );
+    background:linear-gradient(90deg, #d4dad6 0%, #ffeeeeb2 100% );
     color: #e36039;
 }
 
@@ -207,19 +208,50 @@ header{
 
 .panel-title {
     position: relative;
-  }
+}
     
-  .panel-title::after {
-      content: "\002B";
-      color: rgba(51, 51, 51, 0.472);
-      top: 5%;
-      right: 0px;
-      position: absolute;
-      font-size: 1.7rem;
-  }
+.panel-title::after {
+    content: "\002B";
+    color: rgba(51, 51, 51, 0.472);
+    top: 5%;
+    right: 0px;
+    position: absolute;
+    font-size: 1.7rem;
+}
   
-  .panel-title[aria-expanded="true"]::after {
-      content: "\2212";
-  }
+.panel-title[aria-expanded="true"]::after {
+    content: "\2212";
+}
 
-  
+.moreFaq {
+    color:#526679;
+}
+
+.moreFaq:hover {
+    color:#526679;
+}
+
+.startNow{
+    display: block;
+    margin-top: 30px;
+    margin-left: 45%;
+}
+
+.sos{
+    margin-top: 130px;
+    margin-left: 4%;
+    padding-bottom: 15px;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3e4e5dc4;
+}
+
+.sosLink{
+    color:#e36139e7;
+    font-weight: 600;
+}
+
+.sosLink:hover{
+    color:#e36039;
+} 
