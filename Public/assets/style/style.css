@@ -149,3 +149,77 @@ header{
     border-color: #e36039;
     color: #e36039;
 }
+
+/* Frequently Asked Questions */
+
+.faqContainer {
+    margin-top: 170px;
+    padding-top: 50px;
+    background-color: #8b9da769;
+    text-align: center;
+}
+
+.faq {
+    padding-bottom: 30px;
+}
+
+.accordion {
+    width: 65%;
+    margin-left: 17%;
+    background-color: inherit;
+}
+
+.card-header {
+    margin: 15px;
+    background:linear-gradient(90deg, #ffeeeed8 0%,#d4dad6 100% );
+}
+
+.card-header:hover {
+    background:linear-gradient(90deg, #d4dad6 0%, #ffeeeed8 100% );
+    color: #e36039;
+}
+
+.card {
+    background-color:#cbd4d1 ;
+    border: none;
+    text-align: justify;
+}
+
+.btn-link {
+    color: inherit;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+}
+
+.btn-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn-link:focus{
+    text-decoration: none;
+}
+
+.fourWays {
+    padding-left: 50px;
+}
+
+.panel-title {
+    position: relative;
+  }
+    
+  .panel-title::after {
+      content: "\002B";
+      color: rgba(51, 51, 51, 0.472);
+      top: 5%;
+      right: 0px;
+      position: absolute;
+      font-size: 1.7rem;
+  }
+  
+  .panel-title[aria-expanded="true"]::after {
+      content: "\2212";
+  }
+
+  
