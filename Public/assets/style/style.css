@@ -32,6 +32,7 @@ header{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 2;
 }
 
 
@@ -63,6 +64,7 @@ header{
     border-style: solid;
     border-radius: 10px;
     border-color: white;
+    border-width: 1.5px;
     cursor: pointer;
     color: white;
     font-weight: 700;
@@ -71,12 +73,14 @@ header{
 }
 
 .login:hover {
+    border-color: #c2c2c2;
+
     border-style: groove;
 }
 
 .register {
     padding: 15px 25px;
-    background-color: #5cb85c;
+    background-color: #639ecf;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -87,13 +91,14 @@ header{
 }
 
 .register:hover {
-    background-color: #e36039;
+    background-color: #F69D44;
 }
 
 .center {
     align-content: center;
     text-align: center;
     margin: 150px;
+    position: relative;
 }
 
 .centerB {
@@ -101,23 +106,36 @@ header{
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }
 
-.centerB a button {
-    margin-right: 25px;
-    padding: 16px 27px;
-    background-color: #5faa41;
+.types {
+    width: 150px;
+    height: 200px;
+    margin: 0 20px;
+    background-color: #fff5e0;
+    padding: 20px 10px 10px;
+    border-style: none;
+    border-radius: .5rem;
+}
+
+.type-buttons {
+    width: 110px;
+    height: 60px;
+    margin: 30px 10px 0px;
+    padding: 10px;
+    background-color: #639ecf;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     color: white;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.2s ease 0s;
 }
 
-.centerB a button:hover {
-    background-color: #519438;
+.type-buttons:hover {
+    background-color: #2f6896;
 }
 
 .second {
