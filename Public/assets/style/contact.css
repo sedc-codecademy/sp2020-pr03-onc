@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #fafaf0;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(156, 135, 113, 0.198),rgba(156, 135, 113, 0.198)),url(../images/contact.jpg) no-repeat fixed center;
+    background-size: cover;
+    padding-bottom: 10%;
+}
+
+/* Navigation Bar */
+
+h1, li, a, button {
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav-links li a {
+    transition: all 0.2s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #e36039;
+}
+
+.login {
+    padding: 10px 25px;
+    background-color: unset;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 1.5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease 0s;
+}
+
+.login:hover {
+    border-color: #c2c2c2;
+
+    border-style: groove;
+}
+
+.register {
+    padding: 15px 25px;
+    background-color: #639ecf;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease 0s;
+}
+
+.register:hover {
+    background-color: #F69D44;
+}
+
+/* Main container */
+
+.mainContainer {
+    display: flex;
+}
+
+/* Contact Us Text */
+
+.contactContainer {
+    margin-top: 110px;
+    margin-left: 12%;
+}
+
+.contactUs {
+    color: #d1caba;
+    margin-left: 25%;
+    font-size: 3vw;
+}
+
+h1 + h2 {
+    font-size: 2vw;
+}
+
+.contactInfo {
+    margin-top: 20px;
+    text-align: center;
+    background: #6d726e32;
+    width: 50%;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 20px;
+    margin-left: 25%;
+} 
+
+.contactMail {
+    color: #c54822;
+}
+
+.contactMail:hover {
+    color: #c54822;
+}
+
+/* Form */
+
+.formContainer {
+    margin-top: 5%;
+}
+
+.fStyle {
+    width: 92%;
+    margin: 5px;
+    margin-left: 25%;
+    height: 50px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #f0e6deca;
+    transition: all 0.2s ease 0s;
+}
+
+.fStyle:hover {
+    background: #f0e6de;
+}
+
+textarea{
+    padding-top: 10px;
+    height: 150px !important;
+}
+
+.submitBtn {
+    margin: 15px;
+    margin-left: 55%;
+    padding: 15px 40px;
+    background-color: #8bc34a73;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.2s ease 0s;
+}
+
+.submitBtn:hover {
+    background-color: #8bc34aa9;
+}

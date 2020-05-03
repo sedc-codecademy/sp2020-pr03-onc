@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style/contact.css">
+</head>
+
+<body>
+    <div class="background">
+
+        <!-- Navigation Bar -->
+
+        <header id="sticky">
+            <div class="logo">
+                <h1><a href="./index.html">Mindify</a></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Advice</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Join Mindify</a></li>
+                    <li><a class="contactPg" href="./contact.html">Contact</a></li>
+                    <li><a href="#"><button class="login">Login</button></a></li>
+                    <li><a href="#"><button class="register">Get started</button></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="mainContainer">
+
+            <!-- Contact Us Text -->
+
+            <div class="contactContainer">
+                <h1 class="contactUs">Contact Us</h1>
+                <h2>We are always ready to serve you!</h2>
+
+                <div class="contactInfo">
+                    <p> 283 N. Wolfe Rd, <br> Sunnyvale, CA 97565</p>
+                    <a class="contactMail" href="mailto:contact@mindify.com">contact@mindify.com</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+
+            <div class="formContainer">
+                <form action="" method="POST">
+                    <input class="fStyle fullName" type="text" name="fullName" placeholder="Full Name" required>
+                    <input class="fStyle email" type="email" name="email" placeholder="Email" required><br>
+                    <input class="fStyle subject" type="text" name="subject" placeholder="Subject of this message"><br>
+                    <textarea class="fStyle message" name="message" cols="30" rows="10" placeholder="Your Message"
+                        required></textarea><br>
+                    <button class="submitBtn" type="submit">Send</button>
+                </form>
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="./assets/header.js"></script>
+</body>
+
+</html>
