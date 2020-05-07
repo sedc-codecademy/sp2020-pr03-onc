@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get started</title>
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="./assets/style/getStarted.css" type="text/css">
 </head>
 
 <body>
@@ -28,18 +28,21 @@
 
                 <div class="questionnaire form-body" id="question-area">
                     <form name="get-started-questions">
-                        <label for="">Name (or nickname)</label>
-                        <input type="text" id="name" class="inputs">
+                        <label for="name">Name (or nickname)</label>
+                        <input type="text" id="name" class="inputs" name="Name (or nickname)">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" class="inputs">
+                        <input type="email" id="email" class="inputs" name="E-mail">
                         <label for="confirm">Confirm E-mail</label>
-                        <input type="email" id="confirm-email" class="inputs">
+                        <input type="email" id="confirm-email" class="inputs" name="Confirm E-mail">
                         <label for="password">Password</label>
-                        <input type="password" id="password" class="inputs">
-                        <label for="">I agree to terms and conditions</label>
+                        <input type="password" id="password" class="inputs" name="Password">
+                        <label for="">I agree to <a href="http://">terms and conditions</a></label>
                         <input type="checkbox" name="terms" id="terms">
                         <button type="submit" id="signIn-btn"> Sign in </button>
+                        <p id="input-msg">The password should be between 7-15 characters which at least one numeric digit and a special character.</p>
                     </form>
+
+
                 </div>
 
         </div>
@@ -51,7 +54,7 @@
 
     <script src="./assets/js/call.js"></script>
     <script src="./assets/js/signIn.js"></script>
-    
+
 </body>
 
 </html>

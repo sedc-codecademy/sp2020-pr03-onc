@@ -2,26 +2,29 @@
 const dataQandA = [
     {
         no: 1,
+        type:"radio",
         question: 'What type of counseling you are looking for?',
         answers: ['Individual counseling(for myself)', 'Individual counseling(for myself)', 'Teenage counseling (for my child)']
     },
 
     {
         no: 2,
+        type:"radio",
         question: 'What is your gender?',
         answers: ['Male', 'Female', 'Other',]
     },
 
     {
         no: 3,
+        type:'dropdown',
         question: 'Select your age',
-        answers: ['Male', 'Female', 'Other',]
     },
 
     {
         no: 4,
+        type:"radio",
         question: 'Test number 4',
-        answers: ['Male', 'Female', 'Other', 'aaaaa', 'ssss', 'ssss']
+        answers: ['test1', 'test2', 'test3', 'test4', 'test5', 'test6']
     }
 ];
 

@@ -8,13 +8,10 @@ const populateNavi = (data, id, element) => {
     data.forEach(el => {
         naviBar.innerHTML += `<div class="navi-dots" id="${el.no}"></div>`
     });
-
     let naviDots = document.getElementsByClassName('navi-dots');
-
     for (const dot of naviDots) {
         id === parseInt(dot.id) ? dot.style.backgroundColor = "rgb(255, 255, 240, .3)" : null;
     }
-
     //Adding event listiners to testemonial navi
     for (const dot of naviDots) {
         dot.addEventListener('click', (e) => {
@@ -29,7 +26,7 @@ const populateTestemonial = (data, id, element) => {
     let currnetTestimony = data.filter(x => x.no === id)[0];
     element.innerHTML = `
     <div class="testemonials-person">
-    <img src="./assets/css/images/avatar-default.jpg" alt="Avatar">
+    <img src="./assets/images/avatar-default.jpg" alt="Avatar">
     <h5> <span>${currnetTestimony.from}.</span> ${currnetTestimony.job}.</h5>
     </div>
     <p class="testemony">${currnetTestimony.testimonial}
@@ -41,19 +38,16 @@ const populateTestemonial = (data, id, element) => {
 };
 
 //Main function which calls the previous 2 (populateTestemonial & populateNavi)
-const slideTestemonials = (data, element) => {
+const testemonialController = (data, element) => {
     let dataLength = data.length
     let slideCounter = 1;
-
     data.forEach(el => {
         element.lastElementChild.innerHTML += `<div class="navi-dots"></div>`
     });
-
     populateTestemonial(data, slideCounter, element);
-
     setInterval(() => {
         populateTestemonial(data, slideCounter, element)
         slideCounter === dataLength ? slideCounter = 1 : slideCounter++
     }, 6000);
 };
-slideTestemonials(testimonialsData, testemonialArea);
+testemonialController(testimonialsData, testemonialArea);

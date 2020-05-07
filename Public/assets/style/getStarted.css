@@ -259,7 +259,6 @@ footer {
     text-align: center;
 }
 
-
 /* SIGN IN FORM */
 .second {
     margin-top: 1%;
@@ -267,7 +266,7 @@ footer {
 
 .form-body {
     margin-top: 5%;
-    width: 45%;
+    width: 50%;
     height: 90%;
 }
 
@@ -277,19 +276,25 @@ footer {
 }
 
 .form-body > form > button {
-    margin: 3% 0% 3% 0%;
+    margin: 3% 0% 0% 0%;
     height:5%;
     width: 25%;
 }
 
 .inputs {
-    width: 60%;
-    height: 6%;
+    width: 65%;
+    height: 5%;
     font-size: large;
 }
 
 #terms {
-    height: 5%;
+    height: 3%;
+}
+
+#input-msg {
+    border: inherit;
+    font-size: 75%;
+    margin-top: 1%;
 }
 
 .msg-text {
