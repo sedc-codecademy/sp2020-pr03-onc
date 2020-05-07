@@ -22,10 +22,13 @@ class User {
 const validateEmptyInputs = inputs => {
     let helper = true
     for (const input of inputs) {
-        if (input.value === '')
+        if (input.value === ''){
+            inputMsg.innerText = 'Please fill all input areas.'
             return helper = false
+        }      
     }
     return helper
+
 };
 
 const validateMail = (mail, confirmation) => {
@@ -68,7 +71,7 @@ const signIn = () => {
             inputMsg.innerHTML = 'Welcome to Mindify.'
             console.log(user)
             // postUser(user);
-        } 
+        }
         event.preventDefault()
     });
 };
