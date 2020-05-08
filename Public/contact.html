@@ -50,22 +50,34 @@
             <!-- Contact Form -->
 
             <div class="formContainer">
-                <form action="" method="POST">
-                    <input class="fStyle fullName" type="text" name="fullName" placeholder="Full Name" required>
-                    <input class="fStyle email" type="email" name="email" placeholder="Email" required><br>
-                    <input class="fStyle subject" type="text" name="subject" placeholder="Subject of this message"><br>
-                    <textarea class="fStyle message" name="message" cols="30" rows="10" placeholder="Your Message"
-                        required></textarea><br>
+                <div class="error"></div>
+
+                <form action="" method="POST" onsubmit="return false" id="contactForm">
+                    <div>
+                        <input class="formStyle fullName" type="text" name="fullName" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <input class="formStyle email" type="email" name="email" placeholder="Email"><br>
+                    </div>
+                    <div>
+                        <input class="formStyle subject" type="text" name="subject"
+                            placeholder="Subject of this message"><br>
+                    </div>
+                    <div>
+                        <textarea class="formStyle message" name="message" cols="30" rows="10"
+                            placeholder="Your Message"></textarea><br>
+                    </div>
                     <button class="submitBtn" type="submit">Send</button>
                 </form>
+
             </div>
 
         </main>
 
     </div>
 
-
-    <script src="./assets/header.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/contactFormValidation.js"></script>
 </body>
 
 </html>
