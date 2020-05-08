@@ -19,3 +19,8 @@ window.addEventListener('scroll', function () {
 
 
 })
+
+//ToDo
+document.getElementById('get-started-btn').addEventListener('click', ()=> {
+    window.location.href = './getStarted.html';
+});
