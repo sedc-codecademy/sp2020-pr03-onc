@@ -4,13 +4,13 @@ const mail = document.getElementById('email');
 const confirmMail = document.getElementById('confirm-email');
 const password = document.getElementById('password');
 const terms = document.getElementById('terms')
-const userInputs = [name, email, password];
+const userInputs = [name, mail, password];
 const inputMsg = document.getElementById('input-msg');
-userInputs.length
 
 //User class
 class User {
     constructor(name, email, password, questionnarie) {
+        this.role = 'user'
         this.name = name
         this.email = email
         this.password = password

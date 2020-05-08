@@ -14,8 +14,9 @@ window.addEventListener('scroll', function () {
         header.classList.remove('headerHe');
         login.classList.remove('loginScroll');
     }
-
-
-
-
 })
+
+//ToDo
+document.getElementById('get-started-btn').addEventListener('click', ()=> {
+    window.location.href = './getStarted.html';
+});

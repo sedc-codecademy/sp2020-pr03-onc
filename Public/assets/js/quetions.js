@@ -56,9 +56,9 @@ const renderControler = (data, element) => {
         element.lastElementChild.innerHTML = '';
         window.location.href = './signinForm.html';
     } else {
-        let answers = data.filter(x => x.no === counter).map(x => x.answers)[0];
-        let question = data.filter(x => x.no === counter).map(x => x.question)[0];
-        let type = data.filter(x => x.no === counter).map(x => x.type)[0];
+        let answers = data.filter(x => x.id === counter).map(x => x.answers)[0];
+        let question = data.filter(x => x.id === counter).map(x => x.question)[0];
+        let type = data.filter(x => x.id === counter).map(x => x.type)[0];
         renderQuestion(answers, question, type, element)
         counter++
     }
