@@ -6,7 +6,7 @@ const populateNavi = (data, id, element) => {
     let naviBar = element.lastElementChild;
     naviBar.innerHTML = '';
     data.forEach(el => {
-        naviBar.innerHTML += `<div class="navi-dots" id="${el.no}"></div>`
+        naviBar.innerHTML += `<div class="navi-dots" id="${el.id}"></div>`
     });
     let naviDots = document.getElementsByClassName('navi-dots');
     for (const dot of naviDots) {
@@ -15,7 +15,7 @@ const populateNavi = (data, id, element) => {
     //Adding event listiners to testemonial navi
     for (const dot of naviDots) {
         dot.addEventListener('click', (e) => {
-            let elementID  = parseInt(e.target.id) 
+            let elementID = parseInt(e.target.id)
             populateTestemonial(data, elementID, element);
         })
     }
@@ -23,10 +23,11 @@ const populateNavi = (data, id, element) => {
 
 //Populating  testemonial body element (using populateNavi)
 const populateTestemonial = (data, id, element) => {
-    let currnetTestimony = data.filter(x => x.no === id)[0];
+    let avatar = 'avatar-default.jpg'
+    let currnetTestimony = data.filter(x => x.id === id)[0];
     element.innerHTML = `
     <div class="testemonials-person">
-    <img src="./assets/images/avatar-default.jpg" alt="Avatar">
+    <img src="./assets/images/${avatar || currnetTestimony.img}" alt="Avatar">
     <h5> <span>${currnetTestimony.from}.</span> ${currnetTestimony.job}.</h5>
     </div>
     <p class="testemony">${currnetTestimony.testimonial}
@@ -37,7 +38,7 @@ const populateTestemonial = (data, id, element) => {
     populateNavi(data, id, element)
 };
 
-//Main function which calls the previous 2 (populateTestemonial & populateNavi)
+//Main function which calls populateTestemonial 
 const testemonialController = (data, element) => {
     let dataLength = data.length
     let slideCounter = 1;
