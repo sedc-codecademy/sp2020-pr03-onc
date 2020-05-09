@@ -1,25 +1,21 @@
-window.onscroll = function() {stickyN()};
-let header = document.getElementById('sticky');
-let sticky = header.offsetTop;
+window.addEventListener('scroll', function () {
+    let logoImg = document.querySelector('.logo h1 a');
+    let header = document.querySelector('#head');
+    let login = document.querySelector('#logB');
 
-let stickyN = () => {
-
-    if (window.pageYOffset > sticky) {
-        header.classList.add('sticky');
-        header.style.transition = 'all 0.3s ease 0s';
-        header.style.backgroundColor = '#fafaf0';
-        header.style.opacity = 0.8;
-        document.querySelector('.login').style.borderColor = '#5cb85c';
-        document.querySelector('.login').style.color = '#5cb85c';
-
-    } else if (window.pageYOffset == sticky) {
-        header.classList.remove('sticky');
-        header.style.background = 'unset';
-        header.style.transition = 'all 0.4s ease 0s';
-        header.style.opacity = 1;
-        document.querySelector('.login').style.borderColor = 'white';
-        document.querySelector('.login').style.color = 'white';
+    if (window.pageYOffset > 10) {
+        logoImg.innerHTML = `<h2>Mindify</h2>`;
+        header.classList.add('headerHe');
+        login.classList.add('loginScroll');
     }
-}
+    else {
+        logoImg.innerHTML = `<h1>Mindify</h1>`;
+        header.classList.remove('headerHe');
+        login.classList.remove('loginScroll');
+    }
+})
 
-window.scroll(function() {stickyN});
+//ToDo
+document.getElementById('get-started-btn').addEventListener('click', () => {
+    window.location.href = './getStarted.html';
+});

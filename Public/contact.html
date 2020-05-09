@@ -16,19 +16,19 @@
 
         <!-- Navigation Bar -->
 
-        <header id="sticky">
+        <header id="head">
             <div class="logo">
-                <h1><a href="./index.html">Mindify</a></h1>
+                <h1><a href="#">Mindify</a></h1>
             </div>
-            <nav>
+            <nav id="mainNav">
                 <ul class="nav-links">
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Advice</a></li>
+                    <li><a href="#dropDown">FAQ</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#">Join Mindify</a></li>
-                    <li><a class="contactPg" href="./contact.html">Contact</a></li>
-                    <li><a href="#"><button class="login">Login</button></a></li>
-                    <li><a href="#"><button class="register">Get started</button></a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><button class="login" id="logB">Login</button></li>
+                    <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
                 </ul>
             </nav>
         </header>
@@ -50,8 +50,8 @@
             <!-- Contact Form -->
 
             <div class="formContainer">
-                <!-- Error/Success message goes here -->
-                <div class="error success"></div>
+
+                <div class="error"></div> <!-- Error / Success message goes here -->
 
                 <form action="" method="POST" onsubmit="return false" id="contactForm">
                     <div>

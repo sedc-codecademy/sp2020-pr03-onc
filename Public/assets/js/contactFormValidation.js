@@ -1,3 +1,4 @@
+// Input Variables
 const fullName = document.querySelector('.fullName');
 const email = document.querySelector('.email');
 const subject = document.querySelector('.subject');
@@ -7,12 +8,11 @@ const errorMsg = document.querySelector('.error');
 const userInputs = [fullName, email, subject, message];
 
 // Validations
-
 const validateEmptyInputs = inputs => {
     let helper = true
     for (const input of inputs) {
         if (input.value === '') {
-            errorMsg.innerHTML = 'Please fill all input areas.'
+            errorMsg.innerHTML = 'Please fill out all input areas.'
             return helper = false
         }
     }
@@ -21,7 +21,7 @@ const validateEmptyInputs = inputs => {
 
 const validateName = fullName => {
     let helper = false
-    const nameRegex = /^[a-zA-Z'- ]+$/;
+    const nameRegex = /^[a-z ,.'-]+$/i;
     fullName.value.match(nameRegex) ? helper = true : helper = false;
     errorMsg.innerHTML = 'Please enter a valid name.';
     return helper
@@ -50,8 +50,21 @@ const validateMessage = message => {
 }
 
 const validateContactForm = () => {
-    if (!validateEmptyInputs(userInputs) || !validateName(fullName) || !validateEmail(email)) {
-
+    if (!validateEmptyInputs(userInputs) || !validateName(fullName) || !validateEmail(email) || !validateSubject(subject) || !validateMessage(message)) {
+        return false
+    } else {
+        return true
     }
+};
+
+// Post Contact Form
+const sendEmail = () => {
+    sendBtn.addEventListener('click', () => {
+        if (validateContactForm()) {
+            errorMsg.style.background = "#8bc34a73";
+            errorMsg.innerHTML = 'Your message was sent successfully!';
+        }
+    })
 }
 
+sendEmail();
