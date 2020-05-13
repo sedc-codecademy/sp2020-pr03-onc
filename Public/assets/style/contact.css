@@ -14,7 +14,7 @@ body {
     height: 100%;
     background: linear-gradient(rgba(156, 135, 113, 0.198),rgba(156, 135, 113, 0.198)),url(../images/contact.jpg) no-repeat fixed center;
     background-size: cover;
-    padding-bottom: 10%;
+    padding-bottom: 3%;
 }
 
 /* Navigation Bar */
@@ -220,4 +220,25 @@ textarea{
     width: 72%;
     margin-bottom: 10px;
     margin-left: 1%;
+}
+
+/* SOS Msg */
+
+.sos {
+    margin-top: 150px;
+    margin-left: 4%;
+    padding-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000e7;
+}
+
+.sosLink {
+    color: #e36039;
+    font-weight: 600;
+}
+
+.sosLink:hover {
+    color: #e36039;
 }

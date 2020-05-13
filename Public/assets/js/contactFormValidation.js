@@ -63,6 +63,8 @@ const sendEmail = () => {
         if (validateContactForm()) {
             errorMsg.style.background = "#8bc34a73";
             errorMsg.innerHTML = 'Your message was sent successfully!';
+        } else {
+            errorMsg.style.background = "rgba(240, 128, 128, 0.705)";
         }
     })
 }
