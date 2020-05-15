@@ -61,7 +61,7 @@ header {
     border-color: #2f6896 !important;
 }
 
-/* --------------------- */
+/* /--------------------- */
 
 .logo {
     cursor: pointer;
@@ -387,64 +387,41 @@ input {
 }
 
 /* Footer */
-
 .footer {
-    background: #343a40;
-    color: #d3d3d3;
-    height: 400px;
-    position: relative;
-}
-
-.footer .footer-content {
-    height: 350px;
-    display: flex;
-}
-
-.footer .footer-content .footer-section {
-    flex: 1;
-    padding: 25px;
-}
-
-.footer .footer-content .about span {
-    display: block;
-    font-size: 16px;
-}
-
-.footer .footer-content .about .social a {
-    border: 1px solid gray;
-    width: 35px;
-    height: 31px;
-    padding-bottom: 15px;
-    margin-right: 5px;
-    text-align: center;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.footer .footer-content .about .social a:hover {
-    color: #F69D44;
-}
-
-.footer .footer-content .links ul a {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.footer .footer-content .links ul a:hover {
-    color: #F69D44;
-    margin-left: 15px;
-    transition: all .3s;
-}
-
-.footer .footer-bottom {
-    background: #303036;
-    height: 50px;
-    text-align: center;
-    position: absolute;
     width: 100%;
-    bottom: 0px;
-    left: 0px;
-    padding-top: 20px;
+    height: 50px;
+    background: #3e4e5dc4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.arrow {
+    cursor: pointer;
+    transition: all 0.2s ease 0.1s;
+}
+
+.arrow:hover {
+    background-color: #F69D44;
+}
+
+.links {
+    padding-right: 20px;
+}
+
+.social a i{
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    transition: all 0.2s ease 0.1s;
+}
+
+.social a i:hover {
+    border-color: black;
+    color: #F69D44;
 }
