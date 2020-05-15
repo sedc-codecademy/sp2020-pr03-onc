@@ -15,7 +15,6 @@
     <div class="background">
 
         <!-- Navigation Bar -->
-
         <header id="head">
             <div class="logo">
                 <h1><a href="./index.html">Mindify</a></h1>
@@ -33,10 +32,26 @@
             </nav>
         </header>
 
+        <!-- Login PopUp -->
+        <div class="popUpLogin">
+            <div class="loginContent">
+                <div class="close">+</div>
+                <img src="./assets/images/user-login.png" alt="">
+                <form action="index.html" method="">
+                    <input type="text" placeholder="E-mail">
+                    <input type="password" placeholder="Password">
+                    <a href="">
+                        <p class="forgot">Forgot your password?</p>
+                    </a>
+                    <button type="submit" class="log">Sign in</button>
+                    <button type="submit" class="reg">Sign up</button>
+                </form>
+            </div>
+        </div>
+
         <main class="mainContainer">
 
             <!-- Contact Us Text -->
-
             <div class="contactContainer">
                 <h1 class="contactUs">Contact Us</h1>
                 <h2>We are always ready to serve you!</h2>
@@ -48,7 +63,6 @@
             </div>
 
             <!-- Contact Form -->
-
             <div class="formContainer">
 
                 <div class="error"></div> <!-- Error / Success message goes here -->
@@ -57,10 +71,10 @@
                     <div>
                         <input class="formStyle fullName" type="text" name="fullName" placeholder="Full Name">
                     </div>
-                    <div>
+                    <div class="formBox">
                         <input class="formStyle email" type="email" name="email" placeholder="Email"><br>
                     </div>
-                    <div>
+                    <div class="formBox">
                         <input class="formStyle subject" type="text" name="subject"
                             placeholder="Subject of this message"><br>
                     </div>
@@ -76,17 +90,17 @@
         </main>
 
         <!-- SOS -->
-
         <div class="sos">
             <p class="sosTxt">
                 If you are in a crisis or any other person may be in danger - don't use this site. <br>
-                <a class="sosLink" href="#">These resources</a> can provide you with immediate help.
+                <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
             </p>
         </div>
 
     </div>
 
     <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/login.js"></script>
     <script src="./assets/js/contactFormValidation.js"></script>
 </body>
 
