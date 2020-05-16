@@ -134,7 +134,7 @@ header {
 }
 
 .types {
-    width: 170px;
+    width: 180px;
     height: 200px;
     margin: 0 20px;
     background-color: unset;
@@ -144,7 +144,7 @@ header {
 }
 
 .type-buttons {
-    width: 150px;
+    width: 180px;
     height: 60px;
     /* margin-right: 40px; */
     padding: 10px;
