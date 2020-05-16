@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mindify</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 
 <body>
-    <div class="background">
-        <header id="sticky">
+    <div class="background" id="up">
+        <header id="head">
             <div class="logo">
-                <h1><a href="#">Mindify</a></h1>
+                <h1>Mindify</h1>
             </div>
-            <nav>
+            <nav id="mainNav">
                 <ul class="nav-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Advice</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="#dropDown">FAQ</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#">Join Mindify</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="#"><button class="login">Login</button></a></li>
-                    <li><a href="#"><button class="register">Get started</button></a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><button class="login" id="logB">Login</button></li>
+                    <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
                 </ul>
             </nav>
         </header>
@@ -41,7 +44,7 @@
                 </div>
                 <div id="couple" class="types">
                     <img src="./assets/images/couple.png" alt="couple figure">
-                    <button id="couples-btn" class="type-buttons">Couples</button>
+                    <button id="couples-btn" class="type-buttons">Couples </br> (For me and my love)</button>
                 </div>
                 <div id="teen" class="types">
                     <img src="./assets/images/teen.png" alt="teen figure">
@@ -51,7 +54,24 @@
         </div>
     </div>
 
-   
+    <!-- Login PopUp -->
+    <div class="popUpLogin">
+        <div class="loginContent">
+            <div class="close">+</div>
+            <img src="./assets/images/user-login.png" alt="">
+            <form action="index.html" method="GET">
+                <input type="text" placeholder="E-mail" id="emailV" required>
+                <input type="password" placeholder="Password" id="passV" required>
+                <a href="">
+                    <p class="forgot">Forgot your password?</p>
+                </a>
+                <h3 align=center id="info"></h3>
+                <button type="button" class="log" id="logInB">Sign in</button>
+                <button type="button" class="reg" id="regB">Sign up</button>
+            </form>
+        </div>
+    </div>
+
     <div class="second">
         <h2>We want to help with counseling service.</h2>
         <br />
@@ -64,6 +84,230 @@
         </ul>
         <a href="#"><button>Feel free to help yourself</button></a>
     </div>
+
+    <!-- Frequently Asked Questions -->
+
+    <div class="faqContainer" id="dropDown">
+        <h2 class="faq">Frequently Asked Questions</h2>
+        <div class="accordion" id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            What is Mindify ?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Mindify is a online counseling platform. We change the way people get help with facing life's
+                        challenges by providing convenient, discreet and affordable access to a licensed therapist.
+                        Mindify makes professional counseling available anytime, anywhere, through a computer, tablet or
+                        smartphone.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How much does it cost?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        The cost of counseling through Mindify ranges from $ --- to $ --- per week (billed monthly) and
+                        includes unlimited access to your counselor. You can cancel your membership at any time for any
+                        reason.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How will I communicate with my counselor?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        You can get counseling in four ways: <br> <br>
+                        <ul class="fourWays">
+                            <li><strong>Exchanging messages</strong> with your counselor</li>
+                            <li><strong>Chatting live</strong> with your counselor</li>
+                            <li><strong>Speaking over the phone</strong> with your counselor</li>
+                            <li><strong>Video conferencing</strong> with your counselor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Can I stay anonymous?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        When you sign up we do not ask you for your full name or contact information. You may pick any
+                        "nick name" which will identify you in the system. When you decide to start the counseling
+                        process, we will ask you for emergency contact information which is kept safe in the system so
+                        it can be used if your counselor believes that you or someone else might be in danger.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            How are the counselors verified?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        Our team ensures that every provider we bring to the platform is fully licensed and in good
+                        standing. Providers who apply are required to provide proper licensure documentation, proof of
+                        identity, and references from other licensed practitioners who have worked with them. We then
+                        cross-check their licensure information with their respective state licensing board.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            How long until I'm matched with a counselor?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        It generally takes around 24 hours to be matched with a counselor, and on some occasions might
+                        take a little longer depending on which qualifications and expertise you prefer in a counselor.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Can Mindify substitute for traditional face-to-face therapy?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                    <div class="card-body">
+                        The professionals who work through Mindify are licensed and credentialed therapists who were
+                        certified by their state's board to provide therapy and counseling. However, while the service
+                        may have similar benefits, it's not capable of substituting for traditional face-to-face therapy
+                        in every case. Please note that your provider won't be able to make any official diagnosis, to
+                        fulfill any court order or prescribe medication.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingEight">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link panel-title collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Is Mindify right for me?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                    <div class="card-body">
+                        Mindify may be right for you if you're looking to improve the quality of your life. Whenever
+                        there is anything that interferes with your happiness or prevents you from achieving your goals,
+                        we may be able to help. We also have counselors who are specialized in specific issues, such as
+                        stress, anxiety, relationships, parenting, depression, addictions, eating, sleeping, trauma,
+                        anger, family conflicts, LGBT matters, grief, religion, self esteem and more.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="moreFaq" href="./contact.html">If you have further questions click here</a>
+
+        <button class="register startNow">Get started</button>
+
+        <!-- SOS -->
+
+        <div class="sos">
+            <p class="sosTxt">
+                If you are in a crisis or any other person may be in danger - don't use this site. <br>
+                <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="arrow">
+                <a href="#up"><img src="./assets/images/arrow.png" alt=""></a>
+            </div>
+            <div class="copyR">
+                &copy; Mindify 2020
+            </div>
+            <div class="links">
+                <span class="social">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/call.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/index.js"></script>
+    
 </body>
-<script src="./assets/header.js"></script>
+
+
 </html>
