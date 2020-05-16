@@ -27,8 +27,8 @@ const populateTestemonial = (data, id, element) => {
     let currnetTestimony = data.filter(x => x.id === id)[0];
     element.innerHTML = `
     <div class="testemonials-person">
-    <img src="./assets/images/${avatar || currnetTestimony.img}" alt="Avatar">
-    <h5> <span>${currnetTestimony.from}.</span> ${currnetTestimony.job}.</h5>
+    <img src="./assets/images/${currnetTestimony.img || avatar }" alt="Avatar">
+    <h5> <span>${currnetTestimony.from}</span><br> ${currnetTestimony.job}</h5>
     </div>
     <p class="testemony">${currnetTestimony.testimonial}
     </p>
@@ -49,6 +49,6 @@ const testemonialController = (data, element) => {
     setInterval(() => {
         populateTestemonial(data, slideCounter, element)
         slideCounter === dataLength ? slideCounter = 1 : slideCounter++
-    }, 6000);
+    }, 4500);
 };
 testemonialController(testimonialsData, testemonialArea);

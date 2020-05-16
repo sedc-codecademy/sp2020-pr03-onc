@@ -1,9 +1,10 @@
 //HTML elements variables
 const questionArea = document.getElementById("question-area");
 const question = document.getElementById('get-started-question');
+let counter = parseInt(localStorage.getItem('initCounter')) || 1;
 
 //User Q&A data
-let userQandA = [];
+let userQandA = JSON.parse(localStorage.getItem('userQA')) || [];
 
 // Event handling(questions)
 const inputEvent = (elem, question, type) => {
@@ -50,7 +51,7 @@ const renderQuestion = (ansData, queData, dataType, element) => {
 };
 
 //Render contrroler 
-let counter = 1;
+
 const renderControler = (data, element) => {
     if (data.length < counter) {
         element.lastElementChild.innerHTML = '';
