@@ -72,3 +72,14 @@ const sendEmail = () => {
 }
 
 sendEmail();
+
+//Adding event listiener on all get started buttons
+(function getStartedButtons(){
+    Array.from(document.querySelectorAll('.register')).forEach(element => {
+        element.addEventListener('click', () => {
+            localStorage.removeItem('initCounter');
+            localStorage.setItem('userQA', JSON.stringify([]))
+            window.location.href = './getStarted.html';
+        });
+    });
+})();

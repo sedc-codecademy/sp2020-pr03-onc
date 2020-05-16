@@ -56,8 +56,6 @@ let checkEmail = (loginUser) => {
     return false;
 }
 
-
-
 // Event
 signIn.addEventListener('click', () => {
     let email = inpText.value;
@@ -81,5 +79,13 @@ signIn.addEventListener('click', () => {
     inpPass.value = '';
 });
 
+
+// (function getStartedButton() {
+//     signUp.addEventListener('click', () => {
+//         localStorage.removeItem('initCounter');
+//         localStorage.setItem('userQA', JSON.stringify([]))
+//         window.location.href = './getStarted.html';
+//     });
+// })();
 
 

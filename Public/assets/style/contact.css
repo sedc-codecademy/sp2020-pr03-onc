@@ -205,6 +205,9 @@ input {
     margin-right: 100px;
 }
 
+h1 > a {
+    text-decoration: none;
+}
 /* Main container */
 
 .mainContainer {
