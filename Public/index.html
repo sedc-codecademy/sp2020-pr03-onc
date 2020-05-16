@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <div class="background">
+    <div class="background" id="up">
         <header id="head">
             <div class="logo">
-                <h1><a href="#">Mindify</a></h1>
+                <h1><a href="./index.html">Mindify</a></h1>
             </div>
             <nav id="mainNav">
                 <ul class="nav-links">
@@ -24,7 +24,7 @@
                     <li><a href="#dropDown">FAQ</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#">Join Mindify</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                     <li><button class="login" id="logB">Login</button></li>
                     <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
                 </ul>
@@ -59,18 +59,18 @@
         <div class="loginContent">
             <div class="close">+</div>
             <img src="./assets/images/user-login.png" alt="">
-            <form action="index.html" method="">
-                <input type="text" placeholder="E-mail">
-                <input type="password" placeholder="Password">
+            <form action="index.html" method="GET">
+                <input type="text" placeholder="E-mail" id="emailV" required>
+                <input type="password" placeholder="Password" id="passV" required>
                 <a href="">
                     <p class="forgot">Forgot your password?</p>
                 </a>
-                <button type="submit" class="log">Sign in</button>
-                <button type="submit" class="reg">Sign up</button>
+                <h3 align=center id="info"></h3>
+                <button type="button" class="log" id="logInB">Sign in</button>
+                <button type="button" class="reg" id="regB">Sign up</button>
             </form>
         </div>
     </div>
-
 
     <div class="second">
         <h2>We want to help with counseling service.</h2>
@@ -254,14 +254,16 @@
 
         </div>
 
-        <a class="moreFaq" href="#">If you have further questions click here</a> <!-- Leads to contact page -->
+        <a class="moreFaq" href="./contact.html">If you have further questions click here</a>
 
         <button class="register startNow">Get started</button>
+
+        <!-- SOS -->
 
         <div class="sos">
             <p class="sosTxt">
                 If you are in a crisis or any other person may be in danger - don't use this site. <br>
-                <a class="sosLink" href="#">These resources</a> can provide you with immediate help.
+                <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
             </p>
         </div>
     </div>
@@ -269,64 +271,19 @@
     <!-- Footer -->
     <footer>
         <div class="footer">
-            <div class="footer-content">
-
-                <div class="footer-section about">
-                    <h1><a href="#">Mindify</a></h1>
-                    <br />
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta numquam
-                        voluptas ipsa iste cumque saepe eos modi dignissimos beatae</p>
-                    <span class="contact">
-                        <div><i class="fa fa-envelope"></i> &nbsp; contact@mindify.com</div>
-                    </span>
-                    <br />
-                    <span class="social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </span>
-                </div>
-
-                <div class="footer-section links">
-                    <h2>USEFUL LINKS</h2>
-                    <br />
-                    <ul>
-                        <a href="#">
-                            <li>About</li>
-                        </a>
-                        <a href="#">
-                            <li>FAQ</li>
-                        </a>
-                        <a href="#">
-                            <li>Contact</li>
-                        </a>
-                        <a href="#">
-                            <li>For Counselors</li>
-                        </a>
-                        <a href="#">
-                            <li>Reviews</li>
-                        </a>
-                    </ul>
-                </div>
-
-                <div class="footer-section contact-form">
-                    <h2>CONTACT US</h2>
-                    <br />
-                    <form action="index.html" method="POST">
-                        <input type="email" name="email" class="text-input" placeholder="Email">
-                        <textarea name="message" class="text-input contact-input"
-                            placeholder="Your message..."></textarea>
-                        <br />
-                        <button type="submit" class="btn btn-big">
-                            <i class="fa fa-envelope"></i>
-                            Send
-                        </button>
-                    </form>
-                </div>
+            <div class="arrow">
+               <a href="#up"><img src="./assets/images/arrow.png" alt=""></a>
             </div>
-            <div class="footer-bottom">
+            <div class="copyR">
                 &copy; Mindify 2020
+            </div>
+            <div class="links">
+                <span class="social">
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                </span>
             </div>
         </div>
     </footer>
@@ -346,8 +303,9 @@
 
     <script src="./assets/js/header.js"></script>
     <script src="./assets/js/login.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/signIn.js"></script>
+    <script src="./assets/js/call.js"></script>
 </body>
 
 

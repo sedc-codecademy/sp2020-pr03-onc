@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style/contact.css">
+</head>
+
+<body>
+    <div class="background">
+
+        <!-- Navigation Bar -->
+        <header id="head">
+            <div class="logo">
+                <h1><a href="./index.html">Mindify</a></h1>
+            </div>
+            <nav id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="./index.html#dropDown">FAQ</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Join Mindify</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><button class="login" id="logB">Login</button></li>
+                    <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Login PopUp -->
+        <div class="popUpLogin">
+            <div class="loginContent">
+                <div class="close">+</div>
+                <img src="./assets/images/user-login.png" alt="">
+                <form action="index.html" method="">
+                    <input type="text" placeholder="E-mail">
+                    <input type="password" placeholder="Password">
+                    <a href="">
+                        <p class="forgot">Forgot your password?</p>
+                    </a>
+                    <button type="submit" class="log">Sign in</button>
+                    <button type="submit" class="reg">Sign up</button>
+                </form>
+            </div>
+        </div>
+
+        <main class="mainContainer">
+
+            <!-- Contact Us Text -->
+            <div class="contactContainer">
+                <h1 class="contactUs">Contact Us</h1>
+                <h2>We are always ready to serve you!</h2>
+
+                <div class="contactInfo">
+                    <p> 283 N. Wolfe Rd, <br> Sunnyvale, CA 97565</p>
+                    <a class="contactMail" href="mailto:contact@mindify.com">contact@mindify.com</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="formContainer">
+
+                <div class="error"></div> <!-- Error / Success message goes here -->
+
+                <form action="" method="POST" onsubmit="return false" id="contactForm">
+                    <div>
+                        <input class="formStyle fullName" type="text" name="fullName" placeholder="Full Name">
+                    </div>
+                    <div class="formBox">
+                        <input class="formStyle email" type="email" name="email" placeholder="Email"><br>
+                    </div>
+                    <div class="formBox">
+                        <input class="formStyle subject" type="text" name="subject"
+                            placeholder="Subject of this message"><br>
+                    </div>
+                    <div>
+                        <textarea class="formStyle message" name="message" cols="30" rows="10"
+                            placeholder="Your Message"></textarea><br>
+                    </div>
+                    <button class="submitBtn" type="submit">Send</button>
+                </form>
+
+            </div>
+
+        </main>
+
+        <!-- SOS -->
+        <div class="sos">
+            <p class="sosTxt">
+                If you are in a crisis or any other person may be in danger - don't use this site. <br>
+                <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/contactFormValidation.js"></script>
+</body>
+
+</html>

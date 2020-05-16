@@ -8,8 +8,7 @@ window.addEventListener('scroll', function () {
         header.classList.add('headerHe');
         login.classList.add('loginScroll');
     }
-    else 
-    {
+    else {
         logoImg.innerHTML = `<h1>Mindify</h1>`;
         header.classList.remove('headerHe');
         login.classList.remove('loginScroll');
@@ -17,6 +16,6 @@ window.addEventListener('scroll', function () {
 })
 
 //ToDo
-document.getElementById('get-started-btn').addEventListener('click', ()=> {
+document.getElementById('get-started-btn').addEventListener('click', () => {
     window.location.href = './getStarted.html';
 });

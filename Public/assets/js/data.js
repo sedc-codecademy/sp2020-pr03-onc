@@ -62,9 +62,9 @@ const testimonialsData = [
 
 ];
 
-
+let isLoginSelected = true;
 //Users exapmle for login
-const users = [
+let users = [
     {  
         id: 1,
         role: 'counselor',
