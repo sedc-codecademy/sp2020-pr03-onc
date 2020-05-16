@@ -4,7 +4,7 @@ const dataQandA = [
         id: 1,
         type:"radio",
         question: 'What type of counseling you are looking for?',
-        answers: ['Individual counseling(for myself)', 'Individual counseling(for myself)', 'Teenage counseling (for my child)']
+        answers: ['Individual counseling(for myself)', 'Couples (for me and my partner)', 'Teenage counseling (for my child)']
     },
 
     {
@@ -31,40 +31,40 @@ const dataQandA = [
 const testimonialsData = [
     {
         id: 1,
-        img:'',
+        img:'/bob.jpg',
         from: 'Bob Bobsy',
-        job: 'CEO in all IT branches.',
-        testimonial: 'I was very crazy and after using Mindify now i am sexy and everyone know it! Thank you Mindify.'
+        job: 'CEO in BobSoft',
+        testimonial: 'I was very crazy but now i teach coding. Thank you Mindify.'
     },
 
     {
         id: 2,
-        img:'',
+        img:'/download.jpg',
         from: 'Bil Bilov',
-        job: 'CEO Biljbilj Center',
-        testimonial: 'I hated birds, not anymore. Thank you Mindify.'
+        job: 'Writer',
+        testimonial: 'The sea is deep, very deep. Thank you Mindify.'
     },
 
     {
         id: 3,
-        img:'',
-        from: 'Bal Balob',
-        job: 'CEO baloontown.',
-        testimonial: 'I loved my couch now i love baloons! Thank you Mindify.'
+        img:'/will.jpg',
+        from: 'Frank the Tank',
+        job: 'Rodeo rider',
+        testimonial: 'I love you all. Thank you Mindify.'
     },
     {
         id: 4,
-        img:'',
+        img:'/srbo.jpg',
         from: 'Babush',
-        job: 'Expert in all life areas.',
-        testimonial: 'If it wasnt for me and my expertise, nothing! Say thank you Mindify and go buy me a beer.'
+        job: 'Expert in all life areas',
+        testimonial: 'My Yugo is faster then ferrari. Thank you Mindify!'
     },
 
 ];
 
-
+let isLoginSelected = true;
 //Users exapmle for login
-const users = [
+let users = [
     {  
         id: 1,
         role: 'counselor',
