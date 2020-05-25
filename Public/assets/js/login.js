@@ -33,7 +33,7 @@ function AuthData(email, password) {
 
 // Validations
 let emptyInputs = (email, password) => {
-    if (email === '' && password === '') {
+    if (email === '' || password === '') {
         return true;
     }
     return false;
@@ -55,8 +55,6 @@ let checkEmail = (loginUser) => {
     }
     return false;
 }
-
-
 
 // Event
 signIn.addEventListener('click', () => {
@@ -81,5 +79,13 @@ signIn.addEventListener('click', () => {
     inpPass.value = '';
 });
 
+
+// (function getStartedButton() {
+//     signUp.addEventListener('click', () => {
+//         localStorage.removeItem('initCounter');
+//         localStorage.setItem('userQA', JSON.stringify([]))
+//         window.location.href = './getStarted.html';
+//     });
+// })();
 
 

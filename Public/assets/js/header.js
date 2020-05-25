@@ -1,5 +1,5 @@
 window.addEventListener('scroll', function () {
-    let logoImg = document.querySelector('.logo h1 a');
+    let logoImg = document.querySelector('.logo h1');
     let header = document.querySelector('#head');
     let login = document.querySelector('#logB');
 
@@ -14,8 +14,3 @@ window.addEventListener('scroll', function () {
         login.classList.remove('loginScroll');
     }
 })
-
-//ToDo
-document.getElementById('get-started-btn').addEventListener('click', () => {
-    window.location.href = './getStarted.html';
-});
