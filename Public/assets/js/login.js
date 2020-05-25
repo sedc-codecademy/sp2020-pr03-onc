@@ -33,7 +33,7 @@ function AuthData(email, password) {
 
 // Validations
 let emptyInputs = (email, password) => {
-    if (email === '' && password === '') {
+    if (email === '' || password === '') {
         return true;
     }
     return false;
