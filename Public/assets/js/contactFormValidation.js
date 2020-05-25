@@ -1,4 +1,5 @@
 // Input Variables
+const form = document.getElementById('contactForm');
 const fullName = document.querySelector('.fullName');
 const email = document.querySelector('.email');
 const subject = document.querySelector('.subject');
@@ -63,6 +64,7 @@ const sendEmail = () => {
         if (validateContactForm()) {
             errorMsg.style.background = "#8bc34a73";
             errorMsg.innerHTML = 'Your message was sent successfully!';
+            form.reset();
         } else {
             errorMsg.style.background = "rgba(240, 128, 128, 0.705)";
         }
@@ -70,3 +72,14 @@ const sendEmail = () => {
 }
 
 sendEmail();
+
+//Adding event listiener on all get started buttons
+(function getStartedButtons(){
+    Array.from(document.querySelectorAll('.register')).forEach(element => {
+        element.addEventListener('click', () => {
+            localStorage.removeItem('initCounter');
+            localStorage.setItem('userQA', JSON.stringify([]))
+            window.location.href = './getStarted.html';
+        });
+    });
+})();
