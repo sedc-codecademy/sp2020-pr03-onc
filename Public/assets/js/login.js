@@ -33,7 +33,7 @@ function AuthData(email, password) {
 
 // Validations
 let emptyInputs = (email, password) => {
-    if (email === '' && password === '') {
+    if (email === '' || password === '') {
         return true;
     }
     return false;
@@ -69,7 +69,7 @@ signIn.addEventListener('click', () => {
         alertI.innerHTML = '<h4>Please enter the fields.</h4>';
     } else if (dataV(loginUser)) {
         alertI.style.display = 'none';
-        window.location = 'userPage.html';
+        window.location.href = './userPage.html';
     } else {
         isLoginSelected = false;
         alertI.style.display = 'block';
