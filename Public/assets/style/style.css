@@ -24,14 +24,6 @@ body {
     background-attachment: fixed;
 }
 
-h1, li, a, button {
-    font-weight: 500;
-    color: #000;
-    text-decoration: none;
-}
-
-
-
 .center {
     align-content: center;
     text-align: center;

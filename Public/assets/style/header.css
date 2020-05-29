@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Butler;
+    src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
 header {
     top: 0px;
     width: 100%;
@@ -22,7 +29,12 @@ header {
 
 /* /--------------------- */
 
-
+h1, li, a, button {
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    font-family: Butler;
+}
 
 .logo {
     margin-right: auto;
