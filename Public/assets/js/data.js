@@ -35,6 +35,7 @@ const testimonialsData = [
         from: 'Bob Bobsy',
         job: 'CEO in BobSoft',
         testimonial: 'I was very crazy but now i teach coding. Thank you Mindify.'
+        //user ID i za koj doktor e
     },
 
     {
@@ -63,42 +64,70 @@ const testimonialsData = [
 ];
 
 let isLoginSelected = true;
-//Users exapmle for login
+
+
+//Users exapmles
 let users = [
     {  
         id: 1,
         role: 'counselor',
         email: 'Bob@Bobsy.com',
-        password: 'sdfsdffd5674&'
+        password: 'sdfsdffd5674&',
+        active: true,
+        relation: null
     },
 
     {
         id: 2,
         role: 'user',
         email: 'Bil@Bilov.com',
-        password: 'sdfsdf458V'
+        password: 'sdfsdf458V',
+        active: true,
+        relation: null //treba da bide ID dokotorot sto ke mu bide dodelen ako se menuvaat niza ke treba so ont  vo nejze so Id-nja
+        
     },
 
     {
         id: 3,
         role: 'user',
         email: 'Jon@Jonov.com',
-        password: 'ksjd6$f'
+        password: 'ksjd6$f',
+        active: true
     },
     {
         id: 4,
         role: 'counselor',
         email: 'buck@Rogers.com',
-        password: 'asdasd5$'
+        password: 'asdasd5$',
+        active: true
     },
 
     {
         id: 5,
         role: 'counselor',
         email: 'brk@brk.com',
-        password: 'asdasd56$5'
+        password: 'asdasd56$5',
+        active: true
+    },
+
+    {
+        id: 6,
+        role: 'counselor',
+        email: 'bom@bom.com',
+        password: '12345$%',
+        active: false
+    },
+
+    {
+        id: 7,
+        role: 'user',
+        email: 'pow@pow.com',
+        password: 'asdf23',
+        active: false
     }
 ];
+
+let cities = ['skopje', 'valandovo', 'vinica']
 
 
 

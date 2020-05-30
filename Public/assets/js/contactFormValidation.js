@@ -25,6 +25,7 @@ const validateName = fullName => {
     const nameRegex = /^[a-z ,.'-]+$/i;
     fullName.value.match(nameRegex) ? helper = true : helper = false;
     errorMsg.innerHTML = 'Please enter a valid name.';
+    console.log(errorMsg)
     return helper
 };
 
@@ -33,6 +34,8 @@ const validateEmail = email => {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     email.value.match(emailRegex) ? helper = true : helper = false;
     errorMsg.innerHTML = 'Please enter a valid Email.';
+    console.log(errorMsg)
+
     return helper
 }
 
@@ -40,6 +43,8 @@ const validateSubject = subject => {
     let helper = false;
     subject.value.length < 50 ? helper = true : helper = false;
     errorMsg.innerHTML = 'Subject must be less than 50 characters.';
+    console.log(errorMsg)
+
     return helper
 }
 
@@ -47,6 +52,8 @@ const validateMessage = message => {
     let helper = false;
     message.value.length > 50 ? helper = true : helper = false;
     errorMsg.innerHTML = 'Message must contain at least 50 characters.';
+    console.log(errorMsg.innerText)
+
     return helper
 }
 

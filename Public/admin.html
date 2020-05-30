@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link rel="stylesheet" href="./assets/style/admin.css" type="text/css">
+</head>
+
+<body>
+
+  <div class="body-continer container-fluid">
+
+    <header>
+      <h4>Welcome (Admin name)</h4>
+      <button id="log-out">Logout</button>
+    </header>
+
+    <div class="main-content">
+
+      <div class="sidebar-wrraper">
+        <!-- <img src="" alt="">  midify logo -->
+        <ul class="sidebar-nav">
+          <li><a href="#">Add Counselor</a></li>
+          <li><a href="#">Add Question</a></li>
+          <li><a href="#">All Users</a></li>
+          <li><a href="#">Questionnaire </a></li>
+          <li><a href="#">User reviews</a></li>
+        </ul>
+      </div>
+
+      <br>
+
+      <section class="new-content-container  ">
+        <article class="new-content">
+          <h3 id="new-counselor-header">Add counselor</h3>
+          <form>
+            <label for="name"><input type="text" id="name" class="inputs" name="name" placeholder="Enter name"></label>
+            <label for="last-name"><input type="text" id="last-name" class="inputs" name="last-name"
+                placeholder="Enter last name"></label>
+            <label for="email"><input type="email" id="email" class="inputs" name="E-mail"
+                placeholder="Enter E-mail"></label>
+            <div class="counselor-btns">
+              <button>Generate password</button>
+              <button type="submit" id="submit-new-counselor"> Submit </button>
+            </div>
+          </form>
+        </article>
+        <article class="new-content add-quesstion">
+          <h3 id="edit-header">Add question</h3>
+          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs"></label>
+          <label for="answers"><input type="number" min="0" placeholder="Number of answers" id="answers"
+              class="inputs"></label>
+          <button>Submit</button>
+        </article>
+      </section>
+
+      <br>
+
+      <section class="users-container">
+        <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
+          <h3>Users section</h3>
+          <div class="btn-group mr-2 " role="group" aria-label="First group">
+            <button class="btn btn-secondary users-btn">Active</button>
+            <button class="btn btn-secondary users-btn">Inactive</button>
+            <button class="btn btn-secondary users-btn">Counselors</button>
+            <button class="btn btn-secondary users-btn">Patiens</button>
+          </div>
+        </div>
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Active</th>
+              <th scope="col">Settings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Markovic</td>
+              <td>Counselor</td>
+              <td>marj@marj.com</td>
+              <td>&#10004</td>
+              <td>
+                <button>Edit</button>
+                <button>Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Markovic</td>
+              <td>Counselor</td>
+              <td>marj@marj.com</td>
+              <td>&#10006</td>
+              <td>
+                <button>Edit</button>
+                <button>Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <br>
+
+      <section class="questionnere-section">
+        <h3>Questionnaire section</h3>
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Question</th>
+              <th scope="col">Response options</th>
+              <th scope="col">Settings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>How are yoy</td>
+              <td>
+                <ul>
+                  <li>Individual counseling(for myself)</li>
+                  <li>Couples (for me and my partner)</li>
+                  <li>Couples (for me and my partner)</li>
+                  <li>Teenage counseling (for my child)</li>
+                </ul>
+              </td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <br>
+
+
+      <section class="testemonilas-section">
+        <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
+          <h3>Testemonials section</h3>
+          <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button class="btn btn-secondary users-btn">Approved</button>
+            <button class="btn btn-secondary users-btn">Disapproved</button>
+          </div>
+        </div>
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">From</th>
+              <th scope="col">For</th>
+              <th scope="col">Date</th>
+              <th scope="col">Status</th>
+              <th scope="col">testemonial</th>
+              <th scope="col">Settings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Patient name or nick name</td>
+              <td>Counsler name</td>
+              <td>11.11.2015(data)</td>
+              <td>Aproved/Not Approved</td>
+              <td>testemonial text</td>
+              <td>
+                <button>Aprrove</button>
+                <button>Disapprove</button>
+              </td>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/validations.js"></script>
+  <script src="./assets/js/admin.js"></script>
+</body>
+
+</html>
