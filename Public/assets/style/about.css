@@ -190,6 +190,11 @@ h1 > a {
     margin-bottom: -2px;
 }
 
+.counselorsTxt {
+    font-family: Lato;
+    font-size: 1.4vw;
+}
+
 .myCol {
     max-width: 27%;
     margin-top: 3%;
@@ -240,7 +245,8 @@ h1 > a {
 }
 
 .carousel-caption > p {
-    margin-bottom: 20%;
+    margin-bottom: 15%;
+    color: #5a5a5a;
     font-size: 1.4vw;
 }
 
