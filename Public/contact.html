@@ -9,27 +9,27 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/style/contact.css">
     <link rel="stylesheet" href="./assets/style/header.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style/contact.css">
     
 </head>
 
 <body>
-    <div class="background">
+    <div>
 
         <!-- Navigation Bar -->
-        <header id="head">
+        <header id="head" class="headerHe">
             <div class="logo">
-                <a href="./index.html">  <img src="assets/images/Logo.png" alt="logo"> </a>
+              <a href="./index.html">  <img src="assets/images/Logo.png" alt="logo"> </a>
             </div>
             <nav id="mainNav">
                 <ul class="nav-links">
                     <li><a href="./about.html">About</a></li>
-                    <li><a href="#dropDown">FAQ</a></li>
+                    <li><a href="./index.html#dropDown">FAQ</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="./counselorJobs.html">Couneslor Jobs</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><button class="login" id="logB">Login</button></li>
+                    <li><button class="login loginScroll" id="logB">Login</button></li>
                     <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
                 </ul>
             </nav>
@@ -71,7 +71,7 @@
 
                 <div class="error"></div> <!-- Error / Success message goes here -->
 
-                <form action="" method="POST" onsubmit="return false" id="contactForm">
+                <form action="" method="POST" onsubmit="return false" id="contactForm" name="contactForm">
                     <div>
                         <input class="formStyle fullName" type="text" name="fullName" placeholder="Full Name">
                     </div>
@@ -104,11 +104,11 @@
     </div>
 
     
-    <script src="./assets/js/header.js"></script>
+    <!-- <script src="./assets/js/header.js"></script> -->
     <script src="./assets/js/login.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/data.js"></script>
-    <script src="./assets/js/contactFormValidation.js"></script>
+    <script src="./assets/js/formValidations.js"></script>
 </body>
 
 </html>
