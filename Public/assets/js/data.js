@@ -100,7 +100,4 @@ let users = [
     }
 ];
 
-
-
-
-
+let cities = ["Berovo", "Bitola", "Debar", "Delchevo", "Demir Hisar", "Gevgelija", "Gostivar", "Kavadarci", "Kichevo", "Kochani", "Kratovo", "Kriva Palanka", "Krushevo", "Kumanovo", "Makedoski Brod", "Makedonska Kamenica", "Negotino", "Ohrid", "Prilep", "Probishtip", "Radovish", "Resen", "Shtip", "Skopje", "Struga", "Strumica", "Sveti Nikole", "Tetovo", "Valandovo", "Veles", "Vinica"]

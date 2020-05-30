@@ -115,7 +115,7 @@ form {
     background-color: #ebfff5;
 }
 
-#form-alert {
+#error-message {
     width: 70%;
     position: relative;
     bottom: 10px;
