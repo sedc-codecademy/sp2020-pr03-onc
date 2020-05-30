@@ -33,7 +33,7 @@ function AuthData(email, password) {
 
 // Validations
 let emptyInputs = (email, password) => {
-    if (email === '' && password === '') {
+    if (email === '' || password === '') {
         return true;
     }
     return false;
@@ -56,8 +56,6 @@ let checkEmail = (loginUser) => {
     return false;
 }
 
-
-
 // Event
 signIn.addEventListener('click', () => {
     let email = inpText.value;
@@ -71,7 +69,7 @@ signIn.addEventListener('click', () => {
         alertI.innerHTML = '<h4>Please enter the fields.</h4>';
     } else if (dataV(loginUser)) {
         alertI.style.display = 'none';
-        window.location = 'userPage.html';
+        window.location.href = './userPage.html';
     } else {
         isLoginSelected = false;
         alertI.style.display = 'block';
@@ -81,5 +79,13 @@ signIn.addEventListener('click', () => {
     inpPass.value = '';
 });
 
+
+// (function getStartedButton() {
+//     signUp.addEventListener('click', () => {
+//         localStorage.removeItem('initCounter');
+//         localStorage.setItem('userQA', JSON.stringify([]))
+//         window.location.href = './getStarted.html';
+//     });
+// })();
 
 
