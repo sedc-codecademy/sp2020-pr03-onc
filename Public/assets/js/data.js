@@ -100,7 +100,55 @@ let users = [
     }
 ];
 
+let cities = ["Berovo", "Bitola", "Debar", "Delchevo", "Demir Hisar", "Gevgelija", "Gostivar", "Kavadarci", "Kichevo", "Kochani", "Kratovo", "Kriva Palanka", "Krushevo", "Kumanovo", "Makedoski Brod", "Makedonska Kamenica", "Negotino", "Ohrid", "Prilep", "Probishtip", "Radovish", "Resen", "Shtip", "Skopje", "Struga", "Strumica", "Sveti Nikole", "Tetovo", "Valandovo", "Veles", "Vinica"]
 
-
-
-
+const reviewsData = [
+    {
+        reviewID: 1,
+        date: "30.05.2020",
+        counselor: "John Doe",
+        counselorImg: "/4.png",
+        user: "Bojan Stojmenovski",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo scelerisque, pretium velit ut, ullamcorper tortor."
+    },
+    {
+        reviewID: 2,
+        date: "30.05.2020",
+        counselor: "Hana Montana",
+        counselorImg: "/6.png",
+        user: "Bojan Stojmenovski",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo scelerisque, pretium velit ut, ullamcorper tortor."
+    },
+    {
+        reviewID: 3,
+        date: "30.05.2020",
+        counselor: "Jack Black",
+        counselorImg: "/3.png",
+        user: "Bojan Stojmenovski",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo scelerisque, pretium velit ut, ullamcorper tortor."
+    },
+    {
+        reviewID: 4,
+        date: "30.05.2020",
+        counselor: "Serena Williams",
+        counselorImg: "/1.png",
+        user: "Bojan Stojmenovski",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo scelerisque, pretium velit ut, ullamcorper tortor."
+    },
+    {
+        reviewID: 5,
+        date: "30.05.2020",
+        counselor: "Micky Mouse",
+        counselorImg: "/2.png",
+        user: "Bojan Stojmenovski",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo scelerisque, pretium velit ut, ullamcorper tortor."
+    },
+    {
+        reviewID: 6,
+        date: "30.05.2020",
+        counselor: "Ana Banana",
+        counselorImg: "/5.png",
+        user: "Bojan Stojmenovski",
+        reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo scelerisque, pretium velit ut, ullamcorper tortor."
+    },
+]

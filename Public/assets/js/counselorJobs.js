@@ -1,21 +1,27 @@
 //SELECTORS
-let formAlert = document.querySelector("#form-alert");
-let nameInput = document.querySelector("#name-input");
-let emailInput = document.querySelector("#email-input");
-let cityInput = document.querySelector("#select-city");
-let submitBtn = document.querySelector("#submit-btn");
+const form = document.getElementsByTagName("form");
+const errorMsg = document.querySelector("#error-message");
+const nameInput = document.querySelector("#name-input");
+const emailInput = document.querySelector("#email-input");
+const cityInput = document.querySelector("#select-city");
+const submitBtn = document.querySelector("#submit-btn");
+const userInputs = [nameInput, emailInput, cityInput];
 
-//FUNCTIONS
+//Hide error alert message
 function hideAlerts() {
-    formAlert.style.display = "none";
+    errorMsg.style.display = "none";
 }
 hideAlerts();
 
-function emptyFields() {
-    nameInput.value === "";
-    emailInput.value === "";
-    cityInput.value === "";
+//Select city input, rendering all the options
+const selectCity = (arrayCities) => {
+    cityInput.innerHTML = "";
+    cityInput.innerHTML += `<option value="">Select city</option>`;
+    arrayCities.forEach(city => {
+        cityInput.innerHTML += `<option value="${city}">${city}</option>`
+    })
 }
+selectCity(cities);
 
 function Counselor(name, email, city) {
     this.name = name;
@@ -24,11 +30,16 @@ function Counselor(name, email, city) {
 }
 
 //EVENTS
-submitBtn.addEventListener("click", function(){
-    if ( !nameInput.value || !emailInput.value || !cityInput.value ) {
-        emptyFields();
-        formAlert.style.display = "block";   
-    } else {
-        let counselor = new Counselor(nameInput.value, emailInput.value, cityInput.value)
-    }
-});
+const submitReview = () => {
+    submitBtn.addEventListener("click", function(){
+        if (validateJobForm()) {
+            errorMsg.style.background = '#8bc34a73';
+            errorMsg.innerText = 'Thank you for your interests. You will hear from us soon.'
+            let counselor = new Counselor(nameInput, emailInput, cityInput)
+            // counselors.push(counselor);
+        } else {
+            
+        }
+    });
+}
+submitReview();

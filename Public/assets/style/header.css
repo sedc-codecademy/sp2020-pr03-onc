@@ -41,9 +41,10 @@ h1, li, a, button {
 }
 
 .logo img {
-    width: 200px;
+    position: absolute;
+    padding-bottom: 10px;
     height: 80px;
-    padding-bottom: 20px;
+    top: 0;
 }
 
 .nav-links {
