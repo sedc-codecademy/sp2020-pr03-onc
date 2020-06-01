@@ -23,6 +23,17 @@ const selectCity = (arrayCities) => {
 }
 selectCity(cities);
 
+const validateCity = city => {
+    let helper = false;
+    if (city.value !== "") {
+        helper = true;
+    } else {
+        errorMsg.innerHTML = 'You must select a city.';
+    }
+    return helper
+}
+
+//Form object
 function Counselor(name, email, city) {
     this.name = name;
     this.emal = email;
@@ -30,16 +41,15 @@ function Counselor(name, email, city) {
 }
 
 //EVENTS
-const submitReview = () => {
-    submitBtn.addEventListener("click", function(){
-        if (validateJobForm()) {
-            errorMsg.style.background = '#8bc34a73';
-            errorMsg.innerText = 'Thank you for your interests. You will hear from us soon.'
-            let counselor = new Counselor(nameInput, emailInput, cityInput)
-            // counselors.push(counselor);
-        } else {
+// const submitReview = () => {
+//     submitBtn.addEventListener("click", function(){
+//         if (validateJobForm()) {
+//             errorMsg.innerText = 'Thank you for your interests. You will hear from us soon.'
+//             let counselor = new Counselor(nameInput, emailInput, cityInput)
+//             // counselors.push(counselor);
+//         } else {
             
-        }
-    });
-}
-submitReview();
+//         }
+//     });
+// }
+// submitReview();
