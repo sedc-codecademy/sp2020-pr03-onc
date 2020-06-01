@@ -26,10 +26,10 @@ const validateMail = (mail, errEl) => {
 };
 
 //Validate password
-const valiadatePassword = (pass, confirmation, errEl) => {
+const valiadatePassword = (input, confirmInput, errEl) => {
     let helper = false
     const passCheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-    pass.value.match(passCheck) && password.value === confirmation.value ? helper = true : helper = false;
+    input.value.match(passCheck) && input.value === confirmInput.value ? helper = true : helper = false;
     if (helper) {
         return helper
     } else {
@@ -37,13 +37,12 @@ const valiadatePassword = (pass, confirmation, errEl) => {
         errEl.style.background = "#F5EBEB";
         return helper
     }
-    
 };
 
 //Validate checked terms
-const valiadateTerms = (terms, errEl) => {
+const valiadateTerms = (checkInput, errEl) => {
     let helper = false
-    terms.checked ? helper = true : helper = false
+    checkInput.checked ? helper = true : helper = false
     if (helper) {
         return helper
     } else {
@@ -52,4 +51,32 @@ const valiadateTerms = (terms, errEl) => {
         return helper
     }
 };
+
+//Validate letters only
+const valiadateNameLname = (input, errEl) => {
+    let helper = false
+    const lettersCheck = /^[a-zA-Z]+$/;
+    input.value.match(lettersCheck) ? helper = true : helper = false;
+    if (helper) {
+        return helper
+    } else {
+        errEl.innerText = 'Invalid Name or Last namem only letters allowed.'
+        errEl.style.background = "#F5EBEB";
+        return helper
+    }
+};
+
+//Number bigger then zero
+ const validateGreaterNumThenZero = (input, errEl) => {
+    let helper = false;
+    parseInt(input.value) <= 0 ? helper = false : helper = true
+    if (helper) {
+        return helper
+    } else {
+        errEl.innerText = 'Please enter a number bigger then zero.'
+        errEl.style.background = "#F5EBEB";
+        return helper
+    }
+ };
+
 

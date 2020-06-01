@@ -18,6 +18,7 @@ const dataQandA = [
         id: 3,
         type:'dropdown',
         question: 'Select your age',
+        answers: null
     },
 
     {
@@ -31,45 +32,68 @@ const dataQandA = [
 const testimonialsData = [
     {
         id: 1,
-        img:'/bob.jpg',
-        from: 'Bob Bobsy',
-        job: 'CEO in BobSoft',
-        testimonial: 'I was very crazy but now i teach coding. Thank you Mindify.'
-        //user ID i za koj doktor e
+        // userId: 'usersId', //
+        img:'/bob.jpg',//Should be taken from the user profile or if there is no photo null to be send
+        user: 'Bob Bobsy',//User or should be a object with userName and user ID properties?
+        for: 'Ante Antovic',//Should be done on FE(user page) with dropdown dillema:should be a object with counselor and counselor ID?
+        date: 'RandomDate',//Should be generated on FE(user page) when user submit the testemonial
+        occupation: 'CEO in BobSoft',
+        testimonial: 'I was very crazy but now i teach coding. Thank you Mindify.',
+        status: true
     },
 
     {
         id: 2,
+        // userId: 'usersId', //
         img:'/download.jpg',
-        from: 'Bil Bilov',
-        job: 'Writer',
-        testimonial: 'The sea is deep, very deep. Thank you Mindify.'
+        user: 'Bil Bilov',
+        for: 'Maro Amrov',
+        date: 'RandomDate',
+        occupation: 'Writer',
+        testimonial: 'The sea is deep, very deep. Thank you Mindify.',
+        status: true
     },
 
     {
         id: 3,
         img:'/will.jpg',
-        from: 'Frank the Tank',
-        job: 'Rodeo rider',
-        testimonial: 'I love you all. Thank you Mindify.'
+        user: 'Frank the Tank',
+        for: 'Pile pilic',
+        date: 'RandomDate',
+        occupation: 'Rodeo rider',
+        testimonial: 'I love you all. Thank you Mindify.',
+        status: true
     },
     {
         id: 4,
         img:'/srbo.jpg',
-        from: 'Babush',
-        job: 'Expert in all life areas',
-        testimonial: 'My Yugo is faster then ferrari. Thank you Mindify!'
+        user: 'Babush',
+        for: 'Zoki Goran',
+        date: 'RandomDate',
+        occupation: 'Expert in all life areas',
+        testimonial: 'My Yugo is faster then ferrari. Thank you Mindify!',
+        status: false
+    },
+
+    {
+        id: 4,
+        img:'',
+        user: 'Jimi Jims',
+        for: 'Boki Borisov',
+        date: 'RandomDate',
+        occupation: 'Limar',
+        testimonial: 'Midifay is great. Thank you Mindify!',
+        status: true
     },
 
 ];
-
-let isLoginSelected = true;
-
 
 //Users exapmles
 let users = [
     {  
         id: 1,
+        name:'Bob',
+        lastName:'Bobsky',
         role: 'counselor',
         email: 'Bob@Bobsy.com',
         password: 'sdfsdffd5674&',
@@ -79,6 +103,8 @@ let users = [
 
     {
         id: 2,
+        name:'Bilkata',
+        lastName: null,
         role: 'user',
         email: 'Bil@Bilov.com',
         password: 'sdfsdf458V',
@@ -89,45 +115,60 @@ let users = [
 
     {
         id: 3,
+        name:'Penetrator',
+        lastName: null,
         role: 'user',
         email: 'Jon@Jonov.com',
         password: 'ksjd6$f',
-        active: true
+        active: true,
+        relation: null
     },
     {
         id: 4,
+        name:'Buck',
+        lastName:'Rogers',
         role: 'counselor',
         email: 'buck@Rogers.com',
         password: 'asdasd5$',
-        active: true
+        active: true,
+        relation: null
     },
 
     {
         id: 5,
+        name:'Bjork',
+        lastName:'Brkic',
         role: 'counselor',
         email: 'brk@brk.com',
         password: 'asdasd56$5',
-        active: true
+        active: false,
+        relation: null
     },
 
     {
         id: 6,
+        name:'Bamburito',
+        lastName:'Pekmez',
         role: 'counselor',
         email: 'bom@bom.com',
         password: '12345$%',
-        active: false
+        active: true,
+        relation: null
     },
 
     {
         id: 7,
+        name:'P55',
+        lastName: null,
         role: 'user',
         email: 'pow@pow.com',
         password: 'asdf23',
-        active: false
+        active: false,
+        relation: null
     }
 ];
 
-let cities = ['skopje', 'valandovo', 'vinica']
+
 
 
 

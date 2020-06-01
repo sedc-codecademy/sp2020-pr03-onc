@@ -79,7 +79,7 @@ header button:hover {
     padding-left: 15.5%;
     padding-right: 0.5%;
     padding-top: 1%;
-    margin-top: 2%;
+    /* margin-top: 2%; */
 }
 
 button {
@@ -88,6 +88,7 @@ button {
 
 section {
     padding: 2%;
+    margin-bottom: 1.5%;
     border:solid 1px black;
     box-shadow: 2px 2px 2px 2px rgb(138, 121, 95);
 }
@@ -142,11 +143,12 @@ article:first-child {
 /* USER SECTION */
 .users {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .users-btn {
     background-color: rgb(134, 125, 112);
+    font-size: small;
 }
 
 

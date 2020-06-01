@@ -10,10 +10,13 @@ const inputMsg = document.getElementById('input-msg');
 //User class
 class User {
     constructor(name, email, password, questionnarie) {
-        this.role = 'user'
         this.name = name
+        this.lastName = null
+        this.role = 'user'
         this.email = email
         this.password = password
+        this.active = true
+        this.relation = null
         this.questionnarie = questionnarie
     };
 };
@@ -31,6 +34,7 @@ const validateSignUp = () => {
 //Post user data
 const signIn = () => {
     document.getElementById('signIn-btn').addEventListener('click', () => {
+        event.preventDefault()
         if (validateSignUp()) {
             const user = new User(name.value, mail.value, password.value, JSON.parse(localStorage.getItem('userQA')));
             inputMsg.innerHTML = 'Welcome to Mindify.'
@@ -39,12 +43,9 @@ const signIn = () => {
             // localStorage.removeItem('userQA')
             // localStorage.removeItem('initCounter')
         }
-        event.preventDefault()
     });
 };
 signIn();
-
-
 
 
 

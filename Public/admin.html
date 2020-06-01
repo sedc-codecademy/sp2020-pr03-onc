@@ -14,141 +14,101 @@
 
   <div class="body-continer container-fluid">
 
-    <header>
+    <!-- <header>
       <h4>Welcome (Admin name)</h4>
       <button id="log-out">Logout</button>
-    </header>
+    </header> -->
 
     <div class="main-content">
 
       <div class="sidebar-wrraper">
         <!-- <img src="" alt="">  midify logo -->
+        <h5>Welcome Mr. Admin</h5>
         <ul class="sidebar-nav">
-          <li><a href="#">Add Counselor</a></li>
-          <li><a href="#">Add Question</a></li>
-          <li><a href="#">All Users</a></li>
-          <li><a href="#">Questionnaire </a></li>
-          <li><a href="#">User reviews</a></li>
+          <li><a href="#new-content-section">Add Counselor</a></li>
+          <li><a href="#new-content-section">Add Question</a></li>
+          <li><a href="#all-users-section">All Users</a></li>
+          <li><a href="#questionnere-section">Questionnaire </a></li>
+          <li><a href="#testemonials-section">User reviews</a></li>
+          <li><button> Logout</button></li>
         </ul>
       </div>
 
-      <br>
-
-      <section class="new-content-container  ">
+      <section class="new-content-container" id="new-content-section">
         <article class="new-content">
-          <h3 id="new-counselor-header">Add counselor</h3>
+          <h3>Add counselor</h3>
+          <p id="counselor-errMsg" class="inputs">Please fill the following form</p>
           <form>
-            <label for="name"><input type="text" id="name" class="inputs" name="name" placeholder="Enter name"></label>
-            <label for="last-name"><input type="text" id="last-name" class="inputs" name="last-name"
+            <label for="name"><input type="text" id="name" class="inputs counselor-inputs" name="name" placeholder="Enter name"></label>
+            <label for="last-name"><input type="text" id="last-name" class="inputs counselor-inputs " name="last-name"
                 placeholder="Enter last name"></label>
-            <label for="email"><input type="email" id="email" class="inputs" name="E-mail"
+            <label for="email"><input type="email" id="email" class="inputs counselor-inputs" name="E-mail"
                 placeholder="Enter E-mail"></label>
             <div class="counselor-btns">
-              <button>Generate password</button>
               <button type="submit" id="submit-new-counselor"> Submit </button>
             </div>
           </form>
         </article>
         <article class="new-content add-quesstion">
-          <h3 id="edit-header">Add question</h3>
-          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs"></label>
-          <label for="answers"><input type="number" min="0" placeholder="Number of answers" id="answers"
-              class="inputs"></label>
-          <button>Submit</button>
+          <h3 id="add-question-header">Add question</h3>
+          <p id="question-errMsg" class="inputs">Please fill the following form</p>
+          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
+          <label for="answers"><input type="number" min="0" placeholder="Number of answers" id="num-answers"
+              class="inputs question-inputs"></label>
+          <div id="add-answers">
+            <!-- predviden prostor za odgovori za novoto prasanje -->
+          </div>
+          <!-- <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
+          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
+          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
+          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
+          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label> -->
+          <button id="submit-new-question">Submit</button>
         </article>
       </section>
 
-      <br>
-
-      <section class="users-container">
+      <section class="users-container" id="all-users-section">
         <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
           <h3>Users section</h3>
+          <label for="search-user"><input type="text" id="search-user" class="inputs" name="search-user" placeholder="Search by name"></label>
           <div class="btn-group mr-2 " role="group" aria-label="First group">
+            <!-- <button class="btn btn-secondary users-btn">Filter A-Z</button> -->
             <button class="btn btn-secondary users-btn">Active</button>
             <button class="btn btn-secondary users-btn">Inactive</button>
-            <button class="btn btn-secondary users-btn">Counselors</button>
-            <button class="btn btn-secondary users-btn">Patiens</button>
+            <button class="btn btn-secondary users-btn">Counselor`s</button>
+            <button class="btn btn-secondary users-btn">Patient`s</button>
           </div>
         </div>
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Role</th>
-              <th scope="col">E-mail</th>
-              <th scope="col">Active</th>
-              <th scope="col">Settings</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Markovic</td>
-              <td>Counselor</td>
-              <td>marj@marj.com</td>
-              <td>&#10004</td>
-              <td>
-                <button>Edit</button>
-                <button>Remove</button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Markovic</td>
-              <td>Counselor</td>
-              <td>marj@marj.com</td>
-              <td>&#10006</td>
-              <td>
-                <button>Edit</button>
-                <button>Remove</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="users-element">
+        </div>
+        <!-- 
+          SHould be paginataion here and on every page bellow
+          <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav> -->
       </section>
 
-      <br>
-
-      <section class="questionnere-section">
+      <section class="questionnere-section" id="questionnere-section">
         <h3>Questionnaire section</h3>
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Question</th>
-              <th scope="col">Response options</th>
-              <th scope="col">Settings</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>How are yoy</td>
-              <td>
-                <ul>
-                  <li>Individual counseling(for myself)</li>
-                  <li>Couples (for me and my partner)</li>
-                  <li>Couples (for me and my partner)</li>
-                  <li>Teenage counseling (for my child)</li>
-                </ul>
-              </td>
-              <td>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="questionnere-element">
+        </div>
       </section>
 
-      <br>
-
-
-      <section class="testemonilas-section">
+      <section class="testemonilas-section" id="testemonials-section">
         <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
           <h3>Testemonials section</h3>
           <div class="btn-group mr-2" role="group" aria-label="First group">
@@ -156,32 +116,8 @@
             <button class="btn btn-secondary users-btn">Disapproved</button>
           </div>
         </div>
-        <table class="table">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">From</th>
-              <th scope="col">For</th>
-              <th scope="col">Date</th>
-              <th scope="col">Status</th>
-              <th scope="col">testemonial</th>
-              <th scope="col">Settings</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Patient name or nick name</td>
-              <td>Counsler name</td>
-              <td>11.11.2015(data)</td>
-              <td>Aproved/Not Approved</td>
-              <td>testemonial text</td>
-              <td>
-                <button>Aprrove</button>
-                <button>Disapprove</button>
-              </td>
-          </tbody>
-        </table>
+        <div id="testemonilas-element">
+        </div>
       </section>
 
     </div>
@@ -190,7 +126,12 @@
 
   <script src="./assets/js/data.js"></script>
   <script src="./assets/js/validations.js"></script>
-  <script src="./assets/js/admin.js"></script>
+  <script src="./assets/js/adminJS/edit-users.js"></script>
+  <script src="./assets/js/adminJS/edit-quetionnaire.js"></script>
+  <script src="./assets/js/adminJS/edit-testemonials.js"></script>
+  <script src="./assets/js/adminJS/addCounselor.js"></script>
+  <script src="./assets/js/adminJS/addQuestion.js"></script>
+  
 </body>
 
 </html>
