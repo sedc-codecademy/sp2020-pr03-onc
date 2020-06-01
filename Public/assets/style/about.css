@@ -112,17 +112,18 @@ h1 > a {
 .titleContainer {
     position: relative;
     text-align: center;
-    color: white;
+    color: white; 
 }
 
 .mainTitle {
     position: absolute;
-    top: 40%;
-    left: 37%;
-    font-family: Butler;
-    font-size: 5vw;
+    top: 47%;
+    left: 40%;
+    font-family: Lato;
+    font-size: 3vw;
     font-weight: 400;
     color: #fafaf0;
+    text-shadow: 2px 2px 8px rgba(146, 133, 116, 0.301);
 }
 
 .quote {
@@ -159,7 +160,7 @@ h1 > a {
 }
 
 .mainText > h2 {
-    font-family: Butler;
+    font-family: Lato;
     font-weight: 700;
     font-size: 2vw;
     position: absolute;
@@ -177,7 +178,7 @@ h1 > a {
 
 .counselors {
     font-size: 5vw;
-    font-family: Butler;
+    font-family: Lato;
     font-weight: 500;
     color: #707070;
     text-align: center;
@@ -233,7 +234,7 @@ h1 > a {
 }
 
 .carousel-caption > h5 {
-    font-family: Butler;
+    font-family: Lato;
     margin-bottom: 10%;
     font-size: 5vw;
 }
@@ -258,6 +259,7 @@ h1 > a {
 .sosLink {
     color: #e36139e7;
     font-weight: 600;
+    font-family: Lato;
 }
 
 .sosLink:hover {
