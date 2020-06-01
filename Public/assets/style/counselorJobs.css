@@ -22,7 +22,7 @@
 
 #main-title {
     position: relative;
-    bottom: 290px;
+    bottom: 210px;
     color: white;
     font-family: Butler;
     font-size: 60px;
@@ -115,7 +115,7 @@ form {
     background-color: #ebfff5;
 }
 
-#form-alert {
+#error-message {
     width: 70%;
     position: relative;
     bottom: 10px;
@@ -142,19 +142,20 @@ form {
 .inputs {
     width: 70%;
     margin-top: 30px;
-    padding: 10px;
+    padding: 20px 10px;
     border: solid 1px #dedede;
     border-radius: 0.3rem;
     font-family: Lato;
     font-size: 15px;
+    background-color: white;
 }
 
 .inputs::placeholder {
     color: black;
 }
 
-select {
-    margin-top: 30px;
+#select-city {
+    margin-top: 20px;
     padding: 10px;
     width: 70%;
     height: 40px;
