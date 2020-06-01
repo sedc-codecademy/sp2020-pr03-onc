@@ -9,8 +9,8 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="./assets/style/header.css">
+    <link rel="stylesheet" href="./assets/style/index.css">
 </head>
 
 <body>
@@ -34,22 +34,46 @@
         </header>
 
         <div class="center">
-            <h2>You earned your happiness.</h2>
+            <h2 class="center-text">You earned your happiness.</h2>
             <br />
-            <h4>Choose the type of counseling you need</h4>
+            <h4 class="center-text">Choose the type of counseling you need</h4>
             <br />
             <div class="centerB">
-                <div id="individual" class="types">
-                    <img src="./assets/images/individual.png" alt="person figure">
-                    <button id="individual-btn" class="type-buttons">Individual </br> (For myself)</button>
+                <div id="individual" class="couns-types">
+                    <div class="icon-div">
+                        <img src="./assets/images/individual.png" alt="woman icon" class="icons">
+                    </div>
+                    <div class="button-div">
+                        <div class="couns-type-text">
+                            <h4>Individual</h4>
+                            <p>(For myself)</p>
+                        </div>
+                        <button id="individual-btn" class="couns-type-buttons">Match with counselor</button>
+                    </div>
                 </div>
-                <div id="couple" class="types">
-                    <img src="./assets/images/couple.png" alt="couple figure">
-                    <button id="couples-btn" class="type-buttons">Couples </br> (For me and my love)</button>
+                <div id="couple" class="couns-types">
+                    <div class="icon-div">
+                        <img src="./assets/images/couple.png" alt="couple icon" class="icons">
+                    </div>
+                    <div class="button-div">
+                        <div class="couns-type-text">
+                            <h4>Couple</h4>
+                            <p>(Me and my partner)</p>
+                        </div>
+                        <button id="couples-btn" class="couns-type-buttons">Match with counselor</button>
+                    </div>
                 </div>
-                <div id="teen" class="types">
-                    <img src="./assets/images/teen.png" alt="teen figure">
-                    <button id="teen-btn" class="type-buttons">Teen </br> (For my child)</button>
+                <div id="teen" class="couns-types">
+                    <div class="icon-div">
+                        <img src="./assets/images/teen.png" alt="family icon" class="icons">
+                    </div>
+                    <div class="button-div"> 
+                        <div class="couns-type-text">
+                            <h4>Child/Teen</h4>
+                            <p>(For my child / For me)</p>
+                        </div>
+                        <button id="teen-btn" class="couns-type-buttons">Match with counselor</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,21 +97,23 @@
         </div>
     </div>
 
+    <!-- Second part -->
     <div class="second">
-        <h2>We want to help with counseling service.</h2>
+        <h2>We are here to help and offer our counseling service.</h2>
         <br />
-        <h2>100% ONLINE</h2>
-        <br />
-        <ul>
-            <li>Messages, chat, phone, video sessions.</li>
-            <li>Licensed therapists ready to help!</li>
-            <li>People instantly get help.</li>
-        </ul>
-        <a href="#"><button>Feel free to help yourself</button></a>
+        <h2 id="online100">100% ONLINE</h2>
+        <img src="./assets/images/puzzle_people.png" alt="people making a puzzle">
+    </div>
+
+    <!-- Third Part -->
+    <div class="third">
+        <p id="third-p1">It's your choice how you want to communicate: <br>
+        messages, chat, call, video sessions.</p>
+        <img src="./assets/images/chat.png" alt="chat">
+        <p id="third-p2">Our licensed therapist are ready to help anythime from anywhere</p>
     </div>
 
     <!-- Frequently Asked Questions -->
-
     <div class="faqContainer" id="dropDown">
         <h2 class="faq">Frequently Asked Questions</h2>
         <div class="accordion" id="accordion">
