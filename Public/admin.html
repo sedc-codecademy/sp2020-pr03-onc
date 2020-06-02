@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>admin</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link rel="stylesheet" href="./assets/style/admin.css" type="text/css">
 </head>
 
@@ -39,40 +38,50 @@
           <h3>Add counselor</h3>
           <p id="counselor-errMsg" class="inputs">Please fill the following form</p>
           <form>
-            <label for="name"><input type="text" id="name" class="inputs counselor-inputs" name="name" placeholder="Enter name"></label>
-            <label for="last-name"><input type="text" id="last-name" class="inputs counselor-inputs " name="last-name"
-                placeholder="Enter last name"></label>
-            <label for="email"><input type="email" id="email" class="inputs counselor-inputs" name="E-mail"
-                placeholder="Enter E-mail"></label>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control counselor-inputs" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" class="form-control counselor-inputs" id="last-name" placeholder="Enter last name">
+            </div>
+            <div class="form-group">
+              <label for="email">Last name</label>
+              <input type="email" class="form-control counselor-inputs" id="email" placeholder="Enter E-mail">
+            </div>
             <div class="counselor-btns">
-              <button type="submit" id="submit-new-counselor"> Submit </button>
+              <button class="btn btn-secondary users-btn" id="submit-new-counselor">Submit</button>
             </div>
           </form>
         </article>
         <article class="new-content add-quesstion">
           <h3 id="add-question-header">Add question</h3>
           <p id="question-errMsg" class="inputs">Please fill the following form</p>
-          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
-          <label for="answers"><input type="number" min="0" placeholder="Number of answers" id="num-answers"
-              class="inputs question-inputs"></label>
-          <div id="add-answers">
-            <!-- predviden prostor za odgovori za novoto prasanje -->
+          <form>
+            <div class="form-group">
+              <label for="question">Question</label>
+              <input type="text" class="form-control question-inputs" id="question" placeholder="Enter question">
+            </div>
+            <div class="form-group">
+              <label for="answer-option">Answer</label>
+              <input type="text" class="form-control question-inputs" id="answer-option" placeholder="Add Answer">
+            </div>
+            <div id="new-QandA-area"></div>
+          </form>
+          <div class="btn-group mr-2 " role="group" aria-label="First group">
+            <button class="btn btn-secondary users-btn" id="reset-new-question">Reset</button>
+            <button class="btn btn-secondary users-btn" id="submit-new-question">Submit</button>
           </div>
-          <!-- <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
-          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
-          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
-          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label>
-          <label for="question"><input type="text" placeholder="Enter question" id="question" class="inputs question-inputs"></label> -->
-          <button id="submit-new-question">Submit</button>
         </article>
       </section>
 
       <section class="users-container" id="all-users-section">
         <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
+          <label for="search-user"><input type="text" id="search-user" class="inputs" name="search-user"
+              placeholder="Search by name"></label>
           <h3>Users section</h3>
-          <label for="search-user"><input type="text" id="search-user" class="inputs" name="search-user" placeholder="Search by name"></label>
           <div class="btn-group mr-2 " role="group" aria-label="First group">
-            <!-- <button class="btn btn-secondary users-btn">Filter A-Z</button> -->
             <button class="btn btn-secondary users-btn">Active</button>
             <button class="btn btn-secondary users-btn">Inactive</button>
             <button class="btn btn-secondary users-btn">Counselor`s</button>
@@ -81,25 +90,6 @@
         </div>
         <div id="users-element">
         </div>
-        <!-- 
-          SHould be paginataion here and on every page bellow
-          <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav> -->
       </section>
 
       <section class="questionnere-section" id="questionnere-section">
@@ -110,6 +100,8 @@
 
       <section class="testemonilas-section" id="testemonials-section">
         <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
+          <label for="search-review"><input type="text" id="search-review" class="inputs" name="search-review"
+              placeholder="Search by name"></label>
           <h3>Testemonials section</h3>
           <div class="btn-group mr-2" role="group" aria-label="First group">
             <button class="btn btn-secondary users-btn">Approved</button>
@@ -125,13 +117,14 @@
   </div>
 
   <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/call.js"></script>
   <script src="./assets/js/validations.js"></script>
   <script src="./assets/js/adminJS/edit-users.js"></script>
   <script src="./assets/js/adminJS/edit-quetionnaire.js"></script>
   <script src="./assets/js/adminJS/edit-testemonials.js"></script>
   <script src="./assets/js/adminJS/addCounselor.js"></script>
   <script src="./assets/js/adminJS/addQuestion.js"></script>
-  
+
 </body>
 
 </html>

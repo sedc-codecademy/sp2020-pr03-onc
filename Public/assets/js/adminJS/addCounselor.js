@@ -60,7 +60,7 @@ function validateCounselorInputs() {
             console.log(newCounselor)
             //Here should be some call fn to API to submit the the new counselor or something else perhaps? 
             counselorErrMsg.innerText = 'You have succsefully added new Counselor.';
-            counselorErrMsg.style.backgroundColor = '#deebb9';
+            counselorErrMsg.style.backgroundColor = '#bedaed';
         }
     });
 })();

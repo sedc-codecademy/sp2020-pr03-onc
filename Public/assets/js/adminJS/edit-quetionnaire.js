@@ -16,6 +16,7 @@ function displayAnswers(dataArray) {
     return helper
 };
 
+
 function renderQuestionnere(data, el) {
     data.innerHTML = '';
     el.innerHTML = ``;

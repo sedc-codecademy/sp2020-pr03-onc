@@ -1,32 +1,85 @@
 //Add Quenselor Variables
-const addQuestionBtn = document.querySelector('#submit-new-question');
+const submitQuestionBtn = document.querySelector('#submit-new-question');
 const questionErrMsg = document.querySelector('#question-errMsg');
 const questionInputs = Array.from(document.querySelectorAll('.question-inputs'));
 const questionInput = document.querySelector('#question');
-const answerNumInput = document.querySelector('#num-answers');
+const resetBtn = document.querySelector('#reset-new-question');
+const answerOpt = document.querySelector('#answer-option');
+let newQandAarea = document.querySelector('#new-QandA-area');
+let answers = [];
 
-//Validate question inputs
-function validateQuestionInputs() {
-    let helper = false
-    if (validateEmptyInputs(questionInputs, questionErrMsg) &&
-        validateGreaterNumThenZero(answerNumInput, questionErrMsg)) {
-        helper = true
+class NewQandA {
+    constructor(question, answers) {
+        this.type = "radio",
+            this.question = question,
+            this.answers = answers
     }
-    return helper
 };
 
-//Event handling and submiting data
-(function () {
-addQuestionBtn.addEventListener('click', () => {
-    event.preventDefault();
-    if(validateQuestionInputs()) {
-        console.log(answerNumInput.value)
-        questionErrMsg.innerText = 'You have succsefully added new Question.';
-        questionErrMsg.style.backgroundColor = '#deebb9';
-       //ToDo: render fn with posible answers according num input, validate them (no empty inputs)
-    } else{
-       console.log('not ok')
+function renderCurrentQandA(question, answers, element) {
+    element.innerHTML = '';
+    element.innerHTML = `<p>Current question: ${question.value}</p> <ul class="list-group" id ='given-options';></ul>`;
+    let listEL = document.querySelector('#given-options');
+    for (const answer of answers) {
+        listEL.innerHTML += `
+        <li class="list-group-item">${answer}</li>
+        `
+    };
+};
 
-    }
-});
+//Add new Question
+(function () {
+    answerOpt.addEventListener('change', (e) => {
+        event.preventDefault();
+        if (questionInput.value === '') {
+            questionErrMsg.innerText = 'Please enter a question first.';
+            questionErrMsg.style.backgroundColor = '#F5EBEB';
+
+        } else {
+            questionInput.disabled = true
+            answers.push(e.target.value)
+            renderCurrentQandA(questionInput, answers, newQandAarea)
+            console.log(e.target.value)
+            e.target.value = '';
+            questionErrMsg.innerText = 'Please fill the following form';
+            questionErrMsg.style.backgroundColor = 'inherit';
+        }
+    });
+})();
+
+//Reset inputs 
+(function () {
+    resetBtn.addEventListener('click', () => {
+        event.preventDefault();
+        for (const input of questionInputs) {
+            input.value = ''
+        };
+        answers = [];
+        newQandAarea.innerHTML = '';
+        questionErrMsg.innerText = 'Please fill the following form';
+        questionErrMsg.style.backgroundColor = 'inherit';
+        questionInput.disabled = false
+    });
+})();
+
+// Submit data
+(function () {
+    submitQuestionBtn.addEventListener('click', () => {
+        event.preventDefault();
+        if (answers.length !== 0) {
+            let newQuestion = new NewQandA(questionInput.value, answers)
+            console.log(newQuestion)
+            //ToDo: post newQuestion 
+            answers = [];
+            newQandAarea.innerHTML = '';
+            questionErrMsg.innerText = 'You have succsefully added new Question.';
+            questionErrMsg.style.backgroundColor = '#bedaed';
+            questionInput.disabled = false;
+            questionInput.value = '';
+
+        } else {
+            questionErrMsg.innerText = 'Please fill all input areas.'
+            questionErrMsg.style.background = "#F5EBEB";
+        }
+    });
 })();

@@ -1,4 +1,5 @@
 const testemonialEl = document.querySelector('#testemonilas-element');
+const searchInputTwo = document.querySelector('#search-review');
 
 function displayStatus(dataObject) {
     let helper = ''
@@ -7,8 +8,7 @@ function displayStatus(dataObject) {
 }
 
 function renderTestemonials(data, el) {
-    data.innerHTML = '';
-    el.innerHTML = ``;
+    el.innerHTML = '';
     el.innerHTML = `
     <table class="table">
         <thead class="thead-light">
@@ -44,3 +44,24 @@ function renderTestemonials(data, el) {
     };
 };
 renderTestemonials(testimonialsData, testemonialEl)
+
+function searchReviewByName(searchCriteria, data) {
+    let filterData = [];
+    if (searchCriteria !== '') {
+        for (const item of data) {
+            if (item.user.toLowerCase().includes(searchCriteria.toLowerCase())) {
+                filterData.push(item)
+            }
+        }
+        return filterData
+    }
+    return data
+}
+
+//Search testemonial by name input
+searchInputTwo.addEventListener('input', (e) => {
+    let data = getTestemonials();
+    let filteredData = searchReviewByName(e.target.value, data);
+    renderTestemonials(filteredData, testemonialEl);
+});
+

@@ -67,16 +67,16 @@ const valiadateNameLname = (input, errEl) => {
 };
 
 //Number bigger then zero
- const validateGreaterNumThenZero = (input, errEl) => {
-    let helper = false;
-    parseInt(input.value) <= 0 ? helper = false : helper = true
-    if (helper) {
-        return helper
-    } else {
-        errEl.innerText = 'Please enter a number bigger then zero.'
-        errEl.style.background = "#F5EBEB";
-        return helper
-    }
- };
+//  const validateGreaterNumThenZero = (input, errEl) => {
+//     let helper = false;
+//     parseInt(input.value) <= 0 ? helper = false : helper = true
+//     if (helper) {
+//         return helper
+//     } else {
+//         errEl.innerText = 'Please enter a number bigger then zero.'
+//         errEl.style.background = "#F5EBEB";
+//         return helper
+//     }
+//  };
 
 
