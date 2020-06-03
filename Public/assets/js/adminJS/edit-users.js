@@ -2,23 +2,164 @@
 //RENDER USERS
 const usersEl = document.querySelector('#users-element');
 const searchInput = document.querySelector('#search-user');
-let activeHelper = true;
-let inactiveHelper = true;
+const filterBrns = Array.from(document.querySelectorAll('.user-btns'));
+const usersData = getUsers();
+//Helper viariables for filter buttons
+let activeHelper = false;
+let inactiveHelper = false;
 let counselorsHelper = false;
 let patientHelper = false;
 
+//Filter buttons event handling
+(function () {
+  for (const btn of filterBrns) {
+    btn.addEventListener('click', () => {
+      // btn.setAttribute("onmouseover", `style="background-color:rgb(180, 168, 152);"`)
+      // btn.setAttribute("onmouseout", `style="background-color:black"`)
+      switch (btn.id) {
+        case 'activeBtn':
+          activeHelper ? activeHelper = false : activeHelper = true;
+          activeHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          filterData(usersData);
+          break;
+
+        case 'inactiveBtn':
+          inactiveHelper ? inactiveHelper = false : inactiveHelper = true;
+          inactiveHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          filterData(usersData);
+          break;
+
+        case 'counselorBtn':
+          counselorsHelper ? counselorsHelper = false : counselorsHelper = true;
+          counselorsHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          filterData(usersData);
+          break;
+
+        case 'patientBtn':
+          patientHelper ? patientHelper = false : patientHelper = true;
+          patientHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          filterData(usersData);
+          break;
+
+        default:
+          break;
+      }
+    })
+  };
+})();
+
+
+function filterData(data) {
+  let filteredData = [];
+  //all data 
+  if (!activeHelper && !inactiveHelper && !counselorsHelper && !patientHelper) {
+    renderUsers(data, usersEl)
+    return true
+  }
+
+  if (activeHelper && inactiveHelper && counselorsHelper && patientHelper) {
+    renderUsers(data, usersEl)
+    return true
+  }
+
+  if (!activeHelper && !inactiveHelper && counselorsHelper && patientHelper) {
+    renderUsers(data, usersEl)
+    return true
+  }
+
+  if (activeHelper && inactiveHelper && !counselorsHelper && !patientHelper) {
+    renderUsers(data, usersEl)
+    return true
+  }
+  //Filter all active 
+  if (activeHelper && !inactiveHelper && !counselorsHelper && !patientHelper) {
+    filteredData = data.filter(user => user.active === true)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+  if (activeHelper && !inactiveHelper && counselorsHelper && patientHelper) {
+    filteredData = data.filter(user => user.active === true)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+  //Filter all inactive 
+  if (!activeHelper && inactiveHelper && !counselorsHelper && !patientHelper) {
+    filteredData = data.filter(user => user.active === false)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+  if (!activeHelper && inactiveHelper && counselorsHelper && patientHelper) {
+    filteredData = data.filter(user => user.active === false)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+  //Filter all counselors 
+  if (!activeHelper && !inactiveHelper && counselorsHelper && !patientHelper) {
+    filteredData = data.filter(user => user.role === 'counselor')
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  if (activeHelper && inactiveHelper && counselorsHelper && !patientHelper) {
+    filteredData = data.filter(user => user.role === 'counselor')
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  //Filter active counselors 
+  if (activeHelper && !inactiveHelper && counselorsHelper && !patientHelper) {
+    filteredData = data.filter(user => user.role === 'counselor').filter(user => user.active === true)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  //Filter inactive counselors 
+  if (!activeHelper && inactiveHelper && counselorsHelper && !patientHelper) {
+    filteredData = data.filter(user => user.role === 'counselor').filter(user => user.active === false)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  //Filter all patiens 
+  if (!activeHelper && !inactiveHelper && !counselorsHelper && patientHelper) {
+    filteredData = data.filter(user => user.role === 'user')
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  if (activeHelper && inactiveHelper && !counselorsHelper && patientHelper) {
+    filteredData = data.filter(user => user.role === 'user')
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  //Filter active patients 
+  if (activeHelper && !inactiveHelper && !counselorsHelper && patientHelper) {
+    filteredData = data.filter(user => user.role === 'user').filter(user => user.active === true)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+
+  //Filter inactive patients 
+  if (!activeHelper && inactiveHelper && !counselorsHelper && patientHelper) {
+    filteredData = data.filter(user => user.role === 'user').filter(user => user.active === false)
+    renderUsers(filteredData, usersEl)
+    return true
+  }
+};
+
 
 function displayUserActivity(dataObject) {
-  let helper = ''
-  dataObject ? helper = '&#10004' : helper = '&#10006'
+  let helper = '';
+  dataObject ? helper = '&#10004' : helper = '&#10006';
   return helper
-}
+};
 
 function displayUserLname(dataObject) {
-  let helper = ''
-  dataObject ? helper = dataObject : helper = '&#10006'
+  let helper = '';
+  dataObject ? helper = dataObject : helper = '&#10006';
   return helper
-}
+};
 
 function renderUsers(data, el) {
   el.innerHTML = ``;
@@ -54,40 +195,25 @@ function renderUsers(data, el) {
         </tr>`
   };
 };
-renderUsers(users, usersEl)
+renderUsers(usersData, usersEl);
 
 function searchUserByName(searchCriteria, data) {
   let filterData = [];
   if (searchCriteria !== '') {
     for (const user of data) {
       if (user.name.toLowerCase().includes(searchCriteria.toLowerCase())) {
-        filterData.push(user)
+        filterData.push(user);
       }
     }
     return filterData
   }
   return data
-}
+};
 
 //Search user by name input
 searchInput.addEventListener('input', (e) => {
-  let data = getUsers();
-  let filteredData = searchUserByName(e.target.value, data);
+  let filteredData = searchUserByName(e.target.value, usersData);
   renderUsers(filteredData, usersEl)
 });
 
 
-
-
-
-//Da moze da pravi disable na user ova bi trebalo da bide edit na userot i da go smeni propertito active/inactive sto vo pozadina bi bilo true/false()
-
-//da moze da brise megutoa samo od neaktivni useri
-
-//active, inactive and all users users listi
-
-//log out btn treba da go prebaci na landing page
-
-//handlanje na revies content
-
-//da gi prikaze site prasanja da moze da birse i da dodava prasanja od prasalnikot

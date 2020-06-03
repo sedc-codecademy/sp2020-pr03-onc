@@ -43,7 +43,7 @@ function renderQuestionnere(data, el) {
               </td>
               <td>
                 <button>Edit</button>
-                <button>Delete</button>
+                <button>Remove</button>
               </td>
         <tr>`
     };
