@@ -1,24 +1,24 @@
 const testemonialEl = document.querySelector('#testemonilas-element');
 const searchInputTwo = document.querySelector('#search-review');
 const reviewBtns = Array.from(document.querySelectorAll('.review-btns'));
-const reviewData = getTestemonials()
+let reviewData = getTestemonials();
 let approvedHelper = false;
 let disapprovedHelper = false;
 
 //Event handling
-(function(){
+(function () {
     for (const btn of reviewBtns) {
         btn.addEventListener('click', (e) => {
             if (btn.id === 'approved') {
                 approvedHelper ? approvedHelper = false : approvedHelper = true;
                 approvedHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
-                filterRewievs(reviewData);   
+                filterRewievs(reviewData);
             } else {
                 disapprovedHelper ? disapprovedHelper = false : disapprovedHelper = true;
                 disapprovedHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
-                filterRewievs(reviewData);    
-            }  
-        }); 
+                filterRewievs(reviewData);
+            }
+        });
     }
 })();
 
@@ -83,7 +83,7 @@ function renderTestemonials(data, el) {
             <th scope="col">Date</th>
             <th scope="col">Approval Status</th>
             <th scope="col">testemonial</th>
-            <th scope="col">Settings</th>
+            <th scope="col">Actions</th>
          </tr>
         </tr>
         </thead>
@@ -100,8 +100,8 @@ function renderTestemonials(data, el) {
               <td>${displayStatus(testemonial.status)}</td>
               <td>${testemonial.testimonial}</td>
               <td>
-                <button>Approve</button>
-                <button>Remove</button>
+              <a class="btn btn-sm btn-success" id="editT_${testemonial.id}" onclick="editReview(this)"><i class="fa fa-pencil"></i></a> 
+              <a class="btn btn-sm btn-danger" id="deleteT_${testemonial.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
               </td>
         <tr>`
     };

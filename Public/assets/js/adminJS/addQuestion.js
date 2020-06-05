@@ -11,8 +11,8 @@ let answers = [];
 class NewQandA {
     constructor(question, answers) {
         this.type = "radio",
-            this.question = question,
-            this.answers = answers
+        this.question = question,
+        this.answers = answers
     }
 };
 
@@ -66,7 +66,7 @@ function renderCurrentQandA(question, answers, element) {
 (function () {
     submitQuestionBtn.addEventListener('click', () => {
         event.preventDefault();
-        if (answers.length !== 0) {
+        if (answers.length !== 0 ) {
             let newQuestion = new NewQandA(questionInput.value, answers)
             console.log(newQuestion)
             //ToDo: post newQuestion 

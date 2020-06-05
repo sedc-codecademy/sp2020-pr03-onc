@@ -1,5 +1,6 @@
 //RENDER QUETIONERRE
-const QuestionnaireEl = document.querySelector('#questionnere-element');
+const questionnaireEl = document.querySelector('#questionnere-element');
+let questionsData = getQuestions();
 
 function displayAnswers(dataArray) {
     let helper = ''
@@ -16,7 +17,6 @@ function displayAnswers(dataArray) {
     return helper
 };
 
-
 function renderQuestionnere(data, el) {
     data.innerHTML = '';
     el.innerHTML = ``;
@@ -27,7 +27,7 @@ function renderQuestionnere(data, el) {
             <th scope="col">ID</th>
             <th scope="col">Question</th>
             <th scope="col">Response options</th>
-            <th scope="col">Settings</th>
+            <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody id='questionnere-table-body'></tbody>
@@ -42,10 +42,10 @@ function renderQuestionnere(data, el) {
                 <ul>${displayAnswers(question.answers)}</ul>   
               </td>
               <td>
-                <button>Edit</button>
-                <button>Remove</button>
+              <a class="btn btn-sm btn-success" id="editQ_${question.id}" onclick="editQUestion(this)"><i class="fa fa-pencil"></i></a> 
+              <a class="btn btn-sm btn-danger" id="deleteQ_${question.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
               </td>
         <tr>`
     };
 };
-renderQuestionnere(dataQandA, QuestionnaireEl)
+renderQuestionnere(questionsData, questionnaireEl);

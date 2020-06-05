@@ -6,12 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>admin</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/admin.css" type="text/css">
 </head>
 
 <body>
 
-  <div class="body-continer container-fluid">
+  <div id="delete-warning" class="warning-popup">
+    <div class="warning-wrraper">
+      <h5 id="warning-msg"></h5>
+      <div class="warning-btn-warning">
+        <button id="yes-btn" class="warning-btns" value="yes">Yes</button>
+        <button id="no-btn" class="warning-btns" value="no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-continer container-fluid"  id="main">
 
     <!-- <header>
       <h4>Welcome (Admin name)</h4>
@@ -82,7 +93,7 @@
               placeholder="Search by name"></label>
           <h3>Users section</h3>
           <div class="btn-group mr-2 " role="group" aria-label="First group">
-            <button  class="btn btn-secondary users-btn user-btns" id="activeBtn">Active</button>
+            <button class="btn btn-secondary users-btn user-btns" id="activeBtn">Active</button>
             <button class="btn btn-secondary users-btn user-btns" id="inactiveBtn">Inactive</button>
             <button class="btn btn-secondary users-btn user-btns" id="counselorBtn">Counselor`s</button>
             <button class="btn btn-secondary users-btn user-btns" id="patientBtn">Patient`s</button>
@@ -124,6 +135,7 @@
   <script src="./assets/js/adminJS/edit-testemonials.js"></script>
   <script src="./assets/js/adminJS/addCounselor.js"></script>
   <script src="./assets/js/adminJS/addQuestion.js"></script>
+  <script src="./assets/js/adminJS/admin.js"></script>
 
 </body>
 

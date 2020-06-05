@@ -51,6 +51,13 @@ function validateCounselorInputs() {
     return helper
 }
 
+// Clean inptus fn
+function cleanInputs(inputs) {
+    for (const input of inputs) {
+        input.value = '';
+    }
+};
+
 //Event handling and submiting data
 (function () {
     addCounselorBtn.addEventListener('click', () => {
@@ -59,6 +66,7 @@ function validateCounselorInputs() {
             const newCounselor = new Counselor(nameInput.value, lNameInput.value, mailInput.value)
             console.log(newCounselor)
             //Here should be some call fn to API to submit the the new counselor or something else perhaps? 
+            cleanInputs(document.getElementsByClassName('counselor-inputs'))
             counselorErrMsg.innerText = 'You have succsefully added new Counselor.';
             counselorErrMsg.style.backgroundColor = '#bedaed';
         }

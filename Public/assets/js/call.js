@@ -35,10 +35,20 @@ function getTestemonials() {
     return data
 };
 
-function getUsers(searchCriteria) {
+function getUsers() {
     let data = [];
     //ToDo suppost to do a fetch call to API estead of for-loop and getUsers might with callback or asyn func
     for (let item of users) {
+        data.push(item)
+    }
+    
+    return data
+};
+
+function getQuestions() {
+    let data = [];
+    //ToDo suppost to do a fetch call to API estead of for-loop and getUsers might with callback or asyn func
+    for (let item of dataQandA) {
         data.push(item)
     }
     
