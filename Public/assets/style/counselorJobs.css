@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Butler;
+    src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+#nav-bar {
+    width: 100%;
+    height: 70px;
+}
+
+#main-container {
+    text-align: center;
+}
+
+#main-title {
+    position: relative;
+    bottom: 210px;
+    color: white;
+    font-family: Butler;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+}
+
+#center-paragraph {
+    color: gray;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+hr {
+    margin: 50px 0;
+    border: none;
+    height: 2px;
+    background-color: gray;
+    opacity: 30%;
+}
+
+#text-div {
+    height: 600px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#pros-div {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#question, #req-title {
+    flex-basis: 20%;
+    font-family: Lato;
+    font-size: 35px;
+    color: grey;
+    padding-top: 30px;
+}
+
+.pros {
+    flex-basis: 20%;
+}
+
+.icons {
+    float: left;
+    width: 15%;
+    height: 60%;
+}
+
+.pros > p {
+    float: right;
+    width: 70%;
+    margin-right: 9%;
+    text-align: left;
+    font-family: Lato;
+    font-size: 15px;
+}
+
+#req-div {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#req-text {
+    margin-left: 7%;
+    flex-basis: 80%;
+    text-align: left;
+    font-family: Lato;
+    font-size: 15px;
+}
+
+#form {
+    position: relative;
+    bottom: 30px;
+    margin: 100px auto;
+    padding: 40px;
+    border: solid 1px #dedede;
+    border-radius: 0.5rem;
+    width: 70%;
+    background-color: #ebfff5;
+}
+
+#error-message {
+    width: 70%;
+    position: relative;
+    bottom: 10px;
+    margin: auto;
+    padding: 10px 15px;
+    background-color: #fff7f7;
+    border: solid 1px red;
+    border-radius: 0.3rem;
+    text-align: left;
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 700;
+    color: red;
+}
+
+#form-title {
+    margin-top: 20px;
+    font-family: Butler;
+    font-size: 40px;
+    font-weight: 500;
+    color: #F79D65;
+}
+
+.inputs {
+    width: 70%;
+    margin-top: 30px;
+    padding: 20px 10px;
+    border: solid 1px #dedede;
+    border-radius: 0.3rem;
+    font-family: Lato;
+    font-size: 15px;
+    background-color: white;
+}
+
+.inputs::placeholder {
+    color: black;
+}
+
+#select-city {
+    margin-top: 20px;
+    padding: 10px;
+    width: 70%;
+    height: 40px;
+    font-family: Lato;
+    font-size: 15px;
+    background-color: white;
+    border: solid 1px #dedede;
+    border-radius: 0.3rem;
+    
+}
+
+#submit-btn {
+    margin: 40px;
+    padding: 10px 40px;
+    font-family: Lato;
+    font-size: 20px;
+    color: white;
+    background-color: #F79D65;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+/* Login pop up style */
+.popUpLogin {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.loginContent {
+    width: 500px;
+    height: 350px;
+    background-color: #fafaf0;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+input {
+    padding: 7px;
+    width: 50%;
+    height: 27px;
+    background-color: #fafaf0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    display: block;
+    margin: 10px auto;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.log {
+    margin: 30px 30px 0 0;
+    padding: 7px 15px;
+    background-color: #639ecf;
+    border-style: solid;
+    border-color: #639ecf;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.log:hover {
+    background-color: unset;
+    border-style: solid;
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.reg {
+    margin: 30px 0 0 30px;
+    padding: 9px 17px;
+    background-color: #639ecf;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.reg:hover {
+    background-color: #e36039;
+}
+
+.forgot {
+    font-size: 13px;
+    margin-right: 100px;
+}

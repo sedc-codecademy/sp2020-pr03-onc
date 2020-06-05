@@ -1,0 +1,267 @@
+@font-face {
+    font-family: Butler;
+    src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Login pop up style */
+
+.popUpLogin {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.loginContent {
+    width: 500px;
+    height: 350px;
+    background-color: #fafaf0;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+input {
+    padding: 7px;
+    width: 50%;
+    height: 27px;
+    background-color: #fafaf0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    display: block;
+    margin: 10px auto;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.log {
+    margin: 30px 30px 0 0;
+    padding: 7px 15px;
+    background-color: #639ecf;
+    border-style: solid;
+    border-color: #639ecf;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.log:hover {
+    background-color: unset;
+    border-style: solid;
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.reg {
+    margin: 30px 0 0 30px;
+    padding: 9px 17px;
+    background-color: #639ecf;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.reg:hover {
+    background-color: #e36039;
+}
+
+.forgot {
+    font-size: 13px;
+    margin-right: 100px;
+}
+
+h1 > a {
+    text-decoration: none;
+}
+
+/* About Title & Image */
+
+.mainContainer {
+    text-align: center;
+    position: relative;
+}
+
+.titleContainer {
+    position: relative;
+    text-align: center;
+    color: white; 
+}
+
+.mainTitle {
+    position: absolute;
+    top: 47%;
+    left: 40%;
+    font-family: Lato;
+    font-size: 3vw;
+    font-weight: 400;
+    color: #fafaf0;
+    text-shadow: 2px 2px 8px rgba(146, 133, 116, 0.301);
+}
+
+.quote {
+    margin-top: 2%;
+}
+
+/* Text Section */
+
+.puzzle {
+    opacity: 0.1;
+    width: 100%;
+    height: 95vh;
+}
+
+.mainText {
+    position: relative;
+    text-align: center;
+}
+
+.txt {
+    position: absolute;
+    top: 10%;
+    right: 45%;
+    left: 15%;
+    font-family: Lato;
+    font-size: 1.4vw;
+}
+
+.getHelp {
+    position: absolute;
+    height: 50%;
+    top: 35%;
+    left: 58%;
+}
+
+.mainText > h2 {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 2vw;
+    position: absolute;
+    height: 50%;
+    top: 25%;
+    left: 58%;
+    color: rgba(0, 0, 0, 0.644);
+}
+
+/* Our Counselors */
+
+.ourCounselors {
+    margin-left: 16%;
+}
+
+.counselors {
+    font-size: 5vw;
+    font-family: Lato;
+    font-weight: 500;
+    color: #707070;
+    text-align: center;
+    margin-bottom: -2px;
+}
+
+.counselorsTxt {
+    font-family: Lato;
+    font-size: 1.4vw;
+}
+
+.myCol {
+    max-width: 27%;
+    margin-top: 3%;
+}
+
+.topRow {
+    margin-top: -10px;
+}
+
+.counselorsTxt {
+    font-family: Lato;
+    font-size: 1.4vw;
+}
+
+/* Success Stories */
+
+.successStories {
+    position: relative;
+}
+
+#carouselExampleIndicators{
+    position: absolute;
+    width: 800px;
+    height: auto;
+    top: 10%;
+    left: 20%;
+}
+
+/* Opacity of background Image */
+.storiesImg {
+    opacity: 0.2;
+}
+
+/* Opacity of background Color */
+.d-block {
+    opacity: 0.7;
+}
+
+.carousel-caption {
+    color: #707070;
+    font-family: Lato;
+}
+
+.carousel-caption > h5 {
+    font-family: Lato;
+    margin-bottom: 10%;
+    font-size: 5vw;
+}
+
+.carousel-caption > p {
+    margin-bottom: 15%;
+    color: #5a5a5a;
+    font-size: 1.4vw;
+}
+
+/* SOS */
+.sos {
+    position: absolute;
+    bottom: 4%;
+    margin-left: 4%;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3e4e5dc4;
+}
+
+.sosLink {
+    color: #e36139e7;
+    font-weight: 600;
+    font-family: Lato;
+}
+
+.sosLink:hover {
+    color: #e36039;
+}
