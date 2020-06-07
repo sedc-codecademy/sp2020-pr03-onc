@@ -5,25 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get started</title>
+    <link rel="stylesheet" href="./assets/style/index.css">
+    <link rel="stylesheet" href="./assets/style/header.css">
     <link rel="stylesheet" href="./assets/style/getStarted.css" type="text/css">
+    
+    
+    
 </head>
 
 <body>
     <div class="body-container">
 
-        <header id="sticky">
+        <header id="head">
             <div class="logo">
-                <h1><a href="./index.html">Mindify</a></h1>
+                <a href="./index.html">  <img src="assets/images/Logo.png" alt="logo"> </a>
             </div>
-
-            <nav>
+            <nav id="mainNav">
                 <ul class="nav-links">
                     <li><a href="./about.html">About</a></li>
-                    <li><a href="./index.html#dropDown">FAQ</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Join Mindify</a></li>
+                    <li><a href="#dropDown">FAQ</a></li>
+                    <li><a href="./reviews.html">Reviews</a></li>
+                    <li><a href="./counselorJobs.html">Couneslor Jobs</a></li>
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="#"><button class="login">Login</button></a></li>
+                    <li><button class="login" id="logB">Login</button></li>
+                    <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
                 </ul>
             </nav>
         </header>
@@ -114,6 +119,8 @@
         
     </div>
 
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/login.js"></script>
     <script src="./assets/js/call.js"></script>
     <script src="./assets/js/data.js"></script>
     <script src="./assets/js/dropdown.js"></script>

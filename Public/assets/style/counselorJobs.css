@@ -22,7 +22,7 @@
 
 #main-title {
     position: relative;
-    bottom: 290px;
+    bottom: 210px;
     color: white;
     font-family: Butler;
     font-size: 60px;
@@ -104,7 +104,7 @@ hr {
     font-size: 15px;
 }
 
-form {
+#form {
     position: relative;
     bottom: 30px;
     margin: 100px auto;
@@ -115,7 +115,7 @@ form {
     background-color: #ebfff5;
 }
 
-#form-alert {
+#error-message {
     width: 70%;
     position: relative;
     bottom: 10px;
@@ -142,19 +142,20 @@ form {
 .inputs {
     width: 70%;
     margin-top: 30px;
-    padding: 10px;
+    padding: 20px 10px;
     border: solid 1px #dedede;
     border-radius: 0.3rem;
     font-family: Lato;
     font-size: 15px;
+    background-color: white;
 }
 
 .inputs::placeholder {
     color: black;
 }
 
-select {
-    margin-top: 30px;
+#select-city {
+    margin-top: 20px;
     padding: 10px;
     width: 70%;
     height: 40px;
@@ -175,4 +176,90 @@ select {
     background-color: #F79D65;
     border: none;
     border-radius: 0.3rem;
+}
+
+/* Login pop up style */
+.popUpLogin {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.loginContent {
+    width: 500px;
+    height: 350px;
+    background-color: #fafaf0;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+input {
+    padding: 7px;
+    width: 50%;
+    height: 27px;
+    background-color: #fafaf0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    display: block;
+    margin: 10px auto;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.log {
+    margin: 30px 30px 0 0;
+    padding: 7px 15px;
+    background-color: #639ecf;
+    border-style: solid;
+    border-color: #639ecf;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.log:hover {
+    background-color: unset;
+    border-style: solid;
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.reg {
+    margin: 30px 0 0 30px;
+    padding: 9px 17px;
+    background-color: #639ecf;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.reg:hover {
+    background-color: #e36039;
+}
+
+.forgot {
+    font-size: 13px;
+    margin-right: 100px;
 }

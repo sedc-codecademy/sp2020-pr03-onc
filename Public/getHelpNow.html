@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/style/getHelpNow.css">
+    <link rel="stylesheet" href="./assets/style/header.css">
+    <link rel="stylesheet" href="./assets/style/getHelpNow.css">
 </head>
 
 <body>
     <div class="mainContainer">
 
         <!-- Navigation Bar -->
-        <header id="head">
+        <header id="head" class="headerHe">
             <div class="logo">
-                <h1><a href="./index.html">Mindify</a></h1>
+                <a href="./index.html">  <img src="assets/images/Logo.png" alt="logo"> </a>
             </div>
             <nav id="mainNav">
                 <ul class="nav-links">
-                    <li><a href="#">About</a></li>
+                    <li><a href="./about.html">About</a></li>
                     <li><a href="./index.html#dropDown">FAQ</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Join Mindify</a></li>
+                    <li><a href="./reviews.html">Reviews</a></li>
+                    <li><a href="./counselorJobs.html">Couneslor Jobs</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><button class="login" id="logB">Login</button></li>
                     <li><button type="button" class="register" id="get-started-btn">Get started</button></li>
@@ -37,14 +38,15 @@
             <div class="loginContent">
                 <div class="close">+</div>
                 <img src="./assets/images/user-login.png" alt="">
-                <form action="index.html" method="">
-                    <input type="text" placeholder="E-mail">
-                    <input type="password" placeholder="Password">
+                <form action="index.html" method="GET">
+                    <input type="text" placeholder="E-mail" id="emailV" required>
+                    <input type="password" placeholder="Password" id="passV" required>
                     <a href="">
                         <p class="forgot">Forgot your password?</p>
                     </a>
-                    <button type="submit" class="log">Sign in</button>
-                    <button type="submit" class="reg">Sign up</button>
+                    <h3 align=center id="info"></h3>
+                    <button type="button" class="log" id="logInB">Sign in</button>
+                    <button type="button" class="reg" id="regB">Sign up</button>
                 </form>
             </div>
         </div>
@@ -180,7 +182,6 @@
 
     </div>
 
-    <script src="./assets/js/header.js"></script>
     <script src="./assets/js/login.js"></script>
 </body>
 
