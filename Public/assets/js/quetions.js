@@ -21,8 +21,8 @@ const inputEvent = (elem, question, type) => {
 
 //Render question & answer, setting events
 const renderQuestion = (ansData, queData, dataType, element) => {
-    let start = 16;
-    const stop = 99;
+    let minAge = 16;
+    let maxAge = 99;
     element.firstElementChild.innerText = queData
     element.lastElementChild.innerHTML = '';
     switch (dataType) {
@@ -37,10 +37,10 @@ const renderQuestion = (ansData, queData, dataType, element) => {
         case 'dropdown':
             element.lastElementChild.innerHTML += `
             <label for="age" style="padding-bottom:5%;">Age</label>
-            <select name="age" id="age"style="width:70%;"><option value="0">0</option></select> `
-            while (stop >= start) {
-                document.getElementById('age').innerHTML += `<option value="${start}">${start}</option>`
-                start++
+            <select name="age" id="age"style="width:70%;"></select> `
+            while (maxAge >= minAge) {
+                document.getElementById('age').innerHTML += `<option value="${minAge}">${minAge}</option>`
+                minAge++
             };
             inputEvent(document.querySelectorAll('select'), queData, dataType)
             break;
@@ -51,11 +51,10 @@ const renderQuestion = (ansData, queData, dataType, element) => {
 };
 
 //Render contrroler 
-
 const renderControler = (data, element) => {
     if (data.length < counter) {
         element.lastElementChild.innerHTML = '';
-        window.location.href = './signinForm.html';
+        window.location.href = './signUpForm.html';
     } else {
         let answers = data.filter(x => x.id === counter).map(x => x.answers)[0];
         let question = data.filter(x => x.id === counter).map(x => x.question)[0];
