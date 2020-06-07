@@ -2,10 +2,21 @@ const testemonialEl = document.querySelector('#testemonilas-element');
 const searchInputTwo = document.querySelector('#search-review');
 const reviewBtns = Array.from(document.querySelectorAll('.review-btns'));
 let reviewData = getTestemonials();
+//Helper variables
 let approvedHelper = false;
 let disapprovedHelper = false;
 
-//Event handling
+//Filter reviews
+function filterRewievs(unfilteredData) {
+    let data = unfilteredData.filter(review =>
+        !approvedHelper && !disapprovedHelper || approvedHelper && disapprovedHelper
+            ? review.status === true || review.status === false
+            : approvedHelper ? review.status === true : review.status === false
+    );
+    renderTestemonials(data, testemonialEl)
+};
+
+//Filter btns event
 (function () {
     for (const btn of reviewBtns) {
         btn.addEventListener('click', (e) => {
@@ -21,26 +32,6 @@ let disapprovedHelper = false;
         });
     }
 })();
-
-//Filter reviews
-function filterRewievs(data) {
-    let filteredData = [];
-    if (!approvedHelper && !disapprovedHelper) {
-        renderTestemonials(data, testemonialEl);
-        return true
-    }
-    if (approvedHelper && disapprovedHelper) {
-        renderTestemonials(data, testemonialEl);
-        return true
-    }
-    if (approvedHelper && !disapprovedHelper) {
-        filteredData = data.filter(review => review.status === true);
-        renderTestemonials(filteredData, testemonialEl);
-    } else {
-        filteredData = data.filter(review => review.status === false);
-        renderTestemonials(filteredData, testemonialEl);
-    }
-};
 
 //Search testemonial by name input
 function searchReviewByName(searchCriteria, data) {
@@ -62,11 +53,11 @@ searchInputTwo.addEventListener('input', (e) => {
     renderTestemonials(filteredData, testemonialEl);
 });
 
-
 //Render functions
 function displayStatus(dataObject) {
-    let helper = '';
-    dataObject ? helper = '&#10004' : helper = '&#10006';
+    let helper = {};
+    dataObject ? helper.isActive = '&#10004' : helper.isActive = '&#10006';
+    dataObject ? helper.isChecked = 'checked' : null;
     return helper
 };
 
@@ -97,13 +88,32 @@ function renderTestemonials(data, el) {
               <td>${testemonial.user}</td>
               <td>${testemonial.for}</td>
               <td>${testemonial.date}</td>
-              <td>${displayStatus(testemonial.status)}</td>
+              <td>${displayStatus(testemonial.status).isActive}</td>
               <td>${testemonial.testimonial}</td>
               <td>
-              <a class="btn btn-sm btn-success" id="editT_${testemonial.id}" onclick="editReview(this)"><i class="fa fa-pencil"></i></a> 
-              <a class="btn btn-sm btn-danger" id="deleteT_${testemonial.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
+              <a class="btn btn-sm btn-success all-edit-btns" id="editT_${testemonial.id}" onclick="editData(this)"><i class="fa fa-pencil all-edit-btns"></i></a> 
               </td>
-        <tr>`
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <h6 class="reviews${testemonial.id}">
+                    Approve, disapprove or delete this review
+                </h6>
+            </td>
+            <td>
+                <input type="checkbox" id="editT_active_${testemonial.id}" class="reviews${testemonial.id}" ${displayStatus(testemonial.status).isChecked}>
+                <label for="editT_active_${testemonial.id}" class="reviews${testemonial.id}">Active</label>
+            </td>
+            <td>
+            <a class="btn btn-sm btn-success reviews${testemonial.id}" id="saveT_${testemonial.id}" onclick="saveEditedData(this)"><i class="fa fa-floppy-o"></i></a>
+            <a class="btn btn-sm btn-danger reviews${testemonial.id}" id="deleteT_${testemonial.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>`
+        Array.from(document.querySelectorAll(`.reviews${testemonial.id}`)).map(el => el.style.display = "none")
     };
 };
 renderTestemonials(reviewData, testemonialEl);

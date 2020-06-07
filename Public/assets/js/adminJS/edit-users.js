@@ -13,14 +13,15 @@ let patientHelper = false;
 
 //render functions
 function displayUserActivity(dataObject) {
-  let helper = '';
-  dataObject ? helper = '&#10004' : helper = '&#10006';
+  let helper = {};
+  dataObject ? helper.isActive = '&#10004' : helper.isActive = '&#10006';
+  dataObject ? helper.isChecked = 'checked' : null;
   return helper
 };
 
 function displayUserLname(dataObject) {
   let helper = '';
-  dataObject ? helper = dataObject : helper = '&#10006';
+  dataObject ? helper = dataObject : helper = 'No records found';
   return helper
 };
 
@@ -46,39 +47,40 @@ function renderUsers(data, el) {
     tableBody.innerHTML += `
         <tr>
             <th scope="row">${user.id}</th>
-            <td>${user.name}
-            <input type="text" class="form-control" id="edit-name" placeholder="Enter name" hidden>
-            </td>
-            <td>${displayUserLname(user.lastName)}
-            <input type="text" class="form-control" id="edit-lname" placeholder="Enter last name" hidden>
-            </td>
-            <td>${user.email}
-            <input type="email" class="form-control" id="edit-email" placeholder="Enter E-mail" hidden>
-            </td>
-            <td>${displayUserActivity(user.active)}
-            <input type="checkbox" id="edit-active" hidden>
-            <label hidden for="edit-active">Active</label>
-            </td>
+            <td>${user.name}</td>
+            <td>${displayUserLname(user.lastName)}</td>
+            <td>${user.email}</td>
+            <td>${displayUserActivity(user.active).isActive}</td>
             <td>${user.role}</td>
             <td>
-            <a class="btn btn-sm btn-success" id="editU_${user.id}" onclick="editUser(this)"><i class="fa fa-pencil"></i></a> 
-            <a class="btn btn-sm btn-danger" id="deleteU_${user.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
+            <a class="btn btn-sm btn-success all-edit-btns" id="editU_${user.id}" onclick="editData(this)"><i class="fa fa-pencil all-edit-btns"></i></a> 
             </td>
-        </tr>`
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <h6 class="users${user.id}">
+                Activate, deactivate or delete this account
+              </h6>
+            </td>
+            <td>
+            <input type="checkbox" id="editU_active_${user.id}" class="users${user.id}" ${displayUserActivity(user.active).isChecked} >
+            <label for="editU_active_${user.id}" class="users${user.id}">Active</label>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+            <a class="btn btn-sm btn-success users${user.id}" id="saveU_${user.id}" onclick="saveEditedData(this)"><i class="fa fa-floppy-o"></i></a>
+            <a class="btn btn-sm btn-danger users${user.id}" id="deleteU_${user.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        `
+    Array.from(document.querySelectorAll(`.users${user.id}`)).map(el => el.style.display = "none")
   };
+
 };
 renderUsers(usersData, usersEl);
-
-
-// //Edit users
-// function editUser(elementThis) {
-//   let userId = parseInt(elementThis.id.split('_')[1]);
-//   console.log(userId)
-// };
-
-// function saveUser(elementThis) {
-//   console.log(elementThis)
-// };
 
 //Filter buttons event handling
 (function () {
@@ -118,106 +120,21 @@ renderUsers(usersData, usersEl);
   };
 })();
 
-//ToDo for refactor
-function filterData(data) {
-  let filteredData = [];
-  //all data 
-  if (!activeHelper && !inactiveHelper && !counselorsHelper && !patientHelper) {
-    renderUsers(data, usersEl)
-    return true
-  }
-
-  if (activeHelper && inactiveHelper && counselorsHelper && patientHelper) {
-    renderUsers(data, usersEl)
-    return true
-  }
-
-  if (!activeHelper && !inactiveHelper && counselorsHelper && patientHelper) {
-    renderUsers(data, usersEl)
-    return true
-  }
-
-  if (activeHelper && inactiveHelper && !counselorsHelper && !patientHelper) {
-    renderUsers(data, usersEl)
-    return true
-  }
-  //Filter all active 
-  if (activeHelper && !inactiveHelper && !counselorsHelper && !patientHelper) {
-    filteredData = data.filter(user => user.active === true)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-  if (activeHelper && !inactiveHelper && counselorsHelper && patientHelper) {
-    filteredData = data.filter(user => user.active === true)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-  //Filter all inactive 
-  if (!activeHelper && inactiveHelper && !counselorsHelper && !patientHelper) {
-    filteredData = data.filter(user => user.active === false)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-  if (!activeHelper && inactiveHelper && counselorsHelper && patientHelper) {
-    filteredData = data.filter(user => user.active === false)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-  //Filter all counselors 
-  if (!activeHelper && !inactiveHelper && counselorsHelper && !patientHelper) {
-    filteredData = data.filter(user => user.role === 'counselor')
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  if (activeHelper && inactiveHelper && counselorsHelper && !patientHelper) {
-    filteredData = data.filter(user => user.role === 'counselor')
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  //Filter active counselors 
-  if (activeHelper && !inactiveHelper && counselorsHelper && !patientHelper) {
-    filteredData = data.filter(user => user.role === 'counselor').filter(user => user.active === true)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  //Filter inactive counselors 
-  if (!activeHelper && inactiveHelper && counselorsHelper && !patientHelper) {
-    filteredData = data.filter(user => user.role === 'counselor').filter(user => user.active === false)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  //Filter all patiens 
-  if (!activeHelper && !inactiveHelper && !counselorsHelper && patientHelper) {
-    filteredData = data.filter(user => user.role === 'user')
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  if (activeHelper && inactiveHelper && !counselorsHelper && patientHelper) {
-    filteredData = data.filter(user => user.role === 'user')
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  //Filter active patients 
-  if (activeHelper && !inactiveHelper && !counselorsHelper && patientHelper) {
-    filteredData = data.filter(user => user.role === 'user').filter(user => user.active === true)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
-
-  //Filter inactive patients 
-  if (!activeHelper && inactiveHelper && !counselorsHelper && patientHelper) {
-    filteredData = data.filter(user => user.role === 'user').filter(user => user.active === false)
-    renderUsers(filteredData, usersEl)
-    return true
-  }
+//Filter buttons
+function filterData(unfilteredData) {
+  let data = unfilteredData
+    .filter(user =>
+      (activeHelper && inactiveHelper) || (!activeHelper && !inactiveHelper) ? user.active === true || user.active === false
+        : activeHelper ? user.active === true
+          : user.active === false
+    )
+    .filter(user =>
+      (counselorsHelper && patientHelper) || (!counselorsHelper && !patientHelper) ? user.role === 'counselor' || user.role === 'user'
+        : counselorsHelper ? user.role === 'counselor'
+          : user.role === 'user'
+    );
+  renderUsers(data, usersEl)
 };
-
 
 //Search user by name input
 function searchUserByName(searchCriteria, data) {

@@ -53,6 +53,10 @@ header button:hover {
     border-right: solid 2px rgb(46, 40, 33, .8);
 }
 
+.sidebar-nav h5 {
+    color: rgb(255, 255, 255);
+}
+
 .sidebar-nav {
     padding-top: 5%;
 }
@@ -60,7 +64,7 @@ header button:hover {
 .sidebar-nav li  {
     list-style: none;
     text-indent: 10%;
-    line-height: 250%;
+    line-height: 275%;
     font-size: larger;
 }
 
@@ -155,12 +159,6 @@ article:first-child {
     background-color: rgb(180, 168, 152);
 }
 
-/* Disiable all content  */
-/* .body-disable {
-    pointer-events: none;
-    opacity: 0.6;
-} */
-
 /* WARNING POP UP */
 .warning-popup {
     position:fixed;
@@ -190,3 +188,4 @@ article:first-child {
     width: 100%;
     height: 30%;
 }
+
