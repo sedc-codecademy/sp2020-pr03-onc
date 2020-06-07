@@ -56,11 +56,11 @@ function renderUsers(data, el) {
             <a class="btn btn-sm btn-success all-edit-btns" id="editU_${user.id}" onclick="editData(this)"><i class="fa fa-pencil all-edit-btns"></i></a> 
             </td>
         </tr>
-        <tr>
+        <tr >
             <td></td>
             <td></td>
             <td>
-              <h6 class="users${user.id}">
+              <h6 class="users${user.id}" style="color: red;">
                 Activate, deactivate or delete this account
               </h6>
             </td>
@@ -86,30 +86,28 @@ renderUsers(usersData, usersEl);
 (function () {
   for (const btn of filterBrns) {
     btn.addEventListener('click', () => {
-      // btn.setAttribute("onmouseover", `style="background-color:rgb(180, 168, 152);"`)
-      // btn.setAttribute("onmouseout", `style="background-color:black"`)
       switch (btn.id) {
         case 'activeBtn':
           activeHelper ? activeHelper = false : activeHelper = true;
-          activeHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          activeHelper ? btn.style.backgroundColor = "rgb(94, 86, 75)" : btn.style.backgroundColor = "rgb(102, 91, 75, 0.8)";
           filterData(usersData);
           break;
 
         case 'inactiveBtn':
           inactiveHelper ? inactiveHelper = false : inactiveHelper = true;
-          inactiveHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          inactiveHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(102, 91, 75, 0.8)";
           filterData(usersData);
           break;
 
         case 'counselorBtn':
           counselorsHelper ? counselorsHelper = false : counselorsHelper = true;
-          counselorsHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          counselorsHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(102, 91, 75, 0.8)";
           filterData(usersData);
           break;
 
         case 'patientBtn':
           patientHelper ? patientHelper = false : patientHelper = true;
-          patientHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+          patientHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(102, 91, 75, 0.8)";
           filterData(usersData);
           break;
 

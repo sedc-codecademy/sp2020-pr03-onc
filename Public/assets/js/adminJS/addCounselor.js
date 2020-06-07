@@ -65,7 +65,7 @@ function cleanInputs(inputs) {
         if (validateCounselorInputs()) {
             const newCounselor = new Counselor(nameInput.value, lNameInput.value, mailInput.value)
             console.log(newCounselor)
-            //Here should be some call fn to API to submit the the new counselor or something else perhaps? 
+            //ToDo : Here should be some call fn to API to submit the new counselor and when response is positive to make another call and take fresh data.
             cleanInputs(document.getElementsByClassName('counselor-inputs'))
             counselorErrMsg.innerText = 'You have succsefully added new Counselor.';
             counselorErrMsg.style.backgroundColor = '#bedaed';

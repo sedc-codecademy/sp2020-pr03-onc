@@ -30,8 +30,8 @@ function populateWarrnigMsg(dataType, data) {
     }
 };
 
-//ToDo make DELETE call to api for deleting this user and when response is ok make anothert call and GET updateed data from db
 function deleteAction(dataType, data) {
+//ToDo make DELETE call to api for deleting this user and when response is ok make anothert call and GET updateed data from db
     switch (dataType) {
         case 'user':
             dataUsers = data;
@@ -90,20 +90,6 @@ function deleteData(elem) {
     id === 'deleteU' ? deleteReassurance(warningBtns, elem, dataUsers, 'user')
         : id === 'deleteQ' ? deleteReassurance(warningBtns, elem, dataQuestions, 'question')
             : deleteReassurance(warningBtns, elem, dataReviews, 'review');
-
-    // switch (id) {
-    //     case 'deleteU':
-    //         deleteReassurance(warningBtns, elem, dataUsers, 'user');
-    //         break;
-    //     case 'deleteQ':
-    //         deleteReassurance(warningBtns, elem, dataQuestions, 'question');
-    //         break;
-    //     case 'deleteT':
-    //         deleteReassurance(warningBtns, elem, dataReviews, 'review');
-    //         break;
-    //     default:
-    //         break;
-    // };
 };
 
 //Edit users/questions/reviews
@@ -156,7 +142,7 @@ function saveEditedData(elementThis) {
         if (editType === 'saveQ') {
             // ToDo(if some filed is left empty might be sent as null)
             editObject = dataQuestions.filter(item => item.id === id)[0];
-            let question = document.querySelector('#edit_question').value
+            let question = document.querySelector(`#edit_question${id}`).value
             let answers = Array.from(document.querySelectorAll(`.edit-answers${id}`)).filter(el => el.value !== '').map(el => el.value);
             let newObj = {question, answers}
             console.log(newObj)

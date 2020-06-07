@@ -69,14 +69,13 @@ function renderCurrentQandA(question, answers, element) {
         if (answers.length !== 0 ) {
             let newQuestion = new NewQandA(questionInput.value, answers)
             console.log(newQuestion)
-            //ToDo: post newQuestion 
+            //ToDo: Post call same as add counselor 
             answers = [];
             newQandAarea.innerHTML = '';
             questionErrMsg.innerText = 'You have succsefully added new Question.';
             questionErrMsg.style.backgroundColor = '#bedaed';
             questionInput.disabled = false;
             questionInput.value = '';
-
         } else {
             questionErrMsg.innerText = 'Please fill all input areas.'
             questionErrMsg.style.background = "#F5EBEB";

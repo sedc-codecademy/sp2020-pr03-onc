@@ -52,12 +52,12 @@ function renderQuestionnere(data, el) {
         </tr>
         <tr>
         <td>
-            <h6 class="questions${question.id}">
+            <h6 class="questions${question.id}" style="color: red;">
                 Edit or delete question/answers
             </h6>
         </td>
         <td>
-        <input type="text" class="form-control questions${question.id}" id="edit_question"  value ="${question.question}" >
+        <input type="text" class="form-control questions${question.id}" id="edit_question${question.id}"  value ="${question.question}" >
         </td>
         <td>
         <ol class = "questions${question.id}">${displayAnswers(question.answers, question.id)}</ol>

@@ -22,11 +22,11 @@ function filterRewievs(unfilteredData) {
         btn.addEventListener('click', (e) => {
             if (btn.id === 'approved') {
                 approvedHelper ? approvedHelper = false : approvedHelper = true;
-                approvedHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+                approvedHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(102, 91, 75, 0.8)";
                 filterRewievs(reviewData);
             } else {
                 disapprovedHelper ? disapprovedHelper = false : disapprovedHelper = true;
-                disapprovedHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(89, 81, 70, .8)";
+                disapprovedHelper ? btn.style.backgroundColor = "rgb(89, 81, 70)" : btn.style.backgroundColor = "rgb(102, 91, 75, 0.8)";
                 filterRewievs(reviewData);
             }
         });
@@ -100,7 +100,7 @@ function renderTestemonials(data, el) {
             <td></td>
             <td></td>
             <td>
-                <h6 class="reviews${testemonial.id}">
+                <h6 style="color: red;" class="reviews${testemonial.id}">
                     Approve, disapprove or delete this review
                 </h6>
             </td>

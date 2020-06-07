@@ -113,10 +113,9 @@ article:first-child {
     width: 50%;
     display: flex;
     flex-direction:column;
-    align-items: stretch;
 }
 
-.inputs {
+.counselor-inputs {
     width: 95%;
 }
 
@@ -177,7 +176,7 @@ article:first-child {
     align-items: center;
     width: 45%;
     height: 45%;
-    background-color: honeydew;
+    background-color: rgb(255, 255, 255);
     border: solid 2px rgb(78, 68, 68);
     padding: 3%;
 }
