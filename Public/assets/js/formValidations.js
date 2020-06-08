@@ -13,7 +13,7 @@ const validateEmptyInputs = inputs => {
     let helper = true
     for (const input of inputs) {
         if (input.value === '') {
-            errorMsg.innerHTML = 'Please fill out all input areas.'
+            errorMsg.innerHTML = 'Please fill out all input areas'
             return helper = false
         }
     }
@@ -23,10 +23,10 @@ const validateEmptyInputs = inputs => {
 const validateName = fullName => {
     let helper = false
     const nameRegex = /^[a-z ,.'-]+$/i;
-    if (fullName.value.match(nameRegex)) {
+    if (fullName.value.match(nameRegex) && fullName.value.length >= 5) {
         helper = true;
     } else {
-        errorMsg.innerHTML = 'Please enter a valid name.';
+        errorMsg.innerHTML = 'Please enter a valid name';
     }
     return helper
 };
@@ -37,7 +37,7 @@ const validateEmail = email => {
     if (email.value.match(emailRegex)) {
         helper = true
     } else {
-        errorMsg.innerHTML = 'Please enter a valid Email.';
+        errorMsg.innerHTML = 'Please enter a valid Email';
     }
     return helper
 }
@@ -47,17 +47,21 @@ const validateSubject = subject => {
     if (subject.value.length < 50) {
         helper = true;
     } else {
-        errorMsg.innerHTML = 'Subject must be less than 50 characters.';
+        errorMsg.innerHTML = 'Subject must be less than 50 characters';
     }
     return helper
 }
 
 const validateMessage = message => {
     let helper = false;
+    message.value.length > 50 ? helper = true : helper = false;
+    errorMsg.innerHTML = 'Message must contain at least 50 characters.';
+    console.log(errorMsg.innerText)
+
     if(message.value.length > 50) {
         helper = true;
     } else {
-        errorMsg.innerHTML = 'Message must contain at least 50 characters.';
+        errorMsg.innerHTML = 'Message must contain at least 50 characters';
     }
     return helper
 }
@@ -82,12 +86,12 @@ const sendEmail = () => {
             formInfo.message = message.value;
             console.log(formInfo);
             // Send Succesfull Message
-            errorMsg.style.background = "#8bc34a73";
+            errorMsg.style.color = "#0000009c";
             errorMsg.innerHTML = 'Your message was sent successfully!';
             // Clear Input Areas
             form.reset();
         } else {
-            errorMsg.style.background = "rgba(240, 128, 128, 0.705)";
+            errorMsg.style.color = "#bb0012";
         }
     })
 }

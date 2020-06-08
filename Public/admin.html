@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/admin.css" type="text/css">
+</head>
+
+<body>
+
+  <div id="delete-warning" class="warning-popup">
+    <div class="warning-wrraper">
+      <h5 id="warning-msg"></h5>
+      <div class="warning-btn-warning">
+        <button id="yes-btn" class="warning-btns" value="yes">Yes</button>
+        <button id="no-btn" class="warning-btns" value="no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-continer container-fluid" id="main">
+
+    <!-- <header>
+      <h4>Welcome (Admin name)</h4>
+      <button id="log-out">Logout</button>
+    </header> -->
+
+    <div class="main-content">
+
+      <div class="sidebar-wrraper">
+        <!-- <img src="" alt="Admin avatar"> -->
+        <ul class="sidebar-nav">
+          <li>
+            <h5>Welcome Admin</h5>
+            <hr>
+          </li>
+          <li><a href="#new-content-section">Add Counselor</a></li>
+          <li><a href="#new-content-section">Add Question</a></li>
+          <li><a href="#all-users-section">All Users</a></li>
+          <li><a href="#questionnere-section">Questionnaire </a></li>
+          <li><a href="#testemonials-section">User reviews</a></li>
+          <li><a href="./index.html">Logout</a></li>
+        </ul>
+      </div>
+
+      <section class="new-content-container" id="new-content-section">
+        <article class="new-content">
+          <h3>Add counselor</h3>
+          <p id="counselor-errMsg" class="inputs">Please fill the following form</p>
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control counselor-inputs" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" class="form-control counselor-inputs" id="last-name" placeholder="Enter last name">
+            </div>
+            <div class="form-group">
+              <label for="email">Last name</label>
+              <input type="email" class="form-control counselor-inputs" id="email" placeholder="Enter E-mail">
+            </div>
+            <div class="counselor-btns">
+              <button class="btn btn-secondary users-btn" id="submit-new-counselor">Submit</button>
+            </div>
+          </form>
+        </article>
+        <article class="new-content add-quesstion">
+          <h3 id="add-question-header">Add question</h3>
+          <p id="question-errMsg" class="inputs">Please fill the following form</p>
+          <form>
+            <div class="form-group">
+              <label for="question">Question</label>
+              <input type="text" class="form-control question-inputs" id="question" placeholder="Enter question">
+            </div>
+            <div class="form-group">
+              <label for="answer-option">Answer</label>
+              <input type="text" class="form-control question-inputs" id="answer-option" placeholder="Add Answer">
+            </div>
+            <div id="new-QandA-area"></div>
+          </form>
+          <div class="btn-group mr-2 " role="group" aria-label="First group">
+            <button class="btn btn-secondary users-btn" id="reset-new-question">Reset</button>
+            <button class="btn btn-secondary users-btn" id="submit-new-question">Submit</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="users-container" id="all-users-section">
+        <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
+          <label for="search-user"><input type="text" id="search-user" class="inputs" name="search-user"
+              placeholder="Search by name"></label>
+          <h3>Users section</h3>
+          <div class="btn-group mr-2 " role="group" aria-label="First group">
+            <button class="btn btn-secondary users-btn user-btns" id="activeBtn">Active</button>
+            <button class="btn btn-secondary users-btn user-btns" id="inactiveBtn">Inactive</button>
+            <button class="btn btn-secondary users-btn user-btns" id="counselorBtn">Counselor`s</button>
+            <button class="btn btn-secondary users-btn user-btns" id="patientBtn">Patient`s</button>
+          </div>
+        </div>
+        <div id="users-element">
+        </div>
+      </section>
+
+      <section class="questionnere-section" id="questionnere-section">
+        <h3>Questionnaire section</h3>
+        <div id="questionnere-element">
+        </div>
+      </section>
+
+      <section class="testemonilas-section" id="testemonials-section">
+        <div class="btn-toolbar users" role="toolbar" aria-label="Toolbar with button groups">
+          <label for="search-review"><input type="text" id="search-review" class="inputs" name="search-review"
+              placeholder="Search by name"></label>
+          <h3>Testemonials section</h3>
+          <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button class="btn btn-secondary users-btn review-btns" id="approved">Approved</button>
+            <button class="btn btn-secondary users-btn review-btns" id="disapproved">Disapproved</button>
+          </div>
+        </div>
+        <div id="testemonilas-element"> 
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/call.js"></script>
+  <script src="./assets/js/validations.js"></script>
+  <script src="./assets/js/adminJS/edit-quetionnaire.js"></script>
+  <script src="./assets/js/adminJS/edit-testemonials.js"></script>
+  <script src="./assets/js/adminJS/addCounselor.js"></script>
+  <script src="./assets/js/adminJS/addQuestion.js"></script>
+  <script src="./assets/js/adminJS/edit-users.js"></script>
+  <script src="./assets/js/adminJS/admin.js"></script>
+
+</body>
+
+</html>

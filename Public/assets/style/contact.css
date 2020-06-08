@@ -4,17 +4,16 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Libre Baskerville', serif;
-    background-color: #fafaf0;
+@font-face {
+    font-family: Butler;
+    src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
 }
 
-.background {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(156, 135, 113, 0.198),rgba(156, 135, 113, 0.198)),url(../images/contact.jpg) no-repeat fixed center;
-    background-size: cover;
-    padding-bottom: 2%;
+body {
+    font-family: Lato, serif;
+    background-color: #f3f1f249;
 }
 
 /* Login pop up style */
@@ -108,43 +107,89 @@ h1 > a {
     text-decoration: none;
 }
 
-/* Main container */
+/* Cellphone Image */
 
-.mainContainer {
-    padding-top: 7%;
+.imgContainer {
+    position: relative;
+}
+
+.imgContainer > img {
+    max-width: 100%;
+    padding-top: 0.4%;
+    margin-top: 4%;
+}
+
+/* Main Title */
+
+.mainTitle {
+    position: absolute;
+    font-family: Lato, serif;
+    font-size: 3vw;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px rgb(124, 114, 101);
+    color: #fafaf0;
+    top: 47%;
+    left: 40%;
+}
+
+/* Text Below Image */
+
+.faqTxt {
+    font-size: 16px;
+    font-family: Lato;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+.faqTxt > a {
+    font-size: 16px;
+    font-family: inherit;
+    color: #5faa41;
+}
+
+/*Form And Info Container */
+
+.contactContainer {
     display: flex;
 }
 
-/* Contact Us Text */
-
-.contactContainer {
-    width: 100%;
-    margin-top: 110px;
-    margin-left: 12%;
+.infoContainer {
+    position: relative;
+    width: 70%;
 }
 
-.contactUs {
-    color: #d1caba;
-    margin-left: 20%;
-    font-size: 3vw;
+/* Clip art image */
+
+.infoContainer > img {
+    margin-left: 7%;
+    margin-top: 30%;
+    width: 70%;
 }
 
 h1 + h2 {
     font-size: 2vw;
 }
 
-/* Contact Info */
+/* Contact Us Box */
 
 .contactInfo {
-    margin-top: 20px;
+    position: absolute;
+    top: 13%;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    border: solid 3px #d1d1d1b2;
+    left: 21%;
     text-align: center;
-    background: #6d726e32;
-    width: 50%;
-    border-radius: 15px;
-    font-size: 1rem;
-    padding: 20px;
-    margin-left: 15%;
+    width: 40%;
+    padding: 10px;
 } 
+
+.contactInfo > p, .contactInfo > a {
+    font-size: 15px;
+    font-family: Lato;
+}
 
 .contactMail {
     color: #c54822;
@@ -157,64 +202,83 @@ h1 + h2 {
 /* Form */
 
 .formContainer {
-    width: 100%;
+    width: 65%;
+    height: 90%;
     margin-top: 4%;
+    margin-left: 12%;
+    background-color: #f99d65;
+    border-radius: 20px;
 }
 
 .formBox{
-    height: 50px;
+    height: 35px;
 }
 
 .formStyle {
-    width: 72%;
-    height: 50px;
-    margin: 10px;
+    font-family: Lato;
+    width: 90%;
+    height: 35px;
     padding-left: 10px;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: auto;
     border: none;
-    border-radius: 10px;
-    background: #f0e6deca;
-    transition: all 0.2s ease 0s;
+    border-radius: 5px;
+    background: white;
 }
 
-.formStyle:hover {
-    background: #f0e6de;
+input:focus {
+    outline: none;
 }
 
 textarea{
+    font-family: Lato;
     padding-top: 10px;
-    height: 150px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 120px !important;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/* Error Msg */
+
+.error {
+    font-family: Lato;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 3%;
 }
 
 /* Send Btn */
 
 .submitBtn {
     margin: 15px;
-    margin-left: 25%;
-    padding: 15px 40px;
-    background-color: #8bc34a73;
-    border: none;
-    border-radius: 10px;
+    margin-left: 42%;
+    font-family: Lato;
+    padding: 5px 20px;
+    background-color: white;
+    color: #b3602c;
+    border: solid 2px #b3602cc5;
+    border-radius: 5px;
     cursor: pointer;
-    color: white;
     font-weight: 700;
-    font-size: 15px;
     transition: all 0.2s ease 0s;
 }
 
 .submitBtn:hover {
-    background-color: #8bc34aa9;
+    border: solid 2px white;
+    transition: all 0.2s ease 0s;
 }
 
-/* Error Msg */
 
-.error {
-    background-color: rgba(240, 128, 128, 0.705);
-    text-align: center;
-    border-radius: 10px;
-    width: 72%;
-    margin-bottom: 10px;
-    margin-left: 1%;
+.submitBtn:focus {
+    outline: none;
 }
+
+
 
 /* SOS Msg */
 
@@ -228,7 +292,12 @@ textarea{
     color: #000000b7;
 }
 
+.sosTxt {
+    font-family: Lato;
+}
+
 .sosLink {
+    font-family: Lato;
     color: #e36039;
     font-weight: 600;
 }
