@@ -28,7 +28,7 @@ const populateTestemonial = (data, id, element) => {
     element.innerHTML = `
     <div class="testemonials-person">
     <img src="./assets/images/${currnetTestimony.img || avatar }" alt="Avatar">
-    <h5> <span>${currnetTestimony.from}</span><br> ${currnetTestimony.job}</h5>
+    <h5> <span>${currnetTestimony.user}</span><br> ${currnetTestimony.occupation}</h5>
     </div>
     <p class="testemony">${currnetTestimony.testimonial}
     </p>
@@ -40,15 +40,18 @@ const populateTestemonial = (data, id, element) => {
 
 //Main function which calls populateTestemonial 
 const testemonialController = (data, element) => {
-    let dataLength = data.length
     let slideCounter = 1;
-    data.forEach(el => {
+    const approvedData = data.filter(testemonial => testemonial.status === true)
+    console.log(approvedData);
+    const dataLength = approvedData.length
+    approvedData.forEach(el => {
         element.lastElementChild.innerHTML += `<div class="navi-dots"></div>`
     });
-    populateTestemonial(data, slideCounter, element);
+    populateTestemonial(approvedData, slideCounter, element);
     setInterval(() => {
-        populateTestemonial(data, slideCounter, element)
+        populateTestemonial(approvedData, slideCounter, element)
         slideCounter === dataLength ? slideCounter = 1 : slideCounter++
     }, 4500);
 };
+
 testemonialController(testimonialsData, testemonialArea);
