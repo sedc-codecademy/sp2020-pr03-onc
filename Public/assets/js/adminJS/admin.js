@@ -63,7 +63,6 @@ function deleteReassurance(btns, elem, inputData, dataType) {
             if (helper === 'yes') {
                 //ToDo DELETE call to be processed after the user press yes on the warning btn
                 setTimeout(() => {
-                    editFlag ? editFlag = false : editFlag = true;
                     editBtns.map(el => el.style.pointerEvents = "unset")
 
                     let filterData = inputData.filter(item => item.id !== id);
@@ -86,6 +85,7 @@ function deleteReassurance(btns, elem, inputData, dataType) {
 function deleteData(elem) {
     mainBody.classList.add('body-disable');
     deleteWarning.style.display = 'flex';
+    editFlag ? editFlag = false : editFlag = true;
     let id = elem.id.split('_')[0];
     id === 'deleteU' ? deleteReassurance(warningBtns, elem, dataUsers, 'user')
         : id === 'deleteQ' ? deleteReassurance(warningBtns, elem, dataQuestions, 'question')
