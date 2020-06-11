@@ -24,8 +24,9 @@
     position: relative;
     bottom: 210px;
     color: white;
+    text-shadow: 2px 2px 8px rgb(188, 131, 125);
     font-family: Butler;
-    font-size: 60px;
+    font-size: 5vw;
     font-weight: 400;
 }
 

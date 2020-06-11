@@ -1,6 +1,8 @@
 @font-face {
     font-family: Butler;
     src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Butler-Medium;
+    src: url(../fonts/Butler/Butler_Medium.otf);
     font-family: Lato;
     src: url(../fonts/Lato/Lato-Regular.ttf);
 }
@@ -117,13 +119,13 @@ h1 > a {
 
 .mainTitle {
     position: absolute;
-    top: 47%;
-    left: 40%;
-    font-family: Lato;
-    font-size: 3vw;
+    top: 40%;
+    left: 36%;
+    font-family: Butler;
+    font-size: 5vw;
     font-weight: 400;
     color: #fafaf0;
-    text-shadow: 2px 2px 8px rgba(146, 133, 116, 0.301);
+    text-shadow: 2px 2px 8px rgb(20, 6, 4);
 }
 
 .quote {
