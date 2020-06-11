@@ -123,13 +123,13 @@ h1 > a {
 
 .mainTitle {
     position: absolute;
-    font-family: Lato, serif;
-    font-size: 3vw;
+    font-family: Butler, serif;
+    font-size: 5vw;
     font-weight: 400;
-    text-shadow: 2px 2px 8px rgb(124, 114, 101);
+    text-shadow: 2px 2px 8px rgba(124, 114, 101, 0.795);
     color: #fafaf0;
-    top: 47%;
-    left: 40%;
+    top: 40%;
+    left: 36%;
 }
 
 /* Text Below Image */
