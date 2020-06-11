@@ -54,6 +54,10 @@ const validateSubject = subject => {
 
 const validateMessage = message => {
     let helper = false;
+    message.value.length > 50 ? helper = true : helper = false;
+    errorMsg.innerHTML = 'Message must contain at least 50 characters.';
+    console.log(errorMsg.innerText)
+
     if(message.value.length > 50) {
         helper = true;
     } else {
