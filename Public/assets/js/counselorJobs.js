@@ -8,10 +8,26 @@ const submitBtn = document.querySelector("#submit-btn");
 const userInputs = [nameInput, emailInput, cityInput];
 
 //Hide error alert message
-function hideAlerts() {
+const hideAlerts = () => {
     errorMsg.style.display = "none";
 }
-hideAlerts();
+// hideAlerts();
+
+const alertMessage = () => {
+    errorMsg.style.display = "block";
+}
+
+const successMsgStyle = () => {
+    errorMsg.style.color = "#21a34a";
+    errorMsg.style.borderColor = "#21a34a";
+    errorMsg.style.backgroundColor = "#dbffe7";
+}
+
+const errorMsgStyle = () => {
+    errorMsg.style.color = "red";
+    errorMsg.style.borderColor = "red";
+    errorMsg.style.backgroundColor = "#fff7f7;";
+}
 
 //Select city input, rendering all the options
 const selectCity = (arrayCities) => {
@@ -23,15 +39,13 @@ const selectCity = (arrayCities) => {
 }
 selectCity(cities);
 
-const validateCity = city => {
-    let helper = false;
-    if (city.value !== "") {
-        helper = true;
+const validateJobForm = () => {
+    if (!validateEmptyInputs(userInputs, errorMsg) || !validateName(nameInput, errorMsg) || !validateEmail(emailInput, errorMsg) || !validateCity(cityInput, errorMsg)) {
+        return false
     } else {
-        errorMsg.innerHTML = 'You must select a city.';
+        return true
     }
-    return helper
-}
+};
 
 //Form object
 function Counselor(name, email, city) {
@@ -41,15 +55,19 @@ function Counselor(name, email, city) {
 }
 
 //EVENTS
-// const submitReview = () => {
-//     submitBtn.addEventListener("click", function(){
-//         if (validateJobForm()) {
-//             errorMsg.innerText = 'Thank you for your interests. You will hear from us soon.'
-//             let counselor = new Counselor(nameInput, emailInput, cityInput)
-//             // counselors.push(counselor);
-//         } else {
-            
-//         }
-//     });
-// }
-// submitReview();
+const submitReview = () => {
+    submitBtn.addEventListener("click", function(){
+        if (validateJobForm()) {
+            alertMessage();
+            successMsgStyle();
+            errorMsg.innerHTML = 'Thank you for your interests. You will hear from us soon.'
+            let counselor = new Counselor(nameInput, emailInput, cityInput)
+            // counselors.push(counselor);
+            form.reset();
+        } else {
+            alertMessage();
+            errorMsgStyle();
+        }
+    });
+}
+submitReview();

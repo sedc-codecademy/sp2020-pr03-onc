@@ -45,6 +45,16 @@ const validateSubject = (subject, errorMsg) => {
     return helper
 }
 
+const validateCity = (city, errorMsg) => {
+    let helper = false;
+    if (city.value !== "") {
+        helper = true;
+    } else {
+        errorMsg.innerHTML = 'You must select a city.';
+    }
+    return helper
+}
+
 // Validate content of message
 const validateMessage = (message, errorMsg) => {
     let helper = false;
