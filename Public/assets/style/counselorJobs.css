@@ -113,7 +113,8 @@ hr {
     border: solid 1px #dedede;
     border-radius: 0.5rem;
     width: 70%;
-    background-color: #ebfff5;
+    background-color: #bddb8f; 
+    box-shadow: 3px 3px 20px -5px;
 }
 
 #error-message {
@@ -122,10 +123,10 @@ hr {
     bottom: 10px;
     margin: auto;
     padding: 10px 15px;
-    background-color: #fff7f7;
+    background-color: #ffebeb;
     border: solid 1px red;
     border-radius: 0.3rem;
-    text-align: left;
+    text-align: center;
     font-family: Lato;
     font-size: 15px;
     font-weight: 700;
@@ -137,7 +138,7 @@ hr {
     font-family: Butler;
     font-size: 40px;
     font-weight: 500;
-    color: #F79D65;
+    color: white; /* #F79D65; */
 }
 
 .inputs {
@@ -145,14 +146,15 @@ hr {
     margin-top: 30px;
     padding: 20px 10px;
     border: solid 1px #dedede;
-    border-radius: 0.3rem;
+    /* border-radius: 0.3rem; */
     font-family: Lato;
     font-size: 15px;
+    color: grey;
     background-color: white;
 }
 
 .inputs::placeholder {
-    color: black;
+    color: grey;
 }
 
 #select-city {
@@ -162,9 +164,10 @@ hr {
     height: 40px;
     font-family: Lato;
     font-size: 15px;
+    color: grey;
     background-color: white;
     border: solid 1px #dedede;
-    border-radius: 0.3rem;
+    /* border-radius: 0.3rem; */
     
 }
 
@@ -178,6 +181,10 @@ hr {
     border: none;
     border-radius: 0.3rem;
 }
+
+#submit-btn:hover {
+    background-color: #e38349;
+} 
 
 /* Login pop up style */
 .popUpLogin {
