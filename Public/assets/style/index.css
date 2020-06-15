@@ -4,7 +4,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;
 }
 
 @font-face {
@@ -23,6 +22,7 @@ body {
     height: 100%;
     overflow: auto;
     background-color: #fafaf0;
+    font-family: Lato;
 }
 
 .background {
@@ -290,12 +290,13 @@ input {
 .faqContainer {
     margin-top: 170px;
     padding-top: 50px;
-    background-color: #8b9da769;
+    background-color: #F5F4F4;
     text-align: center;
 }
 
 .faq {
     padding-bottom: 30px;
+    font-size: 2vw;
 }
 
 .accordion {
@@ -306,17 +307,22 @@ input {
 }
 
 .card-header {
-    margin: 15px;
-    background: linear-gradient(90deg, #ffeeeeb2 0%, #d4dad6 100%);
+    border-radius: 15px !important;
+    margin: 20px;
+    padding: 2px;
+    background: #d5e69e;
 }
 
 .card-header:hover {
-    background: linear-gradient(90deg, #d4dad6 0%, #ffeeeeb2 100%);
-    color: #e36039;
+    background: #c4d883;
+}
+
+.card-body {
+    font-size: 16px;
 }
 
 .card {
-    background-color: #cbd4d1;
+    background-color: #F5F4F4;
     border: none;
     text-align: justify;
 }
@@ -348,8 +354,8 @@ input {
 .panel-title::after {
     content: "\002B";
     color: rgba(51, 51, 51, 0.472);
-    top: 5%;
-    right: 0px;
+    top: 1%;
+    right: 2%;
     position: absolute;
     font-size: 1.7rem;
 }
@@ -359,11 +365,12 @@ input {
 }
 
 .moreFaq {
-    color: #526679;
+    color: #5f5f5f;
+    font-size: 16px;
 }
 
 .moreFaq:hover {
-    color: #526679;
+    color: #5f5f5f;
 }
 
 .startNow {
