@@ -69,3 +69,16 @@ const validateMessage = (message, errorMsg) => {
     }
     return helper
 }
+
+// Form Error/Success Alerts
+const successMsgStyle = (message) => {
+    message.style.color = "#21a34a";
+    message.style.borderColor = "#21a34a";
+    message.style.backgroundColor = "#dbffe7";
+}
+
+const errorMsgStyle = (message) => {
+    message.style.color = "red";
+    message.style.borderColor = "red";
+    message.style.backgroundColor = "#ffebeb;";
+}
