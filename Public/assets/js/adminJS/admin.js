@@ -1,6 +1,4 @@
 const warningBtns = Array.from(document.querySelectorAll('.warning-btns'));
-const warningYesBtn = document.querySelector('#yes-btn');
-const warningNoBtn = document.querySelector('#no-btn');
 const warningMsg = document.querySelector('#warning-msg');
 const deleteWarning = document.querySelector('#delete-warning');
 //All data
@@ -56,7 +54,6 @@ function deleteReassurance(btns, elem, inputData, dataType) {
     let data = inputData.filter(item => item.id === id)[0];
     let editBtns = Array.from(document.querySelectorAll(`.all-edit-btns`));
     populateWarrnigMsg(dataType, data)
-
     for (const btn of btns) {
         btn.addEventListener('click', (e) => {
             helper = e.target.value
@@ -74,9 +71,9 @@ function deleteReassurance(btns, elem, inputData, dataType) {
                 mainBody.classList.remove('body-disable');
                 deleteWarning.style.display = 'none';
             } else {
-                // editBtnsClickChange()
                 mainBody.classList.remove('body-disable');
                 deleteWarning.style.display = 'none';
+                editFlag ? editFlag = false : editFlag = true;
             }
         });
     };
@@ -113,12 +110,12 @@ function editData(elementThis) {
 };
 
 function saveEditedData(elementThis) {
+    editFlag ? editFlag = false : editFlag = true;
     //ToDO Here should be PUT calls to api with edited data. (set timeout is just for simulation)
     setTimeout(() => {
         let id = parseInt(elementThis.id.split('_')[1]);
         let editType = elementThis.id.split('_')[0];
         let editBtns = Array.from(document.querySelectorAll(`.all-edit-btns`));
-        editFlag ? editFlag = false : editFlag = true;
         let editActivity = false;
         let editObject = false;
         if (editType === 'saveU') {
