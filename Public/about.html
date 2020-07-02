@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style/header.css">
     <link rel="stylesheet" href="./assets/style/about.css">
+    <link rel="stylesheet" href="./assets/style/loginPopUp.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -31,16 +32,19 @@
     <div class="popUpLogin">
         <div class="loginContent">
             <div class="close">+</div>
-            <img src="./assets/images/user-login.png" alt="">
+            <h2 class="loginTxt">Login</h2>
             <form action="index.html" method="GET">
-                <input type="text" placeholder="E-mail" id="emailV" required>
-                <input type="password" placeholder="Password" id="passV" required>
-                <a href="">
-                    <p class="forgot">Forgot your password?</p>
-                </a>
-                <h3 align=center id="info"></h3>
+
+                <label for="emailV" class="labelTxt">Email adress</label>
+                <input type="text" id="emailV" required>
+
+                <label for="passV" class="labelTxt">Password</label>
+                <input type="password" id="passV" required>
+
+                <a href=""><p class="forgot">Forgot your password?</p></a>
+                <h3 id="info"></h3> <!--Error message goes here-->
                 <button type="button" class="log" id="logInB">Sign in</button>
-                <button type="button" class="reg" id="regB">Sign up</button>
+                <p class="createAcc">Don't have account? <a href="./getStarted.html" class="signUpLink">&nbsp Sign Up</a></p>
             </form>
         </div>
     </div>
