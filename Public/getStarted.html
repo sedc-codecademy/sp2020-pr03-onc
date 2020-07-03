@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="./assets/style/index.css">
     <link rel="stylesheet" href="./assets/style/header.css">
     <link rel="stylesheet" href="./assets/style/getStarted.css" type="text/css">
-    
-    
-    
+    <link rel="stylesheet" href="./assets/style/loginPopUp.css">
 </head>
 
 <body>
@@ -32,6 +30,27 @@
                 </ul>
             </nav>
         </header>
+
+    <!-- Login Pop Up -->
+    <div class="popUpLogin">
+        <div class="loginContent">
+            <div class="close">+</div>
+            <h2 class="loginTxt">Login</h2>
+            <form action="index.html" method="GET">
+
+                <label for="emailV" class="labelTxt">Email adress</label>
+                <input type="text" id="emailV" required>
+
+                <label for="passV" class="labelTxt">Password</label>
+                <input type="password" id="passV" required>
+
+                <a href=""><p class="forgot">Forgot your password?</p></a>
+                <h3 id="info"></h3> <!--Error message goes here-->
+                <button type="button" class="log" id="logInB">Sign in</button>
+                <p class="createAcc">Don't have account? <a href="./getStarted.html" class="signUpLink">&nbsp Sign Up</a></p>
+            </form>
+        </div>
+    </div>
 
         <div class="main">
 
@@ -96,26 +115,6 @@
             </div>
 
         </div>
-
-        <!-- <footer>
-            <div class="footer">
-                <div class="arrow">
-                    <a href="#up"><img src="./assets/images/arrow.png" alt=""></a>
-                </div>
-                <div class="copyR">
-                    &copy; Mindify 2020
-                </div>
-                <div class="links">
-                    <span class="social">
-                        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                    </span>
-                </div>
-            </div>
-        </footer> -->
-
         
     </div>
 
