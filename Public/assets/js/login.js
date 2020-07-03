@@ -66,14 +66,14 @@ signIn.addEventListener('click', () => {
     if (emptyInputs(email, password)) {
         isLoginSelected = false;
         alertI.style.display = 'block';
-        alertI.innerHTML = '<h4>Please enter the fields.</h4>';
+        alertI.innerHTML = 'Please enter the fields.';
     } else if (dataV(loginUser)) {
         alertI.style.display = 'none';
         window.location.href = './userPage.html';
     } else {
         isLoginSelected = false;
         alertI.style.display = 'block';
-        alertI.innerHTML = '<h4>You are not registered.</h4>';
+        alertI.innerHTML = 'You are not registered.';
     }
     inpText.value = '';
     inpPass.value = '';

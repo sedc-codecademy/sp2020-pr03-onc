@@ -28,7 +28,7 @@ const populateTestemonial = (data, id, element) => {
     element.innerHTML = `
     <div class="testemonials-person">
     <img src="./assets/images/${currnetTestimony.img || avatar }" alt="Avatar">
-    <h5> <span>${currnetTestimony.user}</span><br> ${currnetTestimony.occupation}</h5>
+    <h5> <span>${currnetTestimony.user}</span><p>${currnetTestimony.occupation}</p></h5>
     </div>
     <p class="testemony">${currnetTestimony.testimonial}
     </p>
