@@ -45,7 +45,7 @@
     position: relative;
 }
 
-input {
+.login-inputs {
     padding: 7px;
     width: 65%;
     height: 27px;

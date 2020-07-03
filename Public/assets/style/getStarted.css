@@ -33,7 +33,7 @@
     max-width: 100%;
     height: 100vh;
     overflow-y: auto;
-    background-color: rgb(233, 231, 227);
+    background-color: #f7f8ff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family: 'Libre Baskerville', serif;
 }
@@ -59,7 +59,7 @@
     justify-content: center;
     align-items:center;
     font-size: large;
-    border-bottom: solid 2px #bdbdbd;
+    border-bottom: solid 2px #ebebeb;
     padding: 1% 2% 1% 2%;
 }
 
@@ -68,6 +68,7 @@
     font-family: Butler;
     font-weight: 300;
     font-size: 37px;
+    margin: 0 30px;
 } 
 
 .second-header > p {
@@ -87,13 +88,39 @@
 }
 
 /*QUESTION AND TESETEMONIALS CONTENT */
-.questionnaire, .testemonials-content {
+.questionnaire {
     width: 43%;
     height: 75%;
     background-color: white;
     font-size: large;
-    border-radius: 10%;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 20px -5px;
+    padding: 30px;
     /* animation: slideAnimation .3s linear */
+}
+
+#test-img-div {
+    width: 35%;
+    height: 75%;
+    flex-flow: row nowrap;
+}
+
+.testemonials-content {
+    height: 45%;
+    background-color: white;
+    font-size: large;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 20px -5px;
+    flex-basis: 50%;
+    /* animation: slideAnimation .3s linear */
+}
+
+#puzzle-people-img {
+    width: 80%;
+    height: 55%;
+    flex-basis: 30%;
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 /* Questionnarie content */
@@ -107,39 +134,76 @@
     border-radius: 30px;
     /* padding: 5%; */
     font-family: Lato;
-    font-size: 23px;
+    font-size: 22px;
     color: gray;
 }
 
 .questionnaire > form {
     display: flex;
     flex-direction:column;
-    justify-content: center; 
-    align-items: center;
+    justify-content: left; 
+    align-items: left;
     width: 100%;
     height: 70%;
     max-height: max-content;
+    padding: 8%;
 }
 
 .questionnaire > form > label{
-  margin-top: 4%;
+    margin-top: 4%;
+}
+
+.labels {
+    font-family: Lato;
+    margin: 3%;
+}
+
+.radio-btns {
+    color: black;
+}
+
+.ans-div {
+    margin: 10px 0;
+    text-align: left;
+}
+
+#age-div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#age{
+    font-size: 15px;
+    padding: 3px;
+    height: 30px;
+    border-color: lightgrey;
+    border-radius: 0.3rem;
+    flex-basis: 85%;
+}
+
+#age-label{
+    width: 15%;
+    margin: 0;
+    flex-basis: 15%;
+    font-size: 20px;
 }
 
 /* Testemonilas content */
 .testemonials-person {
     width: 100%;
-    height: 40%;
+    height: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 3%;
+    padding-bottom: 0;
     border-bottom: solid 1px ivory;
     border-radius: 30px;
 }
 
 .testemonials-person > img {
-    width: 25%;
-    height: 90%;
+    width: 13%;
+    height: 70%;
     max-width:25%;
     max-height:90%;
     border-radius: 50%;
@@ -150,30 +214,32 @@
     width: 75%;
     max-width:75%;
     max-height:90%;
-    padding-left: 10%;
+    padding-left: 5%;
     font-family: Lato;
     color: black;
 }
 
 .testemonials-person > h5 > span {
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 200;
 }
 
 .testemonials-person > h5 > p {
     font-family: Butler;
-    font-size: 14px;
+    font-size: 15px;
     font-style: oblique;
     font-weight: 300;
 }
 
 .testemony {
-    height: 50%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0% 5% 0% 10%;
+    font-family: Lato;
+    font-size: 15px;
 }
 
 .testemonials-navi {
@@ -186,28 +252,31 @@
 }
 
 .navi-dots {
-    height: 15%;
-    width: 5%;
-    border: solid 1.5px #bddb8f;
+    height: 28%;
+    width: 7%;
+    border: solid .5px #bddb8f;
     border-radius: 0.3rem;
     background-color: #bddb8f;
     margin: 0% 2% 0% 2%;
 }
 
-.navi-dots:hover {
-    background-color: rgb(255, 255, 240, .3);
+.navi-dots:active {
+    background-color: white;
 }
 
 /* DROP-DOWN */
 .dropdown-element {
     width: 100%;
     height: 5%;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    border-top: solid 1.5px #b8e6bc;
+    border-bottom: solid 1.5px #b8e6bc;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 15px 0;
     padding: 0% 1.5% 0 1.5%;  
+    color: #72b378;
+    font-family: Lato;
 }
 
 .dropdown-element:hover {
@@ -215,18 +284,20 @@
 }
 
 .arrow {
-    border: solid black;
-    border-width: 0 2px 2px 0;
+    border: solid #72b378;
+    border-width: 0 2.5px 2.5px 0;
     display: inline-block;
-    padding: .2%;
+    padding: .3%;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg)  
 }
 
 .dropdown-content {
     display: none;  
+    font-family: Lato;
 }
 
+/* */
 /* SIGN IN FORM */
 .second {
     margin-top: 1%;
@@ -236,11 +307,13 @@
     margin-top: 5%;
     width: 50%;
     height: 90%;
+    background-color: #bddb8f; 
 }
 
 .form-body > form {
     width: 100%;
     height: 100%;
+    background-color: #bddb8f; 
 }
 
 .form-body > form > button {
@@ -265,15 +338,20 @@
 }
 
 .msg-text {
-    height: fit-content;
+    height: 40%;
     width: fit-content;
     max-width: 35%;
     max-height: 90%;
-    padding: 6%;
-    border-radius: 40%;
+    padding: 3%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4rem;
+    border-color: #bddb8f;
     line-height: 200%;
     font-style: oblique;
     font-size: larger;
+    background-color: #f7f8ff;
+    color: gray;
 }
 
 /* FOOTER  */
