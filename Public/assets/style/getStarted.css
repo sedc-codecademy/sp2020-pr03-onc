@@ -150,13 +150,21 @@
     width: 75%;
     max-width:75%;
     max-height:90%;
-    font-size: large;
     padding-left: 10%;
+    font-family: Lato;
+    color: black;
 }
 
 .testemonials-person > h5 > span {
-    font-size: x-large;
+    font-size: 27px;
+    font-weight: 200;
+}
+
+.testemonials-person > h5 > p {
+    font-family: Butler;
+    font-size: 14px;
     font-style: oblique;
+    font-weight: 300;
 }
 
 .testemony {
@@ -178,11 +186,11 @@
 }
 
 .navi-dots {
-    height: 25%;
-    width: 2%;
-    border: solid 1px ivory;
-    border-radius: 100%;
-    background-color: ivory;
+    height: 15%;
+    width: 5%;
+    border: solid 1.5px #bddb8f;
+    border-radius: 0.3rem;
+    background-color: #bddb8f;
     margin: 0% 2% 0% 2%;
 }
 
