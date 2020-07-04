@@ -94,7 +94,7 @@ let users = [
         id: 1,
         name:'Bob',
         lastName:'Bobsky',
-        role: 'counselor',
+        role: 'admin',
         email: 'Bob@Bobsy.com',
         password: 'sdfsdffd5674&',
         active: true,

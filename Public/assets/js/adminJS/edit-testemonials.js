@@ -95,7 +95,7 @@ function renderTestemonials(data, el) {
               </td>
         </tr>
         <tr>
-            <td></td>
+           
             <td></td>
             <td></td>
             <td></td>

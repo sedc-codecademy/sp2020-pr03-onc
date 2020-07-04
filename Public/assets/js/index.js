@@ -28,7 +28,7 @@ function setFirstQuestion(input) {
 
 //Redirect ot question part and set and reset first question and array in local storrage regarding the questionerry
 (function typeBtnsEvent() {
-    const typeBtns = Array.from(document.querySelectorAll('.type-buttons'));
+    const typeBtns = Array.from(document.querySelectorAll('.couns-type-buttons'));
     typeBtns.forEach(element => {
         element.addEventListener('click', (e) => {
             localStorage.setItem('initCounter', '2');
