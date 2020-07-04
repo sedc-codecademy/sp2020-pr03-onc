@@ -66,7 +66,7 @@ body {
 .couns-types {
     width: 15%;
     height: 80%;
-    margin: 0 40px;
+    margin: 0 4%;
     background-color: white;
     border-style: none;
     /* border-radius: .5rem; */
@@ -79,6 +79,7 @@ body {
     opacity: 100%;
     width: 17%;
     height: 85%;
+    margin: 0 3%;
 }
 
 .icon-div {
@@ -204,7 +205,6 @@ body {
 .faqContainer {
     margin-top: 170px;
     padding-top: 50px;
-    padding-bottom: 50px;
     background-color: #F5F4F4;
     text-align: center;
 }
@@ -292,5 +292,10 @@ body {
 .startNow {
     display: block;
     margin-top: 30px;
+    margin-bottom: 15%;
     margin-left: 45%;
+}
+
+#headingEight {
+    margin-bottom: 2%;
 }
