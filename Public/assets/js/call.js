@@ -26,12 +26,8 @@ const postUser = data => {
 
 
 function getTestemonials() {
-    let data = [];
     //ToDo suppost to do a fetch call to API estead of for-loop and getTestemonials might with callback or asyn func
-    for (let item of testimonialsData) {
-        data.push(item)
-    }
-
+    const data = testimonialsData.filter(testemonial => testemonial.status === true)
     return data
 };
 
@@ -41,7 +37,7 @@ function getUsers() {
     for (let item of users) {
         data.push(item)
     }
-    
+
     return data
 };
 
@@ -51,6 +47,22 @@ function getQuestions() {
     for (let item of dataQandA) {
         data.push(item)
     }
-    
+
     return data
+};
+
+function findUser(email, pass) {
+    //ToDo suppost to do a fetch call to API estead of for-loop and getUsers might with callback or asyn func
+    //Mocking call
+    let response = users.filter(user => user.active)
+        .filter(user => user.email === email && user.password === pass)
+        .map(user => user.role);
+   
+        if ( ! response.length) {
+            return response = {message: 'Your username and/or password do not match.' , role: ''}
+            
+        } else {
+            return response = {message: '' , role: response[0]}  
+        }
+   
 };

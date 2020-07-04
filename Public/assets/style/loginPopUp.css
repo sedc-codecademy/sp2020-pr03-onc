@@ -108,11 +108,9 @@
     margin-left: 90px;
 }
 
-#info {
+#login-error-msg {
     color: tomato;
     font-weight: 600;
     font-size: 14px;
-    margin-left: 100px;
-    margin-top: 25px;
-    margin-bottom: -15px;
+    text-align: center;
 }

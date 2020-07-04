@@ -68,4 +68,9 @@ const renderControler = (data, element) => {
         counter++
     }
 };
-renderControler(dataQandA, questionArea);
+
+
+(function() {
+    let data =  getQuestions()
+    renderControler(data, questionArea);
+})();
