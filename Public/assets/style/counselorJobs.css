@@ -183,3 +183,13 @@ hr {
 #submit-btn:hover {
     background-color: #e38349;
 } 
+
+/* Footer adittional adjustments*/
+
+footer {
+    margin-top: 50px;
+}
+
+.footerHr {
+    margin-top: 20px !important;
+}
