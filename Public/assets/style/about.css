@@ -154,24 +154,3 @@
     color: #5a5a5a;
     font-size: 1.4vw;
 }
-
-/* SOS */
-.sos {
-    position: absolute;
-    bottom: 4%;
-    margin-left: 4%;
-    text-align: justify;
-    font-size: 14px;
-    font-weight: 600;
-    color: #3e4e5dc4;
-}
-
-.sosLink {
-    color: #e36139e7;
-    font-weight: 600;
-    font-family: Lato;
-}
-
-.sosLink:hover {
-    color: #e36039;
-}

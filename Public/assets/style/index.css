@@ -204,6 +204,7 @@ body {
 .faqContainer {
     margin-top: 170px;
     padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #F5F4F4;
     text-align: center;
 }
@@ -211,6 +212,7 @@ body {
 .faq {
     padding-bottom: 30px;
     font-size: 2vw;
+    font-weight: 700;
 }
 
 .accordion {
@@ -291,63 +293,4 @@ body {
     display: block;
     margin-top: 30px;
     margin-left: 45%;
-}
-
-.sos {
-    margin-top: 130px;
-    margin-left: 4%;
-    padding-bottom: 15px;
-    text-align: justify;
-    font-size: 14px;
-    font-weight: 600;
-    color: #3e4e5dc4;
-}
-
-.sosLink {
-    color: #e36139e7;
-    font-weight: 600;
-}
-
-.sosLink:hover {
-    color: #e36039;
-}
-
-/* Footer */
-.footer {
-    width: 100%;
-    height: 50px;
-    background: #3e4e5dc4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-.arrow {
-    cursor: pointer;
-    transition: all 0.2s ease 0.1s;
-}
-
-.arrow:hover {
-    background-color: #F69D44;
-}
-
-.links {
-    padding-right: 20px;
-}
-
-.social a i{
-    width: 30px;
-    height: 30px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    text-align: center;
-    padding-top: 5px;
-    transition: all 0.2s ease 0.1s;
-}
-
-.social a i:hover {
-    border-color: black;
-    color: #F69D44;
 }

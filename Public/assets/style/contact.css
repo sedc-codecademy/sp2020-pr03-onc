@@ -119,10 +119,6 @@ h1 + h2 {
     border-radius: 20px;
 }
 
-.formBox{
-    height: 35px;
-}
-
 .formStyle {
     font-family: Lato;
     width: 90%;
@@ -140,7 +136,7 @@ input:focus {
     outline: none;
 }
 
-textarea{
+textarea {
     font-family: Lato;
     padding-top: 10px;
     padding-left: 10px;
@@ -182,35 +178,12 @@ textarea:focus {
     transition: all 0.2s ease 0s;
 }
 
-
 .submitBtn:focus {
     outline: none;
 }
 
+/* Footer adittional changes */
 
-
-/* SOS Msg */
-
-.sos {
-    margin-top: 150px;
-    margin-left: 4%;
-    padding-top: 15px;
-    text-align: justify;
-    font-size: 14px;
-    font-weight: 800;
-    color: #000000b7;
-}
-
-.sosTxt {
-    font-family: Lato;
-}
-
-.sosLink {
-    font-family: Lato;
-    color: #e36039;
-    font-weight: 600;
-}
-
-.sosLink:hover {
-    color: #e36039;
+footer {
+    margin-top: 100px;
 }
