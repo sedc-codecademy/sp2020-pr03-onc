@@ -66,7 +66,7 @@ body {
 .couns-types {
     width: 15%;
     height: 80%;
-    margin: 0 40px;
+    margin: 0 4%;
     background-color: white;
     border-style: none;
     /* border-radius: .5rem; */
@@ -79,6 +79,7 @@ body {
     opacity: 100%;
     width: 17%;
     height: 85%;
+    margin: 0 3%;
 }
 
 .icon-div {
