@@ -2,29 +2,30 @@
 const testemonialArea = document.getElementById('testemonial');
 
 //Populating navibar of the testemonials and adding event listiners
-const populateNavi = (data, id, element) => {
+const populateNavi = (data, testemonialCounter, element) => {
     let naviBar = element.lastElementChild;
     naviBar.innerHTML = '';
-    data.forEach(el => {
-        naviBar.innerHTML += `<div class="navi-dots" id="${el.id}"></div>`
-    });
+    for (let i = 0; i < data.length; i++) {
+        naviBar.innerHTML += `<div class="navi-dots" id="${i}"></div>`   
+    }
     let naviDots = document.getElementsByClassName('navi-dots');
     for (const dot of naviDots) {
-        id === parseInt(dot.id) ? dot.style.backgroundColor = "rgb(255, 255, 240, .3)" : null;
+        testemonialCounter - 1 === parseInt(dot.id) ? dot.style.backgroundColor = "rgb(255, 255, 240, .3)" : null;
     }
     //Adding event listiners to testemonial navi
     for (const dot of naviDots) {
         dot.addEventListener('click', (e) => {
-            let elementID = parseInt(e.target.id)
+            let elementID = parseInt(e.target.id) + 1
             populateTestemonial(data, elementID, element);
         })
     }
 };
 
 //Populating  testemonial body element (using populateNavi)
-const populateTestemonial = (data, id, element) => {
+const populateTestemonial = (data, testemonialCounter, element) => {
     let avatar = 'avatar-default.jpg'
-    let currnetTestimony = data.filter(x => x.id === id)[0];
+    // let currnetTestimony = data.filter(x => x.id === id)[0];
+    let currnetTestimony = data[testemonialCounter - 1];
     element.innerHTML = `
     <div class="testemonials-person">
     <img src="./assets/images/${currnetTestimony.img || avatar }" alt="Avatar">
@@ -35,23 +36,26 @@ const populateTestemonial = (data, id, element) => {
     </div>
     <div class="testemonials-navi" id="navi-testemonials"></div>
     `
-    populateNavi(data, id, element)
+    populateNavi(data, testemonialCounter, element)
 };
 
 //Main function which calls populateTestemonial 
 const testemonialController = (data, element) => {
     let slideCounter = 1;
-    const approvedData = data.filter(testemonial => testemonial.status === true)
-    console.log(approvedData);
-    const dataLength = approvedData.length
-    approvedData.forEach(el => {
+    const dataLength = data.length
+    data.forEach(el => {
         element.lastElementChild.innerHTML += `<div class="navi-dots"></div>`
     });
-    populateTestemonial(approvedData, slideCounter, element);
+    populateTestemonial(data, slideCounter, element);
     setInterval(() => {
-        populateTestemonial(approvedData, slideCounter, element)
-        slideCounter === dataLength ? slideCounter = 1 : slideCounter++
-    }, 4500);
+        slideCounter === dataLength  ? slideCounter = 1 : slideCounter++
+        populateTestemonial(data, slideCounter, element)
+    }, 3500);
 };
 
-testemonialController(testimonialsData, testemonialArea);
+(function() {
+    let data = getTestemonials()
+    testemonialController(data, testemonialArea);
+})();
+
+

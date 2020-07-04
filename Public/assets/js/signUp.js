@@ -24,7 +24,7 @@ class User {
 //Validatation
 const validateSignUp = () => {
     if (!validateEmptyInputs(userInputs, inputMsg) || !validateMail(mail, inputMsg) ||
-        !valiadatePassword(password, confirmPass, inputMsg) || !valiadateTerms(terms, inputMsg)) {
+        !valiadatePassword(password, inputMsg, confirmPass) || !valiadateTerms(terms, inputMsg)) {
         return false
     } else {
         return true
@@ -40,8 +40,8 @@ const signIn = () => {
             inputMsg.innerHTML = 'Welcome to Mindify.'
             console.log(user)
             // postUser(user);
-            // localStorage.removeItem('userQA')
-            // localStorage.removeItem('initCounter')
+            localStorage.removeItem('userQA')
+            localStorage.removeItem('initCounter')
         }
     });
 };

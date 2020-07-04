@@ -69,7 +69,6 @@ function renderUsers(data, el) {
             <label for="editU_active_${user.id}" class="users${user.id}">Active</label>
             </td>
             <td></td>
-            <td></td>
             <td>
             <a class="btn btn-sm btn-success users${user.id}" id="saveU_${user.id}" onclick="saveEditedData(this)"><i class="fa fa-floppy-o"></i></a>
             <a class="btn btn-sm btn-danger users${user.id}" id="deleteU_${user.id}" onclick="deleteData(this)"><i class="fa fa-trash"></i></a>
