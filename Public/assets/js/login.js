@@ -1,91 +1,95 @@
-// Init for header button
+// Parent DIV of Login
 let popUp = document.querySelector('.popUpLogin');
+
+// Generate login content on start
+(function () {
+    popUp.innerHTML = `
+        <div class="loginContent">
+            <div class="close">+</div>
+            <h2 class="loginTxt">Login</h2>
+            <form action="index.html" method="GET">
+
+                <label for="emailV" class="labelTxt">Email adress</label>
+                <input type="email" id="emailV" class="login-inputs" required>
+
+                <label for="passV" class="labelTxt">Password</label>
+                <input type="password" id="passV" class="login-inputs" required>
+
+                <a href=""><p class="forgot">Forgot your password?</p></a>
+                <h3 id="login-error-msg"></h3> 
+                <button type="button" class="log" id="logInB">Sign in</button>
+                <p class="createAcc">Don't have account? <a href="./getStarted.html" class="signUpLink">&nbsp Sign Up</a></p>
+            </form>
+        </div>  
+    `
+})();
+
+let loginInputFields = Array.from(document.querySelectorAll('.login-inputs'));
+let loginInput = document.querySelector('#emailV');
+let loginPassword = document.querySelector('#passV');
 let loginBtn = document.querySelector('#logB');
 let close = document.querySelector('.close');
-
-// Init for validation
-let inpText = document.querySelector('#emailV');
-let inpPass = document.querySelector('#passV');
 let signIn = document.querySelector('#logInB');
-let signUp = document.querySelector('#regB');
-let alertI = document.querySelector('#info');
+let alertI = document.querySelector('#login-error-msg');
+
+let clearLoginInputs = (inputs) => {
+    inputs.map(input => input.value = '')
+};
 
 
+let redirectPage = (typeOfUser) => {
+    switch (typeOfUser) {
+        case 'counselor':
+            window.location.href = './councelor.html';
+            break;
+        case 'user':
+            window.location.href = './userPage.html';
+            break;
+        case 'admin':
+            window.location.href = './adminPage.html';
+            break;
+
+        default:
+            break;
+    }
+};
+
+//EVENTS
 // Open the modal
 loginBtn.addEventListener('click', () => {
+    event.preventDefault()
     popUp.style.display = 'flex';
     popUp.style.position = 'fixed';
     popUp.style.zIndex = '50';
 });
 
-
 // Close the modal
 close.addEventListener('click', () => {
+    event.preventDefault()
     popUp.style.display = 'none';
+    clearLoginInputs(loginInputFields);
 });
 
-// Constructor
-function AuthData(email, password) {
-    this.email = email;
-    this.password = password;
-}
-
-
-// Validations
-let emptyInputs = (email, password) => {
-    if (email === '' || password === '') {
-        return true;
-    }
-    return false;
-}
-
-let dataV = (loginUser) => {
-    for (let user of users) {
-        if (user.email === loginUser.email && user.password === loginUser.password) {
-            return true;
-        }
-        return false;
-    }
-};
-
-let checkEmail = (loginUser) => {
-    let emailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    if (loginUser.email.value.match(emailCheck)) {
-        return true;
-    }
-    return false;
-}
-
-// Event
+// Make call
 signIn.addEventListener('click', () => {
-    let email = inpText.value;
-    let password = inpPass.value;
-
-    let loginUser = new AuthData(email, password);
-
-    if (emptyInputs(email, password)) {
-        isLoginSelected = false;
+    event.preventDefault()
+    if (!validateEmptyInputs(loginInputFields, alertI) || !validateMail(loginInput, alertI) || !valiadatePassword(loginPassword, alertI)) {
         alertI.style.display = 'block';
-        alertI.innerHTML = '<h4>Please enter the fields.</h4>';
-    } else if (dataV(loginUser)) {
-        alertI.style.display = 'none';
-        window.location.href = './userPage.html';
+        alertI.innerHTML = 'Please enter valid data.';
     } else {
-        isLoginSelected = false;
-        alertI.style.display = 'block';
-        alertI.innerHTML = '<h4>You are not registered.</h4>';
+        let response = findUser(loginInput.value, loginPassword.value);
+        if (response.message) {
+            alertI.style.display = 'block';
+            alertI.innerHTML = response.message;
+
+        } else {
+            clearLoginInputs(loginInputFields);
+            alertI.style.display = 'none';
+            redirectPage(response.role);
+        }
     }
-    inpText.value = '';
-    inpPass.value = '';
 });
 
 
-// (function getStartedButton() {
-//     signUp.addEventListener('click', () => {
-//         localStorage.removeItem('initCounter');
-//         localStorage.setItem('userQA', JSON.stringify([]))
-//         window.location.href = './getStarted.html';
-//     });
-// })();
 
 

@@ -29,15 +29,20 @@ const renderQuestion = (ansData, queData, dataType, element) => {
         case 'radio':
             ansData.forEach(ans => {
                 element.lastElementChild.innerHTML += `
-            <label for="${ans}"><input type="radio" name="init-questions" value="${ans}" id="${ans}">${ans}</label>`
+                <div class="ans-div">
+                <input type="radio" name="init-questions" value="${ans}" id="${ans} class="radio-btns">
+                <label for="${ans}" class="labels">${ans}</label>
+                </div>`
             });
             inputEvent(document.querySelectorAll('input'), queData, dataType)
             break;
 
         case 'dropdown':
             element.lastElementChild.innerHTML += `
-            <label for="age" style="padding-bottom:5%;">Age</label>
-            <select name="age" id="age"style="width:70%;"></select> `
+            <div id="age-div">
+            <label for="age" style="padding-bottom:5%;" class="labels" id="age-label">Age</label>
+            <select name="age" id="age" placeholder="Age" style="width:70%;"></select> 
+            </div>`
             while (maxAge >= minAge) {
                 document.getElementById('age').innerHTML += `<option value="${minAge}">${minAge}</option>`
                 minAge++
@@ -63,4 +68,9 @@ const renderControler = (data, element) => {
         counter++
     }
 };
-renderControler(dataQandA, questionArea);
+
+
+(function() {
+    let data =  getQuestions()
+    renderControler(data, questionArea);
+})();
