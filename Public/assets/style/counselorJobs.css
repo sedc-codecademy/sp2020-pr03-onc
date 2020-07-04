@@ -144,7 +144,7 @@ hr {
 .inputs {
     width: 70%;
     margin-top: 30px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     border: solid 1px #dedede;
     font-family: Lato;
     font-size: 15px;
@@ -157,7 +157,7 @@ hr {
 }
 
 #select-city {
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px;
     width: 70%;
     height: 40px;
