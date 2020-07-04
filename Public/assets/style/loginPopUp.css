@@ -67,7 +67,7 @@
 }
 
 .log {
-    margin-top: 40px;
+    margin-top: 5%;
     margin-left: 35%;
     padding: 5px 25px;
     background-color: #f89d66;
@@ -89,7 +89,7 @@
 
 .forgot {
     font-size: 13px;
-    margin-left: 60px;
+    margin-left:18%;
 }
 
 .signUpLink {
@@ -104,7 +104,7 @@
 
 .createAcc {
     font-size: 13px;
-    margin-top: 15px;
+    margin-top: 3%;
     margin-left: 90px;
 }
 

@@ -205,7 +205,6 @@ body {
 .faqContainer {
     margin-top: 170px;
     padding-top: 50px;
-    padding-bottom: 50px;
     background-color: #F5F4F4;
     text-align: center;
 }
@@ -293,5 +292,10 @@ body {
 .startNow {
     display: block;
     margin-top: 30px;
+    margin-bottom: 15%;
     margin-left: 45%;
+}
+
+#headingEight {
+    margin-bottom: 2%;
 }
