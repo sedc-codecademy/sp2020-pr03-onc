@@ -314,6 +314,7 @@
     width: 100%;
     height: 100%;
     background-color: #bddb8f; 
+    padding: 0 0 20px 20px;
 }
 
 .form-body > form > button {
@@ -323,16 +324,34 @@
 }
 
 .inputs {
-    width: 65%;
-    height: 5%;
-    font-size: large;
+    width: 70%;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border: solid 1px #dedede;
+    font-family: Lato;
+    font-size: 15px;
+    color: grey;
+    background-color: white;
+}
+
+.input-labels {
+    font-family: Lato;
 }
 
 #terms {
     height: 5%;
 }
 
+#terms-label {
+    font-family: Butler;
+}
+
+#terms-label > a {
+    color: #F79D65;
+}
+
 #input-msg {
+    font-family: Butler;
     font-size: 75%;
     margin-top: 1%;
 }
