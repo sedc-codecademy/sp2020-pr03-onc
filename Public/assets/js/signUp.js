@@ -33,7 +33,7 @@ const validateSignUp = () => {
 
 //Post user data
 const signIn = () => {
-    document.getElementById('signIn-btn').addEventListener('click', () => {
+    document.getElementById('signin-btn').addEventListener('click', () => {
         event.preventDefault()
         if (validateSignUp()) {
             const user = new User(name.value, mail.value, password.value, JSON.parse(localStorage.getItem('userQA')));
