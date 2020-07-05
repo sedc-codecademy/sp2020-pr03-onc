@@ -18,11 +18,14 @@
 
 #main-container {
     text-align: center;
+    position: relative;
+    top: 70px;
 }
 
 #main-title {
-    position: relative;
-    bottom: 210px;
+    position: absolute;
+    top: 7%;
+    left: 35%;
     color: white;
     text-shadow: 2px 2px 8px rgb(188, 131, 125);
     font-family: Butler;
@@ -40,6 +43,7 @@
     font-family: Lato;
     font-size: 30px;
     font-weight: 800;
+    margin-top: 30px;
 }
 
 hr {
@@ -77,8 +81,8 @@ hr {
 
 .icons {
     float: left;
-    width: 15%;
-    height: 60%;
+    width: 70px;
+    height: 70px;
 }
 
 .pros > p {
@@ -112,7 +116,7 @@ hr {
     padding: 40px;
     border: solid 1px #dedede;
     border-radius: 0.5rem;
-    width: 70%;
+    width: 800px;
     background-color: #bddb8f; 
     box-shadow: 3px 3px 20px -5px;
 }
