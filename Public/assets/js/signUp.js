@@ -7,6 +7,19 @@ const terms = document.getElementById('terms')
 const userInputs = [name, mail, password];
 const inputMsg = document.getElementById('input-msg');
 
+// Alert error message
+const alertMessage = () => {
+    inputMsg.style.display = "block";
+}
+
+const errorMessageStyleChange = (errMsg) => {
+    errMsg.style.backgroundColor = "#ffebeb";
+    errMsg.style.border = "solid 1px red";
+    errMsg.style.borderRadius = "0.3rem";
+    errMsg.style.color = "red";
+    errMsg.style.textAlign = "center";
+}
+
 //User class
 class User {
     constructor(name, email, password, questionnarie) {
@@ -43,6 +56,7 @@ const signIn = () => {
             localStorage.removeItem('userQA')
             localStorage.removeItem('initCounter')
         }
+        errorMessageStyleChange(inputMsg);
     });
 };
 signIn();
