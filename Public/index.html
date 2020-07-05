@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/style/header.css">
     <link rel="stylesheet" href="./assets/style/index.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="stylesheet" href="./assets/style/loginPopUp.css">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
 
         <header id="head">
             <div class="logo">
-                <a href="./index.html">  <img src="assets/images/Logo.png" alt="logo"> </a>
+                <a href="#">  <img src="assets/images/Logo.png" alt="logo"> </a>
             </div>
             <nav id="mainNav">
                 <ul class="nav-links">
@@ -79,22 +81,8 @@
         </div>
     </div>
 
-    <!-- Login PopUp -->
+    <!-- Login Pop Up -->
     <div class="popUpLogin">
-        <div class="loginContent">
-            <div class="close">+</div>
-            <img src="./assets/images/user-login.png" alt="">
-            <form action="index.html" method="GET">
-                <input type="text" placeholder="E-mail" id="emailV" required>
-                <input type="password" placeholder="Password" id="passV" required>
-                <a href="">
-                    <p class="forgot">Forgot your password?</p>
-                </a>
-                <h3 align=center id="info"></h3>
-                <button type="button" class="log" id="logInB">Sign in</button>
-                <button type="button" class="reg" id="regB">Sign up</button>
-            </form>
-        </div>
     </div>
 
     <!-- Second part -->
@@ -279,39 +267,32 @@
                 </div>
             </div>
 
-        </div>
 
         <a class="moreFaq" href="./contact.html">If you have further questions click here</a>
 
         <button class="register startNow">Get started</button>
-
-        <!-- SOS -->
-
-        <div class="sos">
-            <p class="sosTxt">
-                If you are in a crisis or any other person may be in danger - don't use this site. <br>
-                <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
-            </p>
-        </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="footer">
-            <div class="arrow">
-                <a href="#up"><img src="./assets/images/arrow.png" alt=""></a>
+        <div class="footerContainer">
+            <div class="sos">
+                <p class="sosTxt">
+                    If you are in a crisis or any other person may be in danger - don't use this site. <br>
+                    <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
+                </p>
             </div>
-            <div class="copyR">
-                &copy; Mindify 2020
+            <div class="footerLinks">
+                <a href="">Terms & Conditions</a>
+                <br>
+                <a href="">Privacy Policy</a>
             </div>
-            <div class="links">
-                <span class="social">
-                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                    <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-                </span>
-            </div>
+        </div>
+        <hr class="footerHr">
+        <div class="socialMedia">
+            <a href="https://twitter.com/"><i style="font-size:30px" class="fa">&#xf081;</i></a>
+            <a href="https://www.instagram.com/"><i style="font-size:30px" class="fa">&#xf16d;</i></a>
+            <a href="https://www.facebook.com/"><i style="font-size:30px" class="fa">&#xf082;</i></a> 
         </div>
     </footer>
 
@@ -329,9 +310,10 @@
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
     <script src="./assets/js/header.js"></script>
-    <script src="./assets/js/login.js"></script>
     <script src="./assets/js/call.js"></script>
     <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/validations.js"></script>
+    <script src="./assets/js/login.js"></script>
     <script src="./assets/js/index.js"></script>
 
 </body>

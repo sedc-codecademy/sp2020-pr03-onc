@@ -16,97 +16,6 @@ body {
     background-color: #f3f1f249;
 }
 
-/* Login pop up style */
-
-.popUpLogin {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.loginContent {
-    width: 500px;
-    height: 350px;
-    background-color: #fafaf0;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-}
-
-input {
-    padding: 7px;
-    width: 50%;
-    height: 27px;
-    background-color: #fafaf0;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    display: block;
-    margin: 10px auto;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-.log {
-    margin: 30px 30px 0 0;
-    padding: 7px 15px;
-    background-color: #639ecf;
-    border-style: solid;
-    border-color: #639ecf;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.1s ease 0s;
-}
-
-.log:hover {
-    background-color: unset;
-    border-style: solid;
-    border-color: #5cb85c;
-    color: #5cb85c;
-}
-
-.reg {
-    margin: 30px 0 0 30px;
-    padding: 9px 17px;
-    background-color: #639ecf;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.1s ease 0s;
-}
-
-.reg:hover {
-    background-color: #e36039;
-}
-
-.forgot {
-    font-size: 13px;
-    margin-right: 100px;
-}
-
-h1 > a {
-    text-decoration: none;
-}
-
 /* Cellphone Image */
 
 .imgContainer {
@@ -115,8 +24,6 @@ h1 > a {
 
 .imgContainer > img {
     max-width: 100%;
-    padding-top: 0.4%;
-    margin-top: 4%;
 }
 
 /* Main Title */
@@ -208,30 +115,31 @@ h1 + h2 {
     margin-left: 12%;
     background-color: #f99d65;
     border-radius: 20px;
-}
-
-.formBox{
-    height: 35px;
+    box-shadow: 3px 3px 20px -5px;
 }
 
 .formStyle {
     font-family: Lato;
-    width: 90%;
+    width: 70%;
     height: 35px;
     padding-left: 10px;
     margin-top: 4%;
-    margin-left: 5%;
+    margin-left: 15%;
     margin-right: auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     background: white;
+}
+
+.fullName {
+    margin-top: 5%;
 }
 
 input:focus {
     outline: none;
 }
 
-textarea{
+textarea {
     font-family: Lato;
     padding-top: 10px;
     padding-left: 10px;
@@ -248,8 +156,7 @@ textarea:focus {
 .error {
     font-family: Lato;
     text-align: center;
-    margin-bottom: 2%;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 /* Send Btn */
@@ -273,35 +180,12 @@ textarea:focus {
     transition: all 0.2s ease 0s;
 }
 
-
 .submitBtn:focus {
     outline: none;
 }
 
+/* Footer adittional changes */
 
-
-/* SOS Msg */
-
-.sos {
+footer {
     margin-top: 150px;
-    margin-left: 4%;
-    padding-top: 15px;
-    text-align: justify;
-    font-size: 14px;
-    font-weight: 800;
-    color: #000000b7;
-}
-
-.sosTxt {
-    font-family: Lato;
-}
-
-.sosLink {
-    font-family: Lato;
-    color: #e36039;
-    font-weight: 600;
-}
-
-.sosLink:hover {
-    color: #e36039;
 }

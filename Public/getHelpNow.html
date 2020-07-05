@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/style/header.css">
     <link rel="stylesheet" href="./assets/style/getHelpNow.css">
+    <link rel="stylesheet" href="./assets/style/footer.css">
+    <link rel="stylesheet" href="./assets/style/loginPopUp.css">
 </head>
 
 <body>
@@ -33,24 +36,10 @@
             </nav>
         </header>
 
-        <!-- Login PopUp -->
+        <!-- Login Pop Up -->
         <div class="popUpLogin">
-            <div class="loginContent">
-                <div class="close">+</div>
-                <img src="./assets/images/user-login.png" alt="">
-                <form action="index.html" method="GET">
-                    <input type="text" placeholder="E-mail" id="emailV" required>
-                    <input type="password" placeholder="Password" id="passV" required>
-                    <a href="">
-                        <p class="forgot">Forgot your password?</p>
-                    </a>
-                    <h3 align=center id="info"></h3>
-                    <button type="button" class="log" id="logInB">Sign in</button>
-                    <button type="button" class="reg" id="regB">Sign up</button>
-                </form>
-            </div>
         </div>
-
+        
         <!-- Content -->
         <main class="wrapper">
             <!-- Resources For Immediate Help -->
@@ -172,17 +161,36 @@
             </div>
         </main>
 
-        <!-- SOS -->
-        <div class="sos">
-            <p class="sosTxt">
-                If you are in a crisis or any other person may be in danger - don't use this site. <br>
-                <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
-            </p>
-        </div>
-
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footerContainer">
+            <div class="sos">
+                <p class="sosTxt">
+                    If you are in a crisis or any other person may be in danger - don't use this site. <br>
+                    <a class="sosLink" href="./getHelpNow.html">These resources</a> can provide you with immediate help.
+                </p>
+            </div>
+            <div class="footerLinks">
+                <a href="">Terms & Conditions</a>
+                <br>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+        <hr class="footerHr">
+        <div class="socialMedia">
+            <a href="https://twitter.com/"><i style="font-size:30px" class="fa">&#xf081;</i></a>
+            <a href="https://www.instagram.com/"><i style="font-size:30px" class="fa">&#xf16d;</i></a>
+            <a href="https://www.facebook.com/"><i style="font-size:30px" class="fa">&#xf082;</i></a> 
+        </div>
+    </footer>
+
+    <script src="./assets/js/call.js"></script>
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>

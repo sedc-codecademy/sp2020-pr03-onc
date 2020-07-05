@@ -66,7 +66,7 @@ body {
 .couns-types {
     width: 15%;
     height: 80%;
-    margin: 0 40px;
+    margin: 0 4%;
     background-color: white;
     border-style: none;
     /* border-radius: .5rem; */
@@ -79,6 +79,7 @@ body {
     opacity: 100%;
     width: 17%;
     height: 85%;
+    margin: 0 3%;
 }
 
 .icon-div {
@@ -199,92 +200,6 @@ body {
     bottom: 20px;
 }
 
-/* Login pop up style */
-.popUpLogin {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.loginContent {
-    width: 500px;
-    height: 350px;
-    background-color: #fafaf0;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-}
-
-input {
-    padding: 7px;
-    width: 50%;
-    height: 27px;
-    background-color: #fafaf0;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    display: block;
-    margin: 10px auto;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-.log {
-    margin: 30px 30px 0 0;
-    padding: 7px 15px;
-    background-color: #639ecf;
-    border-style: solid;
-    border-color: #639ecf;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.1s ease 0s;
-}
-
-.log:hover {
-    background-color: unset;
-    border-style: solid;
-    border-color: #5cb85c;
-    color: #5cb85c;
-}
-
-.reg {
-    margin: 30px 0 0 30px;
-    padding: 9px 17px;
-    background-color: #639ecf;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.1s ease 0s;
-}
-
-.reg:hover {
-    background-color: #e36039;
-}
-
-.forgot {
-    font-size: 13px;
-    margin-right: 100px;
-}
-
 /* Frequently Asked Questions */
 
 .faqContainer {
@@ -297,6 +212,7 @@ input {
 .faq {
     padding-bottom: 30px;
     font-size: 2vw;
+    font-weight: 700;
 }
 
 .accordion {
@@ -376,64 +292,10 @@ input {
 .startNow {
     display: block;
     margin-top: 30px;
+    margin-bottom: 15%;
     margin-left: 45%;
 }
 
-.sos {
-    margin-top: 130px;
-    margin-left: 4%;
-    padding-bottom: 15px;
-    text-align: justify;
-    font-size: 14px;
-    font-weight: 600;
-    color: #3e4e5dc4;
-}
-
-.sosLink {
-    color: #e36139e7;
-    font-weight: 600;
-}
-
-.sosLink:hover {
-    color: #e36039;
-}
-
-/* Footer */
-.footer {
-    width: 100%;
-    height: 50px;
-    background: #3e4e5dc4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-}
-
-.arrow {
-    cursor: pointer;
-    transition: all 0.2s ease 0.1s;
-}
-
-.arrow:hover {
-    background-color: #F69D44;
-}
-
-.links {
-    padding-right: 20px;
-}
-
-.social a i{
-    width: 30px;
-    height: 30px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    text-align: center;
-    padding-top: 5px;
-    transition: all 0.2s ease 0.1s;
-}
-
-.social a i:hover {
-    border-color: black;
-    color: #F69D44;
+#headingEight {
+    margin-bottom: 2%;
 }

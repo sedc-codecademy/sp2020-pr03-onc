@@ -1,0 +1,123 @@
+@font-face {
+    font-family: Butler;
+    src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Butler-Medium;
+    src: url(../fonts/Butler/Butler_Medium.otf);
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+* {
+    font-family: Lato, sans-serif;
+}
+
+.loginTxt {
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    font-family: Butler;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.labelTxt {
+    margin-left: 60px;
+    margin-bottom: 0px;
+}
+
+.popUpLogin {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.loginContent {
+    width: 350px;
+    height: 420px;
+    margin-top: 5%;
+    background-color: #fafaf0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.login-inputs {
+    padding: 7px;
+    width: 65%;
+    height: 27px;
+    background-color: #fafaf0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    display: block;
+    margin: 10px auto;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.log {
+    margin-top: 5%;
+    margin-left: 35%;
+    padding: 5px 25px;
+    background-color: #f89d66;
+    border-style: solid;
+    border-color: #f89d66;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.1s ease 0s;
+}
+
+.log:hover {
+    border-color: #e07837;
+    background-color: #e07837;
+}
+
+
+.forgot {
+    font-size: 13px;
+    margin-left: 18%;
+    margin-bottom: 5% !important;
+}
+
+.signUpLink {
+    color: #f89d66;
+    font-weight: 600;
+}
+
+.signUpLink:hover {
+    color: #f89d66;
+    font-weight: 600;
+}
+
+.createAcc {
+    font-size: 13px;
+    margin-top: 3%;
+    margin-left: 90px;
+}
+
+#login-error-msg {
+    color: tomato;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
