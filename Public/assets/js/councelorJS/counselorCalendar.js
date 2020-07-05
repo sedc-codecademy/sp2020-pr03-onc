@@ -52,7 +52,7 @@ users.forEach(user => {
     <div class="chat-display " id="chat-display-user${user.id}">
         <div class="chat-pannel">
             <h4>${user.name} ${user.lastName}:</h4>
-            <p>dude I am in deep shit</p>
+            <p>I need to talk to you...</p>
             <span>${currentTime()}</span>
         </div>
     </div>
