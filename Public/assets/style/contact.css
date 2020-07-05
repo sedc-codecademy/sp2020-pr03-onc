@@ -115,19 +115,24 @@ h1 + h2 {
     margin-left: 12%;
     background-color: #f99d65;
     border-radius: 20px;
+    box-shadow: 3px 3px 20px -5px;
 }
 
 .formStyle {
     font-family: Lato;
-    width: 90%;
+    width: 70%;
     height: 35px;
     padding-left: 10px;
     margin-top: 4%;
-    margin-left: 5%;
+    margin-left: 15%;
     margin-right: auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     background: white;
+}
+
+.fullName {
+    margin-top: 5%;
 }
 
 input:focus {
@@ -151,8 +156,7 @@ textarea:focus {
 .error {
     font-family: Lato;
     text-align: center;
-    margin-bottom: 2%;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 
 /* Send Btn */
@@ -183,5 +187,5 @@ textarea:focus {
 /* Footer adittional changes */
 
 footer {
-    margin-top: 100px;
+    margin-top: 150px;
 }

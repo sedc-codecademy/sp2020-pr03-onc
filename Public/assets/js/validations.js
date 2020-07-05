@@ -132,6 +132,8 @@ const successMsgStyle = (message) => {
 const errorMsgStyle = (message) => {
     message.style.color = "red";
     message.style.borderColor = "red";
+    message.style.borderRadius = "2px";
+
     message.style.backgroundColor = "#ffebeb;";
 }
 
