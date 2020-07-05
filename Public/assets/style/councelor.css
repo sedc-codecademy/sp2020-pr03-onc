@@ -21,8 +21,47 @@ textarea {
 .daily-announcements {
     height: 96vh;
 }
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.upcoming-app {
+    display: inline-block;
+    border: 1px solid black;
+    width: 45%;
+    height: 85vh;
+    padding: 20px;
+    margin: 0 2%;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px rgb(138, 121, 95);
 
-
+}
+.upcoming-app img {
+    width: 100px;
+    height: 100px;
+}
+.upcoming-app div {
+    padding-top: 20px;
+    text-align: justify;
+}
+.upcoming-app div h3 {
+    padding-top: 10px;
+}
+.upcoming-app button {
+    margin-top: 15%;
+    padding: 10px;
+    background-color: rgb(103, 148, 36);
+    border-radius: 40px;
+    border-color: white;
+    box-shadow: 2px 2px 2px 2px rgb(138, 121, 95);
+}
+.upcoming-app button a {
+    color:white;
+}
 
 
 
@@ -57,10 +96,11 @@ textarea {
     width: 100%;
     display: flex;
     flex-direction: row;
+    
 }
 
 .listed-patient:hover {
-    background-color: rgb(209, 207, 207);
+    background-color: rgb(149, 198, 233);
     cursor: pointer;
 }
 
@@ -89,7 +129,8 @@ textarea {
     height: 80%;
     border: 1.5px inset black;
     border-radius: 20px;
-    background-color: springgreen;
+    background-color: rgb(212, 233, 222);
+    box-shadow: 2px 2px 2px 2px rgb(138, 121, 95);
 }
 
 .chat-pannel {
@@ -107,9 +148,10 @@ textarea {
     padding: 15px;
     margin: 5px;
     height: 20%;
-    background-color: steelblue;
+    background-color: rgb(149, 198, 233);
     display: flex;
     border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(138, 121, 95);
 }
 
 .chat-input textarea {
@@ -120,6 +162,7 @@ textarea {
     padding: 5px;
     resize: none;
     border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(138, 121, 95);
 }
 
 .chat-input input {
@@ -127,6 +170,15 @@ textarea {
     margin-top: 3%;
     height: 35%;
     width: 10%
+}
+
+#sendMessage {
+    border-radius: 30px;
+    background-color: whitesmoke;
+}
+
+#sendMessage:hover {
+    background-color: rgb(231, 227, 227);
 }
 
 

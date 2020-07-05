@@ -8,8 +8,8 @@ let patientChats = document.getElementsByClassName('patients-chat');
 // let messageToSend = document.getElementById('messageToSend')
 let sendMessageBtn = document.getElementById('sendMessage')
 
-
 let randomImage = Math.floor(Math.random() * 6) + 1;
+
 
 let currentTime = () => {
     return `${new Date().getUTCHours() + 2}h:${new Date().getMinutes()}m`
@@ -49,7 +49,7 @@ users.forEach(user => {
     div.classList.add('patients-chat');
     div.setAttribute("id", `chat-user-${user.id}`)
     div.innerHTML = `
-    <div class="chat-display" id="chat-display-user${user.id}">
+    <div class="chat-display " id="chat-display-user${user.id}">
         <div class="chat-pannel">
             <h4>${user.name} ${user.lastName}:</h4>
             <p>dude I am in deep shit</p>
@@ -100,8 +100,8 @@ function sendMessage(id) {
 let chats = document.getElementsByClassName('listed-patient');
 for (let i = 0; i < chats.length; i++) {
     chats[i].addEventListener('click', () => {
-        clearChats()
-        displayChat(i + 1)
+        clearChats();
+        displayChat(i + 1);
     })
 }
 
