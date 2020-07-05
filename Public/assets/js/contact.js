@@ -29,12 +29,25 @@ const sendEmail = () => {
             formInfo.message = message.value;
             console.log(formInfo);
             // Send Succesfull Message
-            errorMsg.style.color = "#0000009c";
+            errorMsg.style.color = "#5faa41";
+            errorMsg.style.border = "solid 1px";
+            errorMsg.style.borderRadius = "5px";
+            errorMsg.style.width = "70%";
+            errorMsg.style.marginLeft = "15%";
+            errorMsg.style.backgroundColor = "white";
+            errorMsg.style.padding = "5px";
             errorMsg.innerHTML = 'Your message was sent successfully!';
             // Clear Input Areas
             form.reset();
         } else {
-            errorMsg.style.color = "#bb0012";
+            errorMsg.style.color = "#bd2130";
+            errorMsg.style.border = "solid 1px";
+            errorMsg.style.borderRadius = "5px";
+            errorMsg.style.width = "70%";
+            errorMsg.style.marginLeft = "15%";
+            errorMsg.style.backgroundColor = "white";
+            errorMsg.style.padding = "5px";
+
         }
     })
 }
