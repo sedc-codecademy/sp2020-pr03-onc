@@ -10,7 +10,7 @@ const userInputs = [fullName, email, subject, message];
 
 // Main validation funcion
 const validateContactForm = () => {
-    if (!validateEmptyInputs(userInputs, errorMsg) || !validateName(fullName, errorMsg) || !validateEmail(email, errorMsg) || !validateSubject(subject, errorMsg) || !validateMessage(message, errorMsg)) {
+    if (!validateEmptyInputs(userInputs, errorMsg) || !validateName(fullName, errorMsg) || !validateMail(email, errorMsg) || !validateSubject(subject, errorMsg) || !validateMessage(message, errorMsg)) {
         return false
     } else {
         return true

@@ -1,23 +1,33 @@
+@font-face {
+    font-family: Butler;
+    src: url(../fonts/Butler/Butler_Regular.otf);
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
 footer {
     border-top: 2px solid #3e4e5d27;
     padding-bottom: 20px;  
     background-color: #FFF0E6;
+    font-family: Lato, sans-serif;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 .footerContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 /* SOS text */
 
 .sos {
-    margin-top: 30px;
-    margin-right: 25%;
-    padding-bottom: 15px;
-    font-size: 14px;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding-bottom: 1%;
     font-weight: 600;
     color: #3e4e5dc4;
+    text-align: left;
 }
 
 .sosLink {
@@ -34,11 +44,14 @@ footer {
 .footerLinks > a {
     font-size: 14px;
     font-weight: 600;
-    color: #3e4e5dd0;
+    color: #3e4e5dc4;
 }
 
 .footerLinks {
-    margin-top: 25px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-right: 3%;
+    text-align: right;
 }
 
 /* Hr */

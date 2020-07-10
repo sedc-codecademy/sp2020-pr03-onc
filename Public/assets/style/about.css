@@ -114,18 +114,24 @@
     font-size: 1.4vw;
 }
 
+/* Get started now button */
+
+.aboutRegisterBtn {
+    margin-top: 3%;
+}
+
 /* Success Stories */
 
 .successStories {
     position: relative;
 }
 
-#carouselExampleIndicators{
+.mainCarosel{
     position: absolute;
-    width: 800px;
+    width: 60%;
     height: auto;
-    top: 10%;
-    left: 20%;
+    margin-left: 20%;
+    margin-top: -45%;
 }
 
 /* Opacity of background Image */
