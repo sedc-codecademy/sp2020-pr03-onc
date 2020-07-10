@@ -3,7 +3,7 @@ const validateEmptyInputs = (inputs, errEl) => {
     let helper = true
     for (const input of inputs) {
         if (input.value === '') {
-            errEl.innerText = 'Please fill all input fileds.';
+            errEl.innerText = 'Please fill out all input fileds.';
             return helper = false
         }
     }
@@ -13,7 +13,7 @@ const validateEmptyInputs = (inputs, errEl) => {
 //Validate Email 
 const validateMail = (mail, errEl) => {
     let helper = false
-    const mailCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    const mailCheck = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     mail.value.match(mailCheck) ? helper = true : helper = false;
     if (helper) {
         return helper
@@ -22,17 +22,6 @@ const validateMail = (mail, errEl) => {
         return helper
     }
 };
-
-const validateEmail = (email, errorMsg) => {
-    let helper = false;
-    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (email.value.match(emailRegex)) {
-        helper = true
-    } else {
-        errorMsg.innerHTML = 'Please enter a valid Email';
-    }
-    return helper
-}
 
 //Validate password adn confrim password(optional)
 const valiadatePassword = (input, errEl, confirmInput = true) => {
@@ -81,7 +70,7 @@ const validateName = (fullName, errorMsg) => {
     if (fullName.value.match(nameRegex) && fullName.value.length >= 5) {
         helper = true;
     } else {
-        errorMsg.innerHTML = 'Please enter a valid name';
+        errorMsg.innerHTML = 'Please enter a valid Name';
     }
     return helper
 };
